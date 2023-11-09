@@ -1,0 +1,813 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root {
+    --bg: #3C465C;
+    --primary: #78FFCD;
+    --solid: #fff;
+    --celesteClaro:#769ECB;
+    --azulGris:#758f9c;
+    --azulMorado:#516091;
+
+    /*prueba*/
+    --bs-blue: #0d6efd;
+    --bs-indigo-: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --funBlue:#175a9e;
+    --shark:#1e1e1f;
+    --white_1:#f6f7f1;
+    --bg-colorVidrio:rgba(255, 255, 255, .15);
+    --backdrop-filterVidrio:blur(5px);
+    --azulIntenso:#090979;
+    --negroIn:#020024;
+    --rojoOscuro:#C81D11;
+    --rojoBrillante: #FF0800;
+    --celesteBrillante:#00d4ff;
+    --azulFooter:#1b2a4e;
+    --azulNavBar: rgb(17, 0, 255);
+    --blackTitulos:#444649;
+    --greyPs:#616161;
+    --blackYT:#181818;
+    --linesYT:#303030;
+    --blackYT2:#202020;
+    --blackYT3:#313131;
+    --whiteYT:#f9f9f9;
+    --tittlepurple:#1f2667;
+    /* --z1:#232741; */
+    --z1:#0f172a;
+    --z2:#2c2e43;
+    --z3:#222733;
+    --z4:#080d17;
+    --dark-github:#0d1117;
+    --dark-github-2: #161b22;
+    --dark-beauty:#1e242c;
+    --dark-beauty-2:#171925;
+    --dark-brauty-3:#252934;
+
+    /* Colores nuevos */
+    --bs-indigo: #BE1206;
+    --blur-indigo: rgba(74, 52, 169, 0.6);
+
+    --gameBlue: #0f172a; /*15 23 42*/
+    --gameBlueLight: #1e293b; 
+    --gameLips: #be123c; /*190 18 60*/
+    --gameBlood: #BE1206; /*190 18 6*/
+
+    /* Colores de la institucion */
+    --bordo-escarlata: #8B0000;
+    --bordo-vino:#900020;
+    --bordo-cereza-oscura:#7B0000;
+    --bordo-brillante: #CC0000;
+
+    --white-bg: #F5F6F6;
+    --white-bg-2: #FDFCFF;
+    --white-bg-3: #eeeeee;
+    --white-bg-4: #e5e5e5;
+
+    /* Colores en uso */
+    --main-colour:var(--bordo-escarlata);
+    --secondary-colour: var(--bordo-brillante);
+    --third-colour: var(var(--white-bg));
+}
+
+body{
+    font-family: sans-serif;
+    /* font-family: Merriweather,serif; */
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+    height:1000vh;
+    background:var(--white-bg-4);
+}
+
+section{
+    padding:50px 0;
+}
+main section h2{
+    text-align:center;
+    color:var(--main-colour);
+    text-transform: uppercase;
+    font-size:2.3rem;
+    font-weight:600;
+}
+
+main section p{
+    text-align:justify;
+}
+.text-resaltado{
+    color:var(--bs-danger);
+    font-weight: bolder;
+}
+
+.bg-white-1{
+    background-color:var(--white-bg-2);
+}
+
+/* ------------------------------- Header ------------------------------- */
+
+header{
+    height:90vh;
+    padding: 50px 20px 5px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(rgba(5,7,8, 0.4), rgba(5,7,8, 0.6)), url(./../img/instituto3.png);
+    /*Parallax*/
+    background-attachment: fixed;
+    background-size:cover;
+    background-position:center;
+    background-repeat: repeat;
+
+    gap:5px;
+    color:var(--bs-light);
+
+}
+
+header h2, header h1{
+    text-align:center;
+} 
+header img{
+    width:200px;
+    filter: drop-shadow(0 5px 10px rgba(5,7,8, 0.4));
+}
+
+/* ----------- Navbar ----------- */
+
+header nav{
+    position: fixed !important;
+    top: 0 !important; 
+    width:100%;
+    padding:0 !important;
+    min-height: 60px;
+    z-index: 1;
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+}
+header nav, header .dropdown-menu{
+    /* background: var(--main-colour); */
+    background: linear-gradient(to bottom, #8B0000, #660000);
+}
+
+header nav .nav-link, header .dropdown-item{
+    color:var(--bs-light) !important;
+    transition:all ease .4s;
+}
+header .dropdown-item:hover{
+    transition:all ease .4s;
+    background:var(--secondary-colour);
+}
+
+header nav .dropdown{
+    width:40px !important;
+    display:flex;
+    justify-content:start;
+}
+
+header nav .nav-link{
+    margin-right:30px;
+    font-weight:bolder;
+    width:100%;
+    height: 60px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+header nav .nav-link:hover{
+    background: var(--secondary-colour);
+}
+header .btn-down{
+    background: var(--main-colour);
+    padding:12px 5px;
+    border-radius:5px;
+    transition: all ease .4s;
+    animation: arrow-animation 2s ease-in-out infinite;
+
+}
+header .btn-down:hover{
+    background: var(--bs-light);
+    transition: all ease .4s;
+
+}
+
+header .container-btn-down svg{
+    fill:var(--bs-light);
+    width:40px;
+}
+header .btn-down:hover svg.svg-arrow-down {
+    fill: var(--bs-light);
+    transition: all ease .4s;
+
+}
+@keyframes arrow-animation{
+    0%{
+        background: var(--main-colour);
+    }
+    50%{
+        background: var(--secondary-colour);
+    }
+    100%{
+        background: var(--main-colour);
+    }
+}
+
+/* ------------------------------- Informacion ------------------------------- */
+
+.bloq-cont{
+    background:var(--white-bg-2);
+    padding:30px ;
+    border-radius:10px;
+    /* box-shadow: 0 0 10px rgba(5,7,8, 0.2); */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+.bloq-cont .miniseccion-calendario {
+    padding:20px 0;
+}
+.bloq-cont .miniseccion-calendario h3{
+    text-align:center;
+    color:var(--main-colour);
+    text-transform: uppercase;
+    font-size:2.1rem;
+    font-weight:550;
+    margin-bottom:15px;
+}
+.bloq-cont .cont-info-foto{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.bloq-cont .cont-info-foto img{
+    width:100%;
+}
+.bloq-cont .miniseccion-calendario .cont-foto-calendario{
+    display:flex;
+    justify-content:center;
+}
+.bloq-cont .miniseccion-calendario .cont-foto-calendario img{
+    max-width:400px;
+}
+.img-index-modal{
+    cursor:pointer;
+}
+/* ------------------------------- Ubicacion ------------------------------- */
+
+#ubicacion iframe{
+    width: 100%;
+    height:400px;
+}
+
+#ubicacion .bloq-cont .mb-2 a{
+    font-size:2rem;
+    color:var(--bs-danger);
+}
+
+/* ------------------------------- Carreras ------------------------------- */
+
+.card-carreras{
+    background:var(--white-bg-2);
+    padding:10px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height:300px;
+    margin:10px auto;
+    transition:all .4s ease;
+
+}
+.card-carreras:hover{
+    box-shadow: 0 0 10px rgba(5,7,8, 0.3);
+    transition:all .4s ease;
+}
+
+.card-carreras .img-card-carrera{
+    height:200px;
+    overflow:hidden;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+.card-carreras .img-card-carrera img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s ease;
+}
+.card-carreras:hover .img-card-carrera img{
+    transform: scale(1.03);
+    transition: all .4s ease;
+}
+
+.card-carreras .card-body-carrera{
+    padding:10px;
+}
+#carreras a{
+    text-decoration: none;
+    color:var(--main-colour);
+    text-align:center;
+}
+#carreras .cont-btn-incripcion{
+    padding:20px 0;
+}
+/* ------------------------------- Footer ------------------------------- */
+
+.btn-scrollTop{
+    text-decoration:none;
+    position:fixed;
+    bottom:-50px;
+    right:20px;
+    background:var(--main-colour);
+    padding:10px;
+    border-radius:50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all .4s ease;
+}
+.btn-scrollTop.up{
+    bottom:40px;
+}
+.btn-scrollTop:hover{
+    box-shadow: 0 0 15px rgba(5,7,8, 0.4);
+    transition: all .4s ease;
+    background:var(--secondary-colour);
+
+}
+.btn-scrollTop svg{
+    width:30px;
+}
+.btn-scrollTop #Dribbble-Light-Preview{
+    fill:var(--bs-light)!important;
+}
+
+
+/* ------------------------------- Pagina de Carreras.html ------------------------------- */
+
+/* ----------------- Navbar de Carreras -------------------------- */
+
+#carreras-header nav .dropdown{
+    width:auto !important;
+    /* border:1px solid #000;*/
+}
+
+/* ----------------- Header de Carreras -------------------------- */
+
+header#carreras-header{
+    height:500px;
+    background:linear-gradient(rgba(5,7,8, 0.4), rgba(5,7,8, 0.4)), url(./../img/software-big.jpg);
+    /*Parallax*/
+    background-attachment: fixed;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+header#carreras-header img{
+    width:150px;
+}
+
+/* ------------------------- Estructura Curricular -------------------------- */
+.img-estructura-curr{
+    text-align:center;
+}
+.img-estructura-curr img{
+    width:600px;
+    cursor:pointer;
+}
+
+.cont-btn-incripcion{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    /* border:1px solid #000; */
+    gap:20px;
+}
+
+.btn-incripcion{
+    padding:25px;
+    width:fit-content;
+    background:var(--main-colour);
+    /* background: linear-gradient(to bottom, #8B0000, #660000); */
+
+    text-decoration:none;
+    color:var(--bs-light) !important;
+    border-radius:10px;
+    font-size:1.2rem;
+    text-transform: uppercase;
+    transition:all .4s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-incripcion:hover{
+    transition:all .4s ease;
+    box-shadow: 0 0 10px rgba(5,7,8, 0.3);
+    background:var(--secondary-colour);
+    color:var(--bs-light);
+}
+
+.cont-btn-incripcion p{
+    font-size: 1.1rem;
+    color:var(--bs-danger);
+    text-align:center;
+}
+
+
+/*------------------------- Estilos para el modal -------------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    /* max-height: 80%; */
+}
+
+/* Estilos para el botón de cierre (la "X") */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+/* boton de descarga */
+.download-button {
+    width:fit-content;
+    display: block;
+    text-align: center;
+    background-color: var(--main-colour);
+    color: var(--bs-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+.download-button:hover {
+    background-color: var(--secondary-colour);
+    transition: all .4s ease;
+    color: var(--bs-light);
+
+}
+
+
+/* ----------------------------- Seccion de Mediaqueries ----------------------------- */
+
+/* Escritorio extra grande */
+@media only screen and (min-width: 1200px){
+
+}
+
+/* Escritorio grande */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    /* ----------------- index.html -----------------  */
+    .bloq-cont .cont-info-foto{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+    /* ------- Navbar --------- */
+    .nav .dropdown-menu {
+        width: 400px; /* Establece un ancho máximo para el menú desplegable */
+    }
+    
+    .dropdown-menu a {
+        white-space: normal; /* Permitir saltos de línea en el texto largo */
+        width: 400px;
+    }
+    
+    .dropdown-menu li {
+        width: 100%; /* El ancho completo del <li> para que haga wrap */
+    }
+    
+}
+
+/* Tablets y smartphones MAS ESPECIFICO*/
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    /* ----------------- index.html -----------------  */
+    main section h2{
+        font-size:1.7rem;
+        font-weight:600;
+    }
+    /* ------- Navbar --------- */
+    header nav .nav-link{
+        width:100%;
+        height: auto;
+        padding:10px;
+
+        justify-content:start;
+    }
+    header nav .dropdown, header nav .dropdown.show{
+        width:100px !important;
+        
+    }
+    .dropdown-menu{
+        min-width: 590px; /* Establece un ancho máximo para el menú desplegable */
+    } 
+    
+    .dropdown-menu a {
+        white-space: normal; /* Permitir saltos de línea en el texto largo */
+        width: 590px;
+    }
+    
+    .dropdown-menu li {
+        width: 100%; /* El ancho completo del <li> para que haga wrap */
+    }
+    /* ------- Header --------- */
+    header{
+        padding: 50px 30px 5px 30px; /*top right bottom left*/
+
+    }
+    header h1{
+        font-size:2rem;
+    }
+    header h2{
+        font-size:1.5rem;
+    }
+
+    /* ------- Informacion --------- */
+    .bloq-cont .cont-info-foto{
+        /* border:1px solid #000; */
+        padding:20px 0;
+    }
+    .bloq-cont .cont-info-foto img{
+        width:80%;
+    }
+    .bloq-cont .miniseccion-calendario h3{
+        font-size:1.5rem;
+        font-weight:500;
+    }
+}
+
+/* Tablets y smartphones */
+@media only screen and (max-width: 767px){
+    /* ----------------- index.html -----------------  */
+    
+    main section h2{
+        font-size:1.7rem;
+        font-weight:600;
+    }
+    .bloq-cont{
+        padding:30px 15px;
+    }
+    section{
+        padding:30px 0;
+    }
+    /* ------- Header --------- */
+    header{
+        padding: 50px 30px 5px 30px; /*top right bottom left*/
+
+    }
+    header h1{
+        font-size:2rem;
+    }
+    header h2{
+        font-size:1.5rem;
+    }
+    header img{
+        width:150px;
+    }
+
+    /* ------- Navbar --------- */
+    header nav .nav-link{
+        width:100%;
+        height: auto;
+        padding:10px;
+
+        justify-content:start;
+    }
+    header nav .dropdown, header nav .dropdown.show{
+        width:100px !important;
+        margin-left:0;
+        
+    }
+    .dropdown-menu{
+        min-width: 400px; /* Establece un ancho máximo para el menú desplegable */
+    } 
+    
+    .dropdown-menu a {
+        white-space: normal; /* Permitir saltos de línea en el texto largo */
+        width: 400px;
+    }
+    
+    .dropdown-menu li {
+        width: 100%; /* El ancho completo del <li> para que haga wrap */
+    }
+
+    /* ------- Informacion --------- */
+    .bloq-cont .cont-info-foto{
+        padding:20px 0;
+    }
+    .bloq-cont .cont-info-foto img{
+        width:80%;
+    }
+    .bloq-cont .miniseccion-calendario h3{
+        font-size:1.5rem;
+        font-weight:500;
+    }
+    .bloq-cont .miniseccion-calendario .cont-foto-calendario img{
+        max-width:70%;
+    }
+    /* ------- ubicacion --------- */
+    #ubicacion .bloq-cont{
+        padding: 30px 10px;
+    }
+    .ubi-contenido{
+        display:flex;
+    }
+    .ubi-contenido .mb-2{
+        padding:0 5px;
+    }
+
+    /* ------- Carreras --------- */
+    
+    #carreras .card-body-carrera h5{
+        font-size:.95rem;
+        font-weight:bold;
+    }
+    #carreras .img-card-carrera img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ------- Modal --------- */
+
+    .modal-content {
+        max-width:80%;
+    }
+
+
+    /* ----------------- carreras.html -----------------  */
+
+    /* --------- Estructura Curricular --------- */
+    .img-estructura-curr img{
+        width:100%;
+    }
+
+}
+
+
+/*Celulares*/
+@media only screen and (max-width: 575px){
+    /* --------------------- General ---------------------*/
+    /* navbar */
+    nav li{
+        font-size:1rem;
+    }
+    p, .cont-btn-incripcion p, li{
+        font-size:0.88rem;
+    }
+    h5{
+        font-size:.9rem;
+    }
+    small{
+        font-size:0.75rem;
+    }
+    .cont-btn-incripcion p{
+        font-weight:bold;
+
+    }
+    /* --------------------- Index.html ---------------------*/
+    /* --------------------- Header ---------------------*/
+    header{
+        padding: 50px 20px 5px 20px; /*top right bottom left*/
+
+    }
+    header h1{
+        font-size:1.6rem;
+    }
+    header h2{
+        font-size:1.3rem;
+    }
+    /* ------------- Carreras ---------------*/
+
+    .card-carreras{
+        max-width:400px;
+    }
+    #carreras .card-body-carrera h5{
+        font-size:1.1rem;
+        font-weight:bold;
+    }
+
+    /* ----------------- carreras.html -----------------  */
+
+    /* --------- Estructura Curricular --------- */
+    .img-estructura-curr img{
+        width:90%;
+    }
+
+}
+
+/* Mediaqueries especial pantallas pequeñas */
+@media only screen and (max-width:465px){
+    /* --------------------- General ---------------------*/
+    p, .cont-btn-incripcion p, li{
+        font-size:0.84rem;
+    }
+    small{
+        font-size:0.73rem;
+    }
+    main section h2{
+        font-size:1.3rem;
+        font-weight:600;
+    }
+    /* --------------------- Navbar ---------------------*/
+
+    .dropdown-menu{
+        min-width: 300px; /* Establece un ancho máximo para el menú desplegable */
+    } 
+    
+    .dropdown-menu a {
+        white-space: normal; /* Permitir saltos de línea en el texto largo */
+        width: 300px;
+    }
+
+    /* --------------------- Informacion ---------------------*/
+    .cont-info-foto{
+        padding: 20px;
+    }
+    .bloq-cont .miniseccion-calendario h3{
+        font-size:1.2rem;
+        font-weight:500;
+    }
+    /* --------------------- Carreras ---------------------*/
+
+    /* ----- boton de la preinscipcion -----*/
+    .btn-incripcion{
+        padding:20px;
+        font-weight:bold;
+        font-size:1rem;
+    }
+}
+
+/*Celulares angostos*/
+@media only screen and (max-width:375px){
+    /* --------------------- Index.html ---------------------*/
+    /* --------------------- Header ---------------------*/
+    header h1{
+        font-size:1.3rem;
+    }
+    header h2{
+        font-size:1.1rem;
+    }
+    /* --------------------- Navbar ---------------------*/
+
+    .dropdown-menu{
+        min-width: 250px; /* Establece un ancho máximo para el menú desplegable */
+        margin-left:-30px;
+    }
+
+    .dropdown-menu a {
+        white-space: normal; /* Permitir saltos de línea en el texto largo */
+        width: 250px;
+    }
+    /* --------------------- Ubicacion ---------------------*/
+
+    .ubi-contenido{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+    .ubi-contenido .mb-2{
+        padding:0 5px;
+    }
+}
+
