@@ -380,7 +380,8 @@ header .btn-down:hover svg.svg-arrow-down {
 
 header#carreras-header{
     height:500px;
-    background:linear-gradient(rgba(5,7,8, 0.4), rgba(5,7,8, 0.4)), url(./../img/software-big.jpg);
+    /* background:linear-gradient(rgba(5,7,8, 0.4), rgba(5,7,8, 0.4)), url(./../img/ingles-big.jpg); */
+    background:none;
     /*Parallax*/
     background-attachment: fixed;
     background-size:cover;

@@ -5,7 +5,7 @@ const url = window.location.href;
 // ----- Crear un objeto URLSearchParams ----
 const params = new URLSearchParams(new URL(url).search);
 // ------ Obtener el valor del parámetro 'id' ------
-const id = params.get('id');
+let id = params.get('id');
 
 // Obtiene la imagen y el modal por sus IDs
 // carreras.html
