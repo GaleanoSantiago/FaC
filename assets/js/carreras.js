@@ -109,8 +109,13 @@ const carreras = [
 
 // Adaptando el id a los indices del array (0-carreras.lenght());
 id= id-1;
-// console.log(carreras[id].nombre);
+// console.log(id);
 
+// Validando que exista la variable id y que contenga los datos correctos
+if(id<0 || id>=carreras.length){
+    // console.log("Carrera no encontrada");
+    id=0;
+}
 // Función para generar dinámicamente el contenido
 const generarContenido = ()=> {
     const header = document.getElementById("carreras-header");

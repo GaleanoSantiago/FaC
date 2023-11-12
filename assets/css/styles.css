@@ -174,8 +174,8 @@ header nav{
     box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
 }
 header nav, header .dropdown-menu{
-    /* background: var(--main-colour); */
-    background: linear-gradient(to bottom, #8B0000, #660000);
+    background: var(--main-colour);
+    /* background: linear-gradient(to bottom, #8B0000, #660000); */
 }
 
 header nav .nav-link, header .dropdown-item{
@@ -811,4 +811,5 @@ header#carreras-header img{
         padding:0 5px;
     }
 }
+
 
