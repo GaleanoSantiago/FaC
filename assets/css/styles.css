@@ -173,7 +173,7 @@ nav {
     padding-left: 2vw;
     color: #fff;
     height: 60px;
-    z-index:3;
+    z-index:2;
     box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
 
     /* padding-bottom:0 !important; */
@@ -556,7 +556,7 @@ header#carreras-header img{
 .modal {
     display: none;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     padding-top: 50px;
     left: 0;
     top: 0;
