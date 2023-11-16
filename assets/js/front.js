@@ -7,9 +7,7 @@ const params = new URLSearchParams(new URL(url).search);
 // ------ Obtener el valor del parámetro 'id' ------
 let id = params.get('id');
 
-// Obtiene la imagen y el modal por sus IDs
-// carreras.html
-const imgCurricular = document.getElementById('img-curricular');
+
 // index.html
 const imgsIndex = document.querySelectorAll(".img-index-modal");
 // ambas paginas
@@ -29,18 +27,7 @@ if(imgsIndex!=null){
         });
     });
 }
-// Verifica si estamos en carreras.html
-if(imgCurricular!=null){
 
-    // Maneja el clic en la imagen para abrir el modal
-    imgCurricular.addEventListener('click', ()=> {
-        modal.style.display = 'flex';
-        modal.style.flexDirection = 'column';
-        modal.style.alignItems = 'center';
-        modal.style.gap = '20px';
-        modalImg.src = imgCurricular.src;
-    });
-}
 // Maneja el clic en el botón de cierre para cerrar el modal
 const closeBtn = document.getElementsByClassName('close')[0];
 closeBtn.addEventListener('click', () => {

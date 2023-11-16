@@ -5,11 +5,11 @@
 const carreras = [
     {
         nombre:"Profesorado en Ingles",
-        duracion: "3 años",
+        duracion: "4 años",
         clasificacion: "Profesorado",
         horario:"19:00 a 23:00 hs",
         descripcion: `El Profesorado de Inglés es un programa académico 
-        de tres años que se centra en la formación de profesionales en 
+        de cuatro años que se centra en la formación de profesionales en 
         la enseñanza del idioma inglés. Los estudiantes adquieren habilidades 
         pedagógicas, lingüísticas y culturales, además de profundizar en 
         metodologías de enseñanza modernas. Al completar el programa, estarán 
@@ -18,7 +18,8 @@ const carreras = [
         la enseñanza del idioma y proporciona a los graduados las herramientas 
         necesarias para ser educadores efectivos.
         `,
-        fondo: "ingles-big.jpg"
+        fondo: "ingles-big.jpg",
+        planEstudio:"planingles.png"
     },
     {
         nombre:"Tecnicatura Superior en Desarrollo de Software",
@@ -35,7 +36,8 @@ const carreras = [
         de desarrollo y mantener y optimizar sitios existentes. 
         Esta carrera ofrece una sólida base en tecnología web y prepara a 
         los graduados para roles en desarrollo y diseño web.`,
-        fondo: "software-big.jpg"
+        fondo: "software-big.jpg",
+        planEstudio:"plansoft.png"
     },
     {
         nombre:"Tecnicatura Superior en Administración de Sistemas y Redes",
@@ -52,15 +54,16 @@ const carreras = [
         administración de sistemas, soporte técnico y seguridad informática. 
         La carrera proporciona una sólida base en tecnologías de la información y 
         prepara a los graduados para enfrentar los desafíos del mundo digital.`,
-        fondo: "redes-big.jpg"
+        fondo: "redes-big.jpg",
+        planEstudio:"planredes.png"
     },
     {
         nombre:"Tecnicatura Superior en Administración de Empresas con Orientación a PyMES",
-        duracion: "4 años",
+        duracion: "3 años",
         clasificacion: "Tecnicatura",
         horario:"19:00 a 23:00 hs",
         descripcion: `La Tecnicatura Superior en Administración de Empresas con 
-        Orientación a PyMES es un programa de cuatro años que se enfoca en la 
+        Orientación a PyMES es un programa de tres años que se enfoca en la 
         formación de profesionales en la gestión empresarial, con énfasis en las 
         pequeñas y medianas empresas (PyMES). Los estudiantes desarrollan habilidades 
         en áreas como contabilidad, finanzas, marketing y recursos humanos. 
@@ -69,7 +72,8 @@ const carreras = [
         preparados para asumir roles de liderazgo en la administración de empresas, 
         contribuyendo al éxito y crecimiento sostenible de las organizaciones. 
         La carrera proporciona una sólida base teórica y práctica en el ámbito empresarial.`,
-        fondo: "pymes-big.jpg"
+        fondo: "pymes-big.jpg",
+        planEstudio:"plansoft.png"
     },
     {
         nombre:"Profesorado en Economía",
@@ -86,7 +90,8 @@ const carreras = [
         en diferentes niveles educativos, contribuyendo al entendimiento y análisis 
         crítico de los fenómenos económicos. La carrera ofrece una base sólida tanto en 
         contenido económico como en métodos de enseñanza efectivos.`,
-        fondo: "economia-big.jpg"
+        fondo: "economia-big.jpg",
+        planEstudio:"plansoft.png"
     },
     {
         nombre:"Profesorado en Ciencias de la Educación",
@@ -103,7 +108,8 @@ const carreras = [
         en diversos niveles educativos, contribuyendo al desarrollo integral de los estudiantes. 
         La formación proporciona una base sólida en teorías educativas y prácticas pedagógicas 
         innovadoras.`,
-        fondo: "ciencias_educacion-big.jpg"
+        fondo: "ciencias_educacion-big.jpg",
+        planEstudio:"plansoft.png"
     },
 ];
 
@@ -153,6 +159,12 @@ const generarContenido = ()=> {
     const pDescripcion = document.createElement("p");
     pDescripcion.textContent = carreras[id].descripcion;
 
+    // obtener el contenedor de la imagen curricular
+    const contImgCurricular = document.getElementById("cont-img-curricular");
+    const imgPlan = document.createElement("img");
+    imgPlan.src=`./assets/img/${carreras[id].planEstudio}`;
+    imgPlan.id="img-curricular";
+    
     // Agregar los elementos al contenedor
     contenedor.appendChild(h2);
     contenedor.appendChild(h5Nombre);
@@ -161,6 +173,27 @@ const generarContenido = ()=> {
     contenedor.appendChild(h5Horario);
     contenedor.appendChild(h5Descripcion);
     contenedor.appendChild(pDescripcion);
+
+    contImgCurricular.appendChild(imgPlan);
+    downloadBtn.href=`./assets/img/${carreras[id].planEstudio}`;
+
+    modalCarreras();
+}
+
+const modalCarreras = ()=>{
+    // Obtiene la imagen y el modal por sus IDs
+    // carreras.html
+    const imgCurricular = document.getElementById('img-curricular');
+    // Verifica si estamos en carreras.html
+
+    // Maneja el clic en la imagen para abrir el modal
+    imgCurricular.addEventListener('click', ()=> {
+        modal.style.display = 'flex';
+        modal.style.flexDirection = 'column';
+        modal.style.alignItems = 'center';
+        modal.style.gap = '20px';
+        modalImg.src = imgCurricular.src;
+    });
 }
 
 window.addEventListener('load', generarContenido);
