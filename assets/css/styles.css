@@ -773,11 +773,6 @@ header#carreras-header img{
         right:-40px;
     }
     
-    /* #nav-carreras .svg-carreras{
-        width:40px;
-        height:70px !important;
-        border:1px solid #000;
-    } */
 
     p, .cont-btn-incripcion p, li{
         font-size:0.88rem;
@@ -815,9 +810,6 @@ header#carreras-header img{
     }
     /* ------------- Footer ---------------*/
     
-    .btn-scrollTop.up{
-        bottom:80px;
-    }
 
     /* ----------------- carreras.html -----------------  */
 
@@ -847,19 +839,12 @@ header#carreras-header img{
         padding:2px 5px !important;
         font-size:.6rem;
     }
-    /* .develop{
-        border:1px solid #fff;
-
-    } */
+    
     #nav-carreras .svg-carreras{
         width:20px;
-        /* padding:0; */
-        /* border:1px solid #000; */
+        
     }
-    /* .develop-carrera-arrow{ */
-        /* border:1px solid #000; */
-    /* } */
-
+    
     /* --------------------- Informacion ---------------------*/
     .cont-info-foto{
         padding: 20px;
@@ -889,12 +874,18 @@ header#carreras-header img{
         font-size:1.1rem;
     }
     /* --------------------- Navbar ---------------------*/
-
+    nav#nav-carreras .container{
+        padding:3px;
+    }
     nav li{
         padding:2px 3px !important;
-    
     }
-
+    nav#nav-carreras li a{
+        text-align:center;
+    }
+    nav#nav-carreras .ul-second {
+        right:-20px;
+    }
     /* --------------------- Ubicacion ---------------------*/
 
     .ubi-contenido{
