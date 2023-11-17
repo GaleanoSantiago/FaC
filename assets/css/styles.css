@@ -252,6 +252,9 @@ nav a:hover{
 .develop {
     position: relative;
 }
+#nav-carreras .develop {
+    gap:5px;
+}
 .develop svg{
     width:20px;
 }
@@ -278,47 +281,7 @@ nav a:hover{
     background-color: #CC0000;
 }
 
-/* 
-header nav{
-    position: fixed !important;
-    top: 0 !important; 
-    width:100%;
-    padding:0 !important;
-    min-height: 60px;
-    z-index: 1;
-    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
-}
-header nav, header .dropdown-menu{
-    background: var(--main-colour);
-}
 
-header nav .nav-link, header .dropdown-item{
-    color:var(--bs-light) !important;
-    transition:all ease .4s;
-}
-header .dropdown-item:hover{
-    transition:all ease .4s;
-    background:var(--secondary-colour);
-}
-
-header nav .dropdown{
-    width:40px !important;
-    display:flex;
-    justify-content:start;
-}
-
-header nav .nav-link{
-    margin-right:30px;
-    font-weight:bolder;
-    width:100%;
-    height: 60px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-}
-header nav .nav-link:hover{
-    background: var(--secondary-colour);
-} */
 header .btn-down{
     background: var(--main-colour);
     padding:12px 5px;
@@ -618,19 +581,7 @@ header#carreras-header img{
         justify-content:center;
     }
     /* ------- Navbar --------- */
-    /* .nav .dropdown-menu {
-        width: 400px;
-    }
     
-    .dropdown-menu a {
-        white-space: normal; 
-        width: 400px;
-    }
-    
-    .dropdown-menu li {
-        width: 100%; 
-    }
-     */
 }
 
 /* Tablets y smartphones MAS ESPECIFICO*/
@@ -661,29 +612,7 @@ header#carreras-header img{
         font-size:.75rem;
     }
 
-    /* header nav .nav-link{
-        width:100%;
-        height: auto;
-        padding:10px;
-
-        justify-content:start;
-    }
-    header nav .dropdown, header nav .dropdown.show{
-        width:100px !important;
-        
-    }
-    .dropdown-menu{
-        min-width: 590px; 
-    } 
     
-    .dropdown-menu a {
-        white-space: normal; 
-        width: 590px;
-    }
-    
-    .dropdown-menu li {
-        width: 100%; 
-    } */
     /* ------- Header --------- */
     header{
         padding: 50px 30px 5px 30px; /*top right bottom left*/
@@ -770,31 +699,11 @@ header#carreras-header img{
     nav .ul-second{
         top:60px;
     }
+    #nav-carreras .develop{
+        flex-direction:column;
+        gap:0;
 
-    /* header nav .nav-link{
-        width:100%;
-        height: auto;
-        padding:10px;
-
-        justify-content:start;
     }
-    header nav .dropdown, header nav .dropdown.show{
-        width:100px !important;
-        margin-left:0;
-        
-    }
-    .dropdown-menu{
-        min-width: 400px; 
-    } 
-    
-    .dropdown-menu a {
-        white-space: normal; 
-        width: 400px;
-    }
-    
-    .dropdown-menu li {
-        width: 100%; 
-    } */
 
     /* ------- Informacion --------- */
     .bloq-cont .cont-info-foto{
@@ -855,26 +764,21 @@ header#carreras-header img{
     /* --------------------- General ---------------------*/
     /* ----------- navbar ---------- */
 
-    /* nav{ */
-        /* position:fixed; */
-        /* top:auto; */
-        /* bottom:0 !important; */
-    /* } */
-    /* nav .develop svg{
-        transform:rotate(180deg) !important;
-    } */
     nav li{
         font-size:.65rem;
         padding:10px !important;
     }
     .ul-second {
         /* top:-370px !important; */
-        right:-90px;
+        right:-40px;
     }
-
-    /* nav li{
-        font-size:1rem;
+    
+    /* #nav-carreras .svg-carreras{
+        width:40px;
+        height:70px !important;
+        border:1px solid #000;
     } */
+
     p, .cont-btn-incripcion p, li{
         font-size:0.88rem;
     }
@@ -942,21 +846,19 @@ header#carreras-header img{
     nav li{
         padding:2px 5px !important;
         font-size:.6rem;
-    
     }
-    /* .ul-second {
-        top:-275px !important;
-        right:-90px;
-    } */
+    /* .develop{
+        border:1px solid #fff;
 
-    /* .dropdown-menu{
-        min-width: 300px; 
-    } 
-    
-    .dropdown-menu a {
-        white-space: normal;
-        width: 300px;
     } */
+    #nav-carreras .svg-carreras{
+        width:20px;
+        /* padding:0; */
+        /* border:1px solid #000; */
+    }
+    /* .develop-carrera-arrow{ */
+        /* border:1px solid #000; */
+    /* } */
 
     /* --------------------- Informacion ---------------------*/
     .cont-info-foto{
@@ -993,15 +895,6 @@ header#carreras-header img{
     
     }
 
-    /* .dropdown-menu{
-        min-width: 250px; 
-        margin-left:-30px;
-    }
-
-    .dropdown-menu a {
-        white-space: normal; 
-        width: 250px;
-    } */
     /* --------------------- Ubicacion ---------------------*/
 
     .ubi-contenido{
