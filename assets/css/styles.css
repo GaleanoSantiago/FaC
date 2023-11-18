@@ -880,7 +880,9 @@ header#carreras-header img{
         font-weight:bold;
     }
     /* ------------- Footer ---------------*/
-    
+    footer{
+        padding-top:40px;
+    }
     footer .contenido-footer{
         padding:0 20px;
     }
@@ -940,6 +942,7 @@ header#carreras-header img{
         font-size:1.2rem;
         font-weight:500;
     }
+    
     /* --------------------- Carreras ---------------------*/
 
     /* ----- boton de la preinscipcion -----*/
@@ -948,6 +951,11 @@ header#carreras-header img{
         font-weight:bold;
         font-size:1rem;
     }
+    .cont-btn-incripcion{
+        padding:20px 15px !important;  
+        /* border:1px solid #000;       */
+    }
+
 }
 
 /*Celulares angostos*/
