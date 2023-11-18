@@ -98,6 +98,7 @@
     --main-colour:var(--bordo-escarlata);
     --secondary-colour: var(--bordo-brillante);
     --third-colour: var(var(--white-bg));
+    --footer-color:#6E0000;
 }
 
 body{
@@ -106,7 +107,7 @@ body{
     max-width: 100% !important;
     overflow-x: hidden !important;
     scroll-behavior: smooth;
-    height:1000vh;
+    /* height:1000vh; */
     background:var(--white-bg-4);
 }
 
@@ -169,7 +170,7 @@ nav {
     position:fixed;
     top:0;
     left:0;
-    background-color: #8B0000;
+    background-color: var(--main-colour);
     padding-left: 2vw;
     color: #fff;
     height: 60px;
@@ -214,7 +215,7 @@ nav .nav-logo{
 }
 
 .cont-ul li:hover {
-    background-color: #CC0000;
+    background-color: var(--secondary-colour);
 }
 /* Para que el li de carreras y su dropdown esten unidos */
 nav .cont-ul .dropdown-lis{
@@ -273,12 +274,12 @@ nav a:hover{
     transform: translateX(-20px);
     border-bottom:solid 1px #fff ;
     text-align: center;
-    background-color: #8B0000;
+    background-color: var(--main-colour);
     font-size:.9rem;
 }
 
 .ul-second > li:hover {
-    background-color: #CC0000;
+    background-color: var(--secondary-colour);
 }
 
 
@@ -330,7 +331,7 @@ header .btn-down:hover svg.svg-arrow-down {
 .bloq-cont .miniseccion-calendario {
     padding:20px 0;
 }
-.bloq-cont .miniseccion-calendario h3{
+.bloq-cont .miniseccion-calendario h3 ,h3.subtitulo{
     text-align:center;
     color:var(--main-colour);
     text-transform: uppercase;
@@ -414,8 +415,77 @@ header .btn-down:hover svg.svg-arrow-down {
 #carreras .cont-btn-incripcion{
     padding:20px 0;
 }
+.cont-btn-incripcion ul{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    list-style: circle;
+}
+
 /* ------------------------------- Footer ------------------------------- */
 
+footer{
+    background:var(--footer-color);
+    color:var(--bs-light);
+}
+footer .cont-img-footer{
+    display:flex;
+    align-items:end;
+    justify-content:center;
+    gap:20px;
+    padding: 15px 0;
+    width:90%;
+    margin:auto;
+}
+footer .cont-img-footer img{
+    width:100px;
+}
+footer .cont-img-footer span{
+    font-size:1.2rem;
+}
+footer .info-footer{
+    text-align:justify;
+}
+footer a{
+    text-decoration:none;
+}
+footer .redes-footer .fa-instagram{
+    font-size:2.4rem;
+}
+footer .redes-footer a{
+    font-size:1.4rem;
+    color:var(--bs-light);
+
+}
+footer .contacto-footer ul{
+    list-style: none;
+    padding:0;
+}
+footer .contacto-footer li{
+    padding:10px 0;
+}
+footer .contacto-footer li .fa{
+    font-size:1.3rem;
+}
+footer .second-col-footer{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+footer .tercer-col-footer h4{
+    text-align:center;
+}
+footer .tercer-col-footer ul li{
+    padding:10px 0;
+}
+
+footer .copyright-footer{
+    background: #4B0000;
+    padding:10px 0 5px 0;
+}
+footer .copyright-footer p{
+    text-align:center;
+}
 .btn-scrollTop{
     text-decoration:none;
     position:fixed;
@@ -484,6 +554,7 @@ header#carreras-header img{
     align-items:center;
     /* border:1px solid #000; */
     gap:20px;
+    margin-top:40px;
 }
 
 .btn-incripcion{
@@ -633,7 +704,7 @@ header#carreras-header img{
     .bloq-cont .cont-info-foto img{
         width:80%;
     }
-    .bloq-cont .miniseccion-calendario h3{
+    .bloq-cont .miniseccion-calendario h3, h3.subtitulo{
         font-size:1.5rem;
         font-weight:500;
     }
@@ -712,7 +783,7 @@ header#carreras-header img{
     .bloq-cont .cont-info-foto img{
         width:80%;
     }
-    .bloq-cont .miniseccion-calendario h3{
+    .bloq-cont .miniseccion-calendario h3, h3.subtitulo{
         font-size:1.5rem;
         font-weight:500;
     }
@@ -810,7 +881,23 @@ header#carreras-header img{
     }
     /* ------------- Footer ---------------*/
     
+    footer .contenido-footer{
+        padding:0 20px;
+    }
+    footer .second-col-footer, footer .tercer-col-footer{
+        padding:20px 0;
+    }
 
+    footer .second-col-footer{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    footer .copyright-footer{
+        background: #4B0000;
+        padding:10px 0 5px 0;
+    }
     /* ----------------- carreras.html -----------------  */
 
     /* --------- Estructura Curricular --------- */
@@ -849,7 +936,7 @@ header#carreras-header img{
     .cont-info-foto{
         padding: 20px;
     }
-    .bloq-cont .miniseccion-calendario h3{
+    .bloq-cont .miniseccion-calendario h3, h3.subtitulo{
         font-size:1.2rem;
         font-weight:500;
     }
@@ -895,6 +982,12 @@ header#carreras-header img{
     }
     .ubi-contenido .mb-2{
         padding:0 5px;
+    }
+    /* --------------------- Footer ---------------------*/
+
+    footer .contenido-footer{
+        padding:0 10px;
+
     }
 }
 

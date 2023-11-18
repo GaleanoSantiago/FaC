@@ -113,7 +113,7 @@ const carreras = [
     },
 ];
 
-// Adaptando el id a los indices del array (0-carreras.lenght());
+// Adaptando el id a los indices del array (de 0 a carreras.lenght);
 id= id-1;
 // console.log(id);
 
