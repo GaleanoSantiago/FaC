@@ -467,7 +467,7 @@ footer .contacto-footer li{
 footer .contacto-footer li .fa{
     font-size:1.3rem;
 }
-footer .second-col-footer{
+footer .second-col-footer, footer .tercer-col-footer{
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
@@ -477,6 +477,7 @@ footer .tercer-col-footer h4{
 }
 footer .tercer-col-footer ul li{
     padding:10px 0;
+    text-align:justify;
 }
 
 footer .copyright-footer{
