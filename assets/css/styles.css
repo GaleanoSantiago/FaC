@@ -101,8 +101,8 @@
     --footer-color:#6E0000;
 }
 
-body{
-    font-family: sans-serif;
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     /* font-family: Merriweather,serif; */
     max-width: 100% !important;
     overflow-x: hidden !important;
