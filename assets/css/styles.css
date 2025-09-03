@@ -85,9 +85,9 @@
 
     /* Colores de la institucion */
     --bordo-escarlata: #8B0000;
-    --bordo-vino:#900020;
+    --bordo-vino:#610317;
     --bordo-cereza-oscura:#7B0000;
-    --bordo-brillante: #CC0000;
+    --bordo-brillante: #a02929;
 
     --white-bg: #F5F6F6;
     --white-bg-2: #FDFCFF;
@@ -95,7 +95,7 @@
     --white-bg-4: #e5e5e5;
 
     /* Colores en uso */
-    --main-colour:var(--bordo-escarlata);
+    --main-colour:var(--bordo-vino);
     --secondary-colour: var(--bordo-brillante);
     --third-colour: var(var(--white-bg));
     --footer-color:#6E0000;
@@ -104,6 +104,7 @@
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     /* font-family: Merriweather,serif; */
+    font-size: 14px;
     max-width: 100% !important;
     overflow-x: hidden !important;
     scroll-behavior: smooth;
@@ -425,7 +426,7 @@ header .btn-down:hover svg.svg-arrow-down {
 /* ------------------------------- Footer ------------------------------- */
 
 footer{
-    background:var(--footer-color);
+    background:var(--main-colour);
     color:var(--bs-light);
 }
 footer .cont-img-footer{
@@ -481,7 +482,7 @@ footer .tercer-col-footer ul li{
 }
 
 footer .copyright-footer{
-    background: #4B0000;
+    background: var(--bordo-vino);
     padding:10px 0 5px 0;
 }
 footer .copyright-footer p{
