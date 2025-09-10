@@ -1,0 +1,472 @@
+
+/* ===========================
+Paleta de colores institucionales
+   =========================== */
+:root{
+    /* Paleta principal */
+    --red-900: #560000;
+    --red-800: #8b0000;
+    --red-700: #e70000;
+    --red-600: #ff0000;
+    --red-500: #ff4949;
+    --red-400: #ff8b8b;
+    --red-300: #ffbbbb;
+    --red-200: #ffdada;
+    --red-100: #ffeeee;
+     --bg-50: #f4f4f5; /* fondo neutro */
+
+
+    /* Paleta secundaria */
+    --amber-900: #e29400;
+    --amber-800: #ffc107;
+    --amber-700: #ffdf1b;
+    --amber-600: #fff176;
+    --amber-500: #fff885;
+    --amber-400: #fffbc5;
+    --amber-300: #ffffea;
+
+    /* <PALETAS DE APOYO >*/
+
+    /* Naranjas */
+    --orange-900: #f95700;
+    --orange-800: #ff7407;
+    --orange-700: #ff942f;
+    --orange-600: #ffbc6b;
+    --orange-500: #ffd9a4;
+    --orange-400: #ffeed2;
+
+    /* Grises */
+    --gray-900: #3a3938;
+    --gray-800: #5f5d5b;
+    --gray-700: #706c6a;
+    --gray-600: #8b8785;
+    --gray-500: #b2afae;
+    --gray-400: #d2d1cf;
+    --gray-300: #f6f5f5;
+
+    /* Verdes*/
+    --green-900: #4d7c34;
+    --green-800: #659d45;
+    --green-700: #84b863;
+    --green-600: #a4cd89;
+    --green-500: #c8e1b5;
+    --green-400: #e3efd8;
+    --green-300: #f2f8ed;
+
+    /* Alias semánticos (útiles en el proyecto) */
+    --main-colour: var(--red-900);
+    --secondary-colour: var(--amber-900);
+    --white-bg-4: var(--bg-50);
+    --bs-light: #ffffff;
+    --bs-danger: var(--red-600);
+}
+
+
+/* ===========================
+   Global / Reset / Tipografía
+   =========================== */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  background: var(--bg-50);
+}
+
+/* ===========================
+   Navbar / Menú principal
+   =========================== */
+.navbar {
+  background: var(--bg-50);
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  color: var(--red-100);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: var(--main-colour);
+  color: var(--red-100);
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: var(--main-colour);
+  padding: 14px 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--red-800);
+  min-width: 180px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #ecf0f1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--red-200);
+  color: var(--main-colour);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===========================
+   Encabezado listado
+   =========================== */
+.titulo-listado {
+  margin: 30px 0 10px 20px;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+/* ===========================
+   Tabla: Listado de Alumnos
+   =========================== */
+.tabla-alumnos {
+  width: 90%;
+  margin: 0 5%;
+  border-collapse: collapse;
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--gray-900);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+.tabla-alumnos th {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: var(--gray-600);
+  color: var(--gray-300);
+  font-weight: 600;
+}
+
+.tabla-alumnos td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.tabla-alumnos tr:nth-child(even) {
+  background: #f4f6fa;
+}
+
+/* Botones generales en tabla */
+button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-family: "Poppins", Arial, sans-serif;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  opacity: 0.95;
+}
+
+.btn-ver {
+  background: var(--green-700);
+}
+
+.btn-editar {
+  background: var(--orange-700);
+}
+
+.btn-eliminar {
+  background: var(--red-500);
+}
+
+.btn-ver:hover    { background: var(--green-900); }
+.btn-editar:hover { background: var(--orange-800); }
+.btn-eliminar:hover { background: var(--red-600); }
+
+
+
+/* ===========================
+   Modales personalizados
+   =========================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(44, 62, 80, 0.7);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);
+  text-align: center;
+}
+
+.modal-header {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.modal-btn {
+  margin: 10px 5px 0 5px;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+}
+
+.btn-cerrar {
+  background: #2980b9;
+}
+
+.btn-confirmar {
+  background: #27ae60;
+}
+
+.btn-cancelar {
+  background: #c0392b;
+}
+
+.modal-error {
+  color: #c0392b;
+  margin-top: 10px;
+}
+
+/* ===========================
+   Layout: Formas en fila
+   (Login + Carga alumno)
+   =========================== */
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Contenedores: login y carga */
+.login-container,
+.alumno-container {
+  width: 350px;
+  background: var(--gray-300);
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15);
+  padding: 30px 25px;
+  text-align: center;
+}
+
+.login-container h3,
+.alumno-container h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ===========================
+   Formulario: Login
+   =========================== */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #c7c9c6;
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.btn-ingresar {
+  background: var(--main-colour);
+  color: var(--amber-900);
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.olvide-pass {
+  margin-top: 15px;
+}
+
+.olvide-pass a {
+  color: #0091ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ===========================
+   Formulario: Carga de Alumno
+   =========================== */
+.alumno-container table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: transparent;
+}
+
+.alumno-container td {
+  padding: 8px;
+  border: none;
+  text-align: left;
+}
+
+.alumno-container input {
+  width: 98%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 2px;
+  font-size: 15px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.acciones-form {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Botones del formulario de alumno */
+.btn-guardar {
+  background: #27ae60;
+}
+
+.btn-guardar:hover {
+  background: #219150;
+}
+
+.btn-retroceso {
+  background: #7f8c8d;
+}
+
+.btn-retroceso:hover {
+  background: #34495e;
+}
+
+.btn-cancelar {
+  background: #c0392b;
+}
+
+.btn-cancelar:hover {
+  background: #a93226;
+}
+
+/* Mensajes del formulario */
+#mensajeAlumno {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.msg-exito {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.msg-error {
+  color: var(--red-500);
+  background-color: var(--red-200);
+  padding: 8px;
+  font-size: 0.9rem;
+ padding-left: 60px;
+ padding-right:  60px;
+
+}
+
+/* ===========================
+   Card: Noticias
+   =========================== */
+.card-noticia {
+  width: 370px;
+  margin: 0 auto 40px auto;
+  background: #f4f6fa;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15);
+  padding: 25px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-noticia {
+  width: 90%;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.1);
+}
+
+.titulo-noticia {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.desc-noticia {
+  color: #34495e;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.btn-leer-mas {
+  background: #610404;
+  color: #ff9d1c;
+  border: none;
+  padding: 10px 0;
+  width: 70%;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 500;
+}
