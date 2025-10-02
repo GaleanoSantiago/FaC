@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carreras - ISFDCyT</title>
+    <link rel="icon" href="<?php echo e(asset('img/logo.png')); ?>">
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
+    <!-- Animaciones AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS Propios -->
+    <link rel="stylesheet" href="<?php echo e(asset('css/styles.css')); ?>">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/52ab3134b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="carreras-header">
+        
+        <nav class="" id="nav-carreras">
+            <div class="container">
+                <div class="cont-nav-logo">
+                    <!--<img src="./assets/img/logo.png" class="nav-logo" alt="">-->
+                </div>
+                <ul class="cont-ul ">
+                    <li><a href="<?php echo e(route('home')); ?>"> 
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.18753 11.3788C4.03002 11.759 4 
+                                11.9533 4 12V20.0018C4 20.5529 4.44652 21 5 21H8V15C8 13.8954 8.89543 13 10 13H14C15.1046 13 16 13.8954 16 
+                                15V21H19C19.5535 21 20 20.5529 20 20.0018V12C20 11.9533 19.97 11.759 19.8125 11.3788C19.6662 11.0256 19.4443 
+                                10.5926 19.1547 10.1025C18.5764 9.1238 17.765 7.97999 16.8568 6.89018C15.9465 5.79788 14.9639 4.78969 14.0502 
+                                4.06454C13.5935 3.70204 13.1736 3.42608 12.8055 3.2444C12.429 3.05862 12.1641 3 12 3C11.8359 3 11.571 3.05862 
+                                11.1945 3.2444C10.8264 3.42608 10.4065 3.70204 9.94978 4.06454C9.03609 4.78969 8.05348 5.79788 7.14322 6.89018C6.23505 
+                                7.97999 5.42361 9.1238 4.8453 10.1025C4.55568 10.5926 4.33385 11.0256 4.18753 11.3788ZM10.3094 1.45091C10.8353 
+                                1.19138 11.4141 1 12 1C12.5859 1 13.1647 1.19138 13.6906 1.45091C14.2248 1.71454 14.7659 2.07921 15.2935 2.49796C16.3486 
+                                3.33531 17.4285 4.45212 18.3932 5.60982C19.3601 6.77001 20.2361 8.0012 20.8766 9.08502C21.1963 9.62614 21.4667 10.1462 
+                                21.6602 10.6134C21.8425 11.0535 22 11.5467 22 12V20.0018C22 21.6599 20.6557 23 19 23H16C14.8954 23 14 22.1046 14 
+                                21V15H10V21C10 22.1046 9.10457 23 8 23H5C3.34434 23 2 21.6599 2 20.0018V12C2 11.5467 2.15748 11.0535 2.33982 10.6134C2.53334 
+                                10.1462 2.80369 9.62614 3.12345 9.08502C3.76389 8.0012 4.63995 6.77001 5.60678 5.60982C6.57152 4.45212 7.65141 3.33531 8.70647 
+                                2.49796C9.2341 2.07921 9.77521 1.71454 10.3094 1.45091Z" fill=""></path> 
+                            </g>
+                        </svg>
+                        VOLVER A INICIO
+                        </a>
+                    </li>
+                    <li><a href="#informacion-carrera">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-info">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier"> 
+                                <path d="M12 17V11" stroke="#ffff" stroke-width="1.5" stroke-linecap="round"></path> 
+                                <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="#ffff"></circle> 
+                                <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 
+                                22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke="#ffff" stroke-width="1.5" stroke-linecap="round"></path> 
+                            </g>
+                        </svg>
+                        INFORMACIÓN
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#estructura-curricular">
+                            <svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g transform="translate(1 1)">
+                                        <g>
+                                            <g>
+                                                <path d="M442.733-1H152.6h-51.2C77.507-1,58.733,17.773,58.733,41.667v426.667C58.733,492.227,77.507,511,101.4,511h341.333 
+                                                    c5.12,0,8.533-3.413,8.533-8.533V434.2V7.533C451.267,2.413,447.853-1,442.733-1z M434.2,425.667H161.133v-409.6H434.2V425.667z 
+                                                    M101.4,16.067h42.667v409.6H101.4c-0.615,0-1.229,0.016-1.843,0.045c-8.953,0.365-17.12,3.371-23.757,8.285V41.667 
+                                                    C75.8,27.16,86.893,16.067,101.4,16.067z M434.2,493.933H101.4c-14.507,0-25.6-11.093-25.6-25.6c0-14.507,11.093-25.6,25.6-25.6 
+                                                    h51.2h281.6V493.933z"></path>
+                                                <path
+                                                    d="M101.4,468.333c0,5.12,3.413,8.533,8.533,8.533H408.6c5.12,0,8.533-3.413,8.533-8.533s-3.413-8.533-8.533-8.533H109.933 C104.813,459.8,101.4,463.213,101.4,468.333z">
+                                                </path>
+                                                <path
+                                                    d="M297.667,135.533c-34.987,0-66.56,32.427-68.267,68.267c-0.853,17.067,5.12,33.28,15.36,45.227 c11.947,15.36,18.773,31.573,18.773,48.64V331.8v8.533c0,18.773,15.36,34.133,34.133,34.133c18.773,0,34.133-15.36,34.133-34.133 
+                                                    V331.8v-30.099c0.55-1.169,0.853-2.525,0.853-4.035c0-17.067,5.973-34.133,17.067-46.933 
+                                                    c11.093-11.947,17.067-28.16,17.067-44.373c0-19.627-8.533-38.4-22.187-52.053C331.8,142.36,314.733,135.533,297.667,135.533z M314.733,323.267H280.6V306.2h34.133V323.267z M297.667,357.4c-9.387,0-17.067-7.68-17.067-17.067h34.133 C314.733,349.72,307.053,357.4,297.667,357.4z M336.067,239.64c-11.947,14.507-19.627,31.573-21.333,49.493h-34.987 c-1.707-17.92-9.387-34.987-21.333-51.2c-8.533-9.387-12.8-21.333-11.947-34.133c0.853-27.307,24.747-51.2,51.2-52.053 c11.947,0,24.747,5.12,34.133,14.507c11.093,10.24,17.067,25.6,17.067,40.107C348.867,218.307,343.747,230.253,336.067,239.64z">
+                                                </path>
+                                                <path
+                                                    d="M297.667,118.467c5.12,0,8.533-3.413,8.533-8.533v-51.2c0-5.12-3.413-8.533-8.533-8.533s-8.533,3.413-8.533,8.533v51.2 C289.133,115.053,292.547,118.467,297.667,118.467z">
+                                                </path>
+                                                <path
+                                                    d="M335.213,125.293c1.707,0.853,3.413,1.707,5.12,1.707c2.56,0,5.12-0.853,6.827-3.413l25.6-34.133 c2.56-3.413,1.707-9.387-1.707-11.947c-3.413-2.56-9.387-1.707-11.947,1.707l-25.6,34.133 C330.947,116.76,331.8,122.733,335.213,125.293z">
+                                                </path>
+                                                <path d="M222.573,89.453l25.6,34.133C249.88,126.147,252.44,127,255,127c1.707,0,3.413-0.853,5.12-1.707 c3.413-2.56,4.267-8.533,1.707-11.947l-25.6-34.133c-2.56-3.413-8.533-4.267-11.947-1.707 
+                                                        C220.867,80.067,220.013,86.04,222.573,89.453z"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            PLAN DE ESTUDIO
+                        </a>
+                    </li>
+                    <div class="dropdown-lis">
+                    
+                    <li class="develop">
+                        
+                        <svg class="svg-carreras" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier"> <path d="M12 4.5L2 9.5L12 14.5L22 9.5L12 4.5Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                            <path d="M19 11V16L12 19.5L5 16V11" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                            <path d="M22 14V18" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                            </g>
+                            </svg>
+                        
+                        <div class="develop-carrera-arrow">
+                        CARRERAS
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier"> 
+                                <path d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z" fill="#fff"></path> 
+                            </g>
+                        </svg>
+                        </div>
+                        <ul class="ul-second">
+                            <li><a href="<?php echo e(route('carreras')); ?>?id=1">PROFESORADO EN INGLÉS</a></li>
+                            <li><a href="<?php echo e(route('carreras')); ?>?id=2">TECNICATURA SUPERIOR EN DESARROLLO DE SOFTWARE</a></li>
+                            <li><a href="<?php echo e(route('carreras')); ?>?id=3">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS Y REDES</a></li>
+                            <li><a href="<?php echo e(route('carreras')); ?>?id=4">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE EMPRESAS CON ORIENTACIÓN A PYMES</a></li>
+                            <li><a href="<?php echo e(route('carreras')); ?>?id=5">PROFESORADO EN ECONOMÍA</a></li>
+                            <li><a href="<?php echo e(route('carreras')); ?>?id=6">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
+                        </ul>
+
+                    </li>
+                    </div>
+                    
+                    <!-- <li><a href="#">CONTACT</a></li> -->
+                </ul>
+            </div>
+        </nav>
+        <img src="<?php echo e(asset('img/logo.png')); ?>" alt="logo felix atilio cabrera">
+        <h1 id="titulo-carrera"></h1>
+        <div class="container-btn-down">
+            <a href="#informacion-carrera" class="btn-down">
+                <svg class="svg-arrow-down" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"> <g> 
+                        <path d="M50.5,19.881c-1.104,0-2,0.896-2,2V72.17L33.193,56.609c-0.781-0.781-1.922-0.781-2.703,0 c-0.781,0.78-0.719,2.047,0.062,2.828l18.883,18.857c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l18.857-18.857 c0.781-0.781,0.783-2.048,0.002-2.828c-0.781-0.781-2.296-0.781-3.077,0L52.5,71.933V21.881C52.5,20.776,51.604,19.881,50.5,19.881 z"></path> 
+                    </g> 
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id="informacion-carrera" class="">
+                <div class="container bloq-cont">
+                    <div class="row" id="contenedorDinamico">
+
+                    </div>
+                    <!-- <h2>Informacion sobre la carrera</h2>
+                    <h5><span class="text-resaltado">Nombre:</span> Tecnicatura Superior en Desarrollo de Software</h5>
+                    <h5><span class="text-resaltado">Duración:</span> 3 años</h5>
+                    <h5><span class="text-resaltado">Clasificación:</span> Tecnicatura</h5>
+                    <h5><span class="text-resaltado">Horario:</span> 19:00 a 23:00 hs</h5>
+                    <h5><span class="text-resaltado">Descripcion:</span></h5>
+                    <p>
+                        La Tecnicatura Superior en Desarrollo de Software, especializada 
+                        en Desarrollo Web, es un programa de tres años que forma a profesionales 
+                        en programación, diseño web y gestión de proyectos. Los estudiantes 
+                        adquieren habilidades técnicas en programación web, bases de datos y 
+                        frameworks, además de aprender sobre diseño web y usabilidad. Al graduarse, 
+                        estarán preparados para desarrollar sitios y aplicaciones web, gestionar 
+                        proyectos de desarrollo y mantener y optimizar sitios existentes. 
+                        Esta carrera ofrece una sólida base en tecnología web y prepara a los 
+                        graduados para roles en desarrollo y diseño web.
+                    </p> -->
+                    <div class="row">
+                        <div class="cont-btn-incripcion">
+                            <h3 class="subtitulo">PREINSCRIPCIÓN</h3>
+                            <ul>
+                                <li>La preinscripción online se encuentra disponible desde noviembre hasta enero. <span class="text-resaltado">Actualmente no se encuentra habilitado.</span></li>
+                                <li>Todas las carreras pueden preinscribirse a través de la misma página web.</li>
+                                <li>La preinscripción a las carreras terciarias se realiza únicamente desde el sitio web.</li>
+                                <li>Si desea conocer mas información acerca de las carreras puede acercarse a la institución
+                                    a partir de las 19:00 hs. 
+                                </li>
+                            </ul>
+                            <a href="https://www.formosa.gob.ar/educacion/inscripcioneducacionsuperior" target="_blank" class="btn-incripcion">
+                                Preinscripción Online
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                </div>    
+            
+        </section>
+        <section id="estructura-curricular" class="bg-white-1">
+            <div class="container">
+                <h2>Plan de Estudio</h2>
+                <div class="img-estructura-curr" id="cont-img-curricular">
+                    <!-- <img src="./assets/img/plansoft.png" alt="Estructura curricular" id="img-curricular"> -->
+                </div>
+                
+                <!-- Modal para la imagen -->
+                <div id="imageModal" class="modal">
+                    <span class="close">&times;</span>
+                    <a id="downloadBtn"  
+                    download="estructura_curricular.png" class="download-button">
+                        Descargar Foto
+                    </a>
+                    <img class="modal-content" id="modalImage">
+                    
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Boton para volver a arriba -->
+        <a href="#" class="btn-scrollTop" id="btnScrollTop">
+            <svg viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier"> 
+                <title>arrow_up [#337]</title> 
+                <desc>Created with Sketch.</desc> 
+                <defs> </defs> 
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> 
+                <g id="Dribbble-Light-Preview" transform="translate(-260.000000, -6684.000000)"> 
+                <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M223.707692,6534.63378 L223.707692,6534.63378 C224.097436,6534.22888 224.097436,6533.57338 223.707692,6533.16951 L215.444127,6524.60657 C214.66364,6523.79781 213.397472,6523.79781 212.616986,6524.60657 L204.29246,6533.23165 C203.906714,6533.6324 203.901717,6534.27962 204.282467,6534.68555 C204.671211,6535.10081 205.31179,6535.10495 205.70653,6534.69695 L213.323521,6526.80297 C213.714264,6526.39807 214.346848,6526.39807 214.737591,6526.80297 L222.294621,6534.63378 C222.684365,6535.03868 223.317949,6535.03868 223.707692,6534.63378" id="arrow_up-[#337]"> 
+                </path> 
+                </g> 
+                </g> 
+                </g> 
+                </g>
+                </svg>
+        </a>
+        <section class="contenido-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+                        <div class="cont-img-footer">
+                            <img src="<?php echo e(asset('img/logo.png')); ?>" alt="Logo escudo felix atilio cabrera">
+                            <p class=""><span class="">Instituto Superior de Formación Docente Continua y Técnica</span> <br> Felix Atilio Cabrera</p>
+                        </div>
+                        <div class="info-footer">
+                            <p>
+                                El Instituto Superior de Formación Docente Continua y Técnica 
+                                "Félix Atilio Cabrera" de gestión Estatal, con más de cuatro 
+                                décadas de experiencia, cumple un papel fundamental en la 
+                                formación de niños, jóvenes y adultos en la provincia de Formosa. 
+                                Su misión principal es proporcionar educación de calidad, capacitación 
+                                docente y técnica. Busca equipar a los estudiantes con las habilidades 
+                                necesarias para desempeñarse eficazmente como docentes, abarcando el diseño 
+                                y ejecución de planes de estudio, la evaluación del rendimiento estudiantil, 
+                                y la promoción de un entorno educativo inclusivo y colaborativo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 second-col-footer">
+                        <div class="redes-footer">
+                            <a href="https://www.instagram.com/isfdyt_fac/" target="_blank" 
+                                title="Instagram Felix Atilio Cabrera">
+                                <i class="fa fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                        <div class="contacto-footer">
+                            <ul>
+                                <li><i class="fa fa-location-dot"></i> Formosa Capital - Barrio Don Bosco - Cordoba 1125</li>
+                                <li><i class="fa fa-phone"></i> 555 555 555</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12 tercer-col-footer">
+                        <h4>CARRERAS TERCIARIAS</h4>
+                        <ul>
+                            <li>La preinscripción online se encuentra disponible desde noviembre hasta enero.</li>
+                            <li>Todas las carreras pueden preinscribirse a través de la misma página web.</li>
+                            <li>La preinscripción a las carreras terciarias se realiza únicamente desde el sitio web.</li>
+                            <li>Si desea conocer mas información acerca de las carreras puede acercarse a la institución
+                                a partir de las 19:00 hs. 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copyright-footer">
+            <div class="container-fluid">
+                <p>Sitio Web Desarrollado por <a href="https://galeanosantiago.github.io/Portfolio/" target="_blank" class="text-warning">Galeano Santiago</a> </p>
+            </div>
+        </section>
+    </footer>
+    <!-- JS Propios -->
+    <script src="<?php echo e(asset('js/front.js')); ?>"></script>
+
+    <!-- JS de Carreras -->
+    <script src="<?php echo e(asset('js/carreras.js')); ?>"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+    <!-- Animaciones AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        /*Inicializacion*/
+        AOS.init({
+            delay: 150,
+        });
+    </script>
+</body>
+</html><?php /**PATH C:\xampp\htdocs\proyecto_felix\resources\views/carreras.blade.php ENDPATH**/ ?>
