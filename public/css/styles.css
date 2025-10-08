@@ -99,6 +99,63 @@
     --secondary-colour: var(--bordo-brillante);
     --third-colour: var(var(--white-bg));
     --footer-color:#6E0000;
+
+    /* Paleta principal */
+    --red-900: #560000;
+    --red-800: #8b0000;
+    --red-700: #e70000;
+    --red-600: #ff0000;
+    --red-500: #ff4949;
+    --red-400: #ff8b8b;
+    --red-300: #ffbbbb;
+    --red-200: #ffdada;
+    --red-100: #ffeeee;
+     --bg-50: #f4f4f5; /* fondo neutro */
+
+
+    /* Paleta secundaria */
+    --amber-900: #e29400;
+    --amber-800: #ffc107;
+    --amber-700: #ffdf1b;
+    --amber-600: #fff176;
+    --amber-500: #fff885;
+    --amber-400: #fffbc5;
+    --amber-300: #ffffea;
+
+    /* <PALETAS DE APOYO >*/
+
+    /* Naranjas */
+    --orange-900: #f95700;
+    --orange-800: #ff7407;
+    --orange-700: #ff942f;
+    --orange-600: #ffbc6b;
+    --orange-500: #ffd9a4;
+    --orange-400: #ffeed2;
+
+    /* Grises */
+    --gray-900: #3a3938;
+    --gray-800: #5f5d5b;
+    --gray-700: #706c6a;
+    --gray-600: #8b8785;
+    --gray-500: #b2afae;
+    --gray-400: #d2d1cf;
+    --gray-300: #f6f5f5;
+
+    /* Verdes*/
+    --green-900: #4d7c34;
+    --green-800: #659d45;
+    --green-700: #84b863;
+    --green-600: #a4cd89;
+    --green-500: #c8e1b5;
+    --green-400: #e3efd8;
+    --green-300: #f2f8ed;
+
+ /* Alias semánticos (útiles en el proyecto) */
+    /* --main-colour: var(--red-900);
+    --secondary-colour: var(--amber-900);*/
+    --white-bg-4: var(--bg-50);
+    --bs-light: #ffffff;
+    --bs-danger: var(--red-600); 
 }
 
 body{
@@ -357,6 +414,8 @@ header .btn-down:hover svg.svg-arrow-down {
 .img-index-modal{
     cursor:pointer;
 }
+
+
 /* ------------------------------- Ubicacion ------------------------------- */
 
 #ubicacion iframe{
@@ -405,9 +464,11 @@ header .btn-down:hover svg.svg-arrow-down {
 }
 
 .card-carreras .card-body-carrera{
-    padding:10px;
+    padding:10px 2px;
+    
 }
-#carreras a{
+
+#carreras a, #noticias a{
     text-decoration: none;
     color:var(--main-colour);
     text-align:center;
@@ -420,6 +481,55 @@ header .btn-down:hover svg.svg-arrow-down {
     flex-direction:column;
     gap:20px;
     list-style: circle;
+}
+
+
+/* ------------------------------- Noticias ------------------------------- */
+
+/* .container-news{
+
+} */
+
+
+.container-btn{
+    display: flex;
+    justify-content: center;
+
+}
+/* Cards para noticias */
+
+
+.card-news{
+    width:300px;
+
+    height:auto;
+    min-height:450px;
+    padding:0;
+}
+#noticias .card-body-carrera h5{
+    font-size:1.05rem;
+    font-weight: 700;
+}
+#noticias .card-news .card-body-carrera{   
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:15px 10px;
+    padding-bottom:0; 
+}
+.card-news .card-body-carrera p{
+    color:var(--gray-700);
+}
+
+.btn-main{
+    background:var(--red-900);
+    transition: all .4s ease-in-out;
+    color:var(--white-bg-4) !important;
+}
+.btn-main:hover{
+    transition: all .4s ease-in-out;
+    background:var(--red-800);
 }
 
 /* ------------------------------- Footer ------------------------------- */

@@ -262,6 +262,78 @@
                     
                 </div>
         </section>
+        <!------------------------------------------ Noticias ------------------------------------------>
+        <section id="noticias">
+        <div class="container">
+                <h2>Noticias</h2>
+                <div class="row container-news">
+                            <div class="card-carreras card-news">
+                                <div class="img-card-carrera ">
+                                    <img src="<?php echo e(asset('img/ingles.jpg')); ?>" alt="Profesorado de inglés Felix atilio cabrera">
+                                    
+                                </div>
+                                <div class="card-body-carrera ">
+                                    <h5>El Instituto Félix inaugura su nuevo laboratorio de ciencias modernas</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!</p>
+                                    <div class="container-btn">
+                                        <a href="" class="btn btn-main">Seguir Leyendo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-carreras card-news">
+                                <div class="img-card-carrera ">
+                                    <img src="<?php echo e(asset('img/software.jpg')); ?>" alt="Tecnicatura Superior en Desarrollo de Software">
+                                </div>
+                                <div class="card-body-carrera ">
+                                    <h5>Estudiantes del último año destacan en la Feria Regional de Innovación</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!</p>
+                                    <div class="container-btn">
+                                        <a href="" class="btn btn-main">Seguir Leyendo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-carreras card-news">
+                                <div class="img-card-carrera ">
+                                    <img src="<?php echo e(asset('img/redes.jpg')); ?>"  alt="Tecnicatura Superior en Administración de Sistemas y Redes">
+                                </div>
+                                <div class="card-body-carrera ">
+                                    <h5>Campaña ecológica: alumnos promueven el reciclaje en toda la comunidad</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!</p>
+                                    <div class="container-btn">
+                                        <a href="" class="btn btn-main">Seguir Leyendo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-carreras card-news">
+                                <div class="img-card-carrera ">
+                                    <img src="<?php echo e(asset('img/pymes.jpg')); ?>" alt="Tecnicatura Superior en Administración de Empresas con Orientación a PyMES">
+                                </div>
+                                <div class="card-body-carrera ">
+                                    <h5>Se abren las inscripciones para los cursos extracurriculares 2025</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!</p>
+                                    <div class="container-btn">
+                                        <a href="" class="btn btn-main">Seguir Leyendo</a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                </div>
+                <div class="cont-btn-incripcion bloq-cont">
+                    <h3 class="subtitulo">PREINSCRIPCIÓN A LAS CARRERAS</h3>
+                    <ul>
+                        <li>La preinscripción online se encuentra disponible desde noviembre hasta enero. <span class="text-resaltado">Actualmente no se encuentra habilitado.</span></li>
+                        <li>Todas las carreras pueden preinscribirse a través de la misma página web.</li>
+                        <li>La preinscripción a las carreras terciarias se realiza únicamente desde el sitio web.</li>
+                        <li>Si desea conocer mas información acerca de las carreras puede acercarse a la institución
+                            a partir de las 19:00 hs. 
+                        </li>
+                    </ul>
+                    <a href="https://www.formosa.gob.ar/educacion/inscripcioneducacionsuperior" target="_blank" class="btn-incripcion">
+                        Preinscripción Online
+                    </a>
+                </div>
+            </div>
+        </section>
         <!------------------------------------------ Ubicacion ------------------------------------------>
         <section id="ubicacion" class="">
             <div class="container">
