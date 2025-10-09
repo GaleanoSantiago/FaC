@@ -243,13 +243,7 @@
                         El Jardín de Infantes Funciona en Horarios del Turno Mañana y Tarde en 
                         su propio edificio incesando por la calle Fortín Yunka 1.190
                     </p>
-                    <div class="miniseccion-calendario">
-                        <h3>Calendario Escolar 2023 Nivel Superior</h3>
-                        <div class="cont-foto-calendario">
-                            <img src="{{ asset('img/calendarioEscolar.webp') }}" alt="Calendario Escolar 2023" class="img-index-modal">
-                            
-                        </div>
-                    </div>
+                   
                 </div>
                 <!-- Modal para la imagen -->
                 <div id="imageModal" class="modal">
