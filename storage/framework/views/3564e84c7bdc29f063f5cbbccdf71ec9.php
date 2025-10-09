@@ -243,13 +243,7 @@
                         El Jardín de Infantes Funciona en Horarios del Turno Mañana y Tarde en 
                         su propio edificio incesando por la calle Fortín Yunka 1.190
                     </p>
-                    <div class="miniseccion-calendario">
-                        <h3>Calendario Escolar 2023 Nivel Superior</h3>
-                        <div class="cont-foto-calendario">
-                            <img src="<?php echo e(asset('img/calendarioEscolar.webp')); ?>" alt="Calendario Escolar 2023" class="img-index-modal">
-                            
-                        </div>
-                    </div>
+                   
                 </div>
                 <!-- Modal para la imagen -->
                 <div id="imageModal" class="modal">
@@ -261,6 +255,101 @@
                     <img class="modal-content" id="modalImage">
                     
                 </div>
+        </section>
+        <!------------------------------------------ Noticias ------------------------------------------>
+        <section id="noticias">
+            <div class="container">
+                <h2>Ultimas Noticias</h2>
+                <div class="row container-news">
+                    <div class="card-carreras card-news">
+                        <div class="img-card-carrera ">
+                            <img src="<?php echo e(asset('img/lab.jpg')); ?>" alt="Profesorado de inglés Felix atilio cabrera">
+                            
+                        </div>
+                        <div class="card-body-carrera ">
+                            <div class="container-fecha">
+                                <span class="news-fecha">08-10-2025</span>
+
+                            </div>
+                            <h5>El Instituto Félix inaugura su nuevo laboratorio de ciencias modernas</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
+                            <div class="container-btn">
+                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-carreras card-news">
+                        <div class="img-card-carrera ">
+                            <img src="<?php echo e(asset('img/feria.jpeg')); ?>" alt="Tecnicatura Superior en Desarrollo de Software">
+                        </div>
+                        <div class="card-body-carrera ">
+                            <div class="container-fecha">
+                                <span class="news-fecha">21-09-2025</span>
+
+                            </div>
+                            <h5>Estudiantes del último año destacan en la Feria Regional de Innovación</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
+                            <div class="container-btn">
+                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-carreras card-news">
+                        <div class="img-card-carrera ">
+                            <img src="<?php echo e(asset('img/ecologico.jpg')); ?>"  alt="Tecnicatura Superior en Administración de Sistemas y Redes">
+                        </div>
+                        <div class="card-body-carrera ">
+                            <div class="container-fecha">
+                                <span class="news-fecha">15-09-2025</span>
+
+                            </div>
+                            <h5>Campaña ecológica: alumnos promueven el reciclaje en toda la comunidad</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
+                            <div class="container-btn">
+                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-carreras card-news">
+                        <div class="img-card-carrera ">
+                            <img src="<?php echo e(asset('img/instituto.jpg')); ?>" alt="Tecnicatura Superior en Administración de Empresas con Orientación a PyMES">
+                        </div>
+                        <div class="card-body-carrera ">
+                            <div class="container-fecha">
+                                <span class="news-fecha">10-09-2025</span>
+
+                            </div>
+                            <h5>Se abren las inscripciones para los cursos extracurriculares 2025</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
+                            <div class="container-btn">
+                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row container-enlace">
+                    <a href="#noticias" class="enlace_pag_noticias">Ver Más Noticias <i class="fa-solid fa-chevron-right fa"></i></a>
+                </div>
+                <div class="cont-btn-incripcion bloq-cont">
+                    <h3 class="subtitulo">PREINSCRIPCIÓN A LAS CARRERAS</h3>
+                    <ul>
+                        <li>La preinscripción online se encuentra disponible desde noviembre hasta enero. <span class="text-resaltado">Actualmente no se encuentra habilitado.</span></li>
+                        <li>Todas las carreras pueden preinscribirse a través de la misma página web.</li>
+                        <li>La preinscripción a las carreras terciarias se realiza únicamente desde el sitio web.</li>
+                        <li>Si desea conocer mas información acerca de las carreras puede acercarse a la institución
+                            a partir de las 19:00 hs. 
+                        </li>
+                    </ul>
+                    <a href="https://www.formosa.gob.ar/educacion/inscripcioneducacionsuperior" target="_blank" class="btn-incripcion">
+                        Preinscripción Online
+                    </a>
+                </div>
+            </div>
         </section>
         <!------------------------------------------ Ubicacion ------------------------------------------>
         <section id="ubicacion" class="">
