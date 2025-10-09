@@ -171,6 +171,7 @@
                 </ul>
             </div>
         </nav>
+        <!----------------------------------------- CARRUSEL----------------------------------------->
        <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -179,13 +180,16 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="{{ asset('img/instituto2.jpg') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/instituto_slide.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="{{ asset('img/instituto2.jpg') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/inscripcion_slide.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="{{ asset('img/instituto2.jpg') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/software_slide.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{{ asset('img/ingles2_slide.png') }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
