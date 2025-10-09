@@ -136,7 +136,7 @@ main section p{
 
 /* ------------------------------- Header ------------------------------- */
 
-header{
+/*header{
     height:90vh;
     padding: 50px 20px 5px 20px;
     display:flex;
@@ -145,7 +145,7 @@ header{
     align-items:center;
     background: linear-gradient(rgba(5,7,8, 0.4), rgba(5,7,8, 0.6)), url(./../img/instituto3.png);
     /*Parallax*/
-    background-attachment: fixed;
+   /* background-attachment: fixed;
     background-size:cover;
     background-position:center;
     background-repeat: repeat;
