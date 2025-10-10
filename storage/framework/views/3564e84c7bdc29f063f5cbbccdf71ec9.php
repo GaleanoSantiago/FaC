@@ -261,7 +261,7 @@
             <div class="container">
                 <h2>Ultimas Noticias</h2>
                 <div class="row container-news">
-                    <div class="card-carreras card-news">
+                    <!-- <div class="card-carreras card-news">
                         <div class="img-card-carrera ">
                             <img src="<?php echo e(asset('img/lab.jpg')); ?>" alt="Profesorado de inglés Felix atilio cabrera">
                             
@@ -278,7 +278,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="card-carreras card-news">
                         <div class="img-card-carrera ">
                             <img src="<?php echo e(asset('img/feria.jpeg')); ?>" alt="Tecnicatura Superior en Desarrollo de Software">
@@ -404,7 +404,7 @@
             </div>
         </section>
         <!------------------------------------------ Carreras ------------------------------------------>
-        <section id="carreras">
+        <section id="carreras" class="d-none">
             <div class="container">
                 <h2>Carreras</h2>
                 <div class="row">
@@ -496,6 +496,87 @@
                         Preinscripción Online
                     </a>
                 </div>
+            </div>
+        </section>
+        <!------------------------------------------ Eventos ------------------------------------------>
+        <section id="eventos">
+            <div class="container">
+                <h2>Eventos</h2>
+                <div class="row container-news">
+                    <div class="descripcion">
+                        <p>En esta sección vas a encontrar las actividades más importantes que se realizan en 
+                            nuestro Instituto Superior: jornadas académicas, capacitaciones, talleres, actos 
+                            institucionales y encuentros con la comunidad educativa.</p>
+                    </div>
+                    <div class="card-carreras card-evento">
+                        <div class="img-card-carrera ">
+                            <img src="<?php echo e(asset('img/evento1.jpg')); ?>" alt="Profesorado de inglés Felix atilio cabrera">
+                            
+                        </div>
+                        <div class="card-body-carrera ">
+                            <div class="container-fecha">
+                                <span class="news-fecha">21-09-2025</span>
+
+                            </div>
+                            <h5>Jornada de Innovación Pedagógica 2025</h5>
+                            <div class="container-fechas-evento">
+                                <span>Fecha Evento: 02-11-2025</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum repellendus quas numquam at aut magnam quidem autem voluptate praesentium eos...</p>
+                            
+                        </div>
+                        <div class="container-btn">
+                            <a href="#eventos" class="btn btn-main">Ver Evento <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-carreras card-evento">
+                        <div class="img-card-carrera ">
+                            <img src="<?php echo e(asset('img/evento_2.png')); ?>" alt="Tecnicatura Superior en Desarrollo de Software">
+                        </div>
+                        <div class="card-body-carrera ">
+                            <div class="container-fecha">
+                                <span class="news-fecha">21-09-2025</span>
+
+                            </div>
+                            <h5>Acto de Colación de Grado – Promoción 2025</h5>
+                            <div class="container-fechas-evento">
+                                <span>Fecha Evento: 02-11-2025</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum repellendus quas numquam at aut magnam quidem autem voluptate praesentium eos...</p>
+                            
+                        </div>
+                        <div class="container-btn">
+                            <a href="#eventos" class="btn btn-main">Ver Evento <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-carreras card-evento">
+                        <div class="img-card-carrera ">
+                            <img src="<?php echo e(asset('img/evento_3.jpg')); ?>"  alt="Tecnicatura Superior en Administración de Sistemas y Redes">
+                        </div>
+                        <div class="card-body-carrera ">
+                            <div class="container-fecha">
+                                <span class="news-fecha">21-09-2025</span>
+
+                            </div>
+                            <h5>Taller de Evaluación Formativa en la Educación Inicial</h5>
+                            <div class="container-fechas-evento">
+                                <span>Fecha Evento: 02/11/2025</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum repellendus quas numquam at aut magnam quidem autem voluptate praesentium eos...</p>
+                            
+                        </div>
+                        <div class="container-btn">
+                            <a href="#eventos" class="btn btn-main">Ver Evento <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row container-enlace">
+                        <a href="#noticias" class="enlace_pag_eventos">Ver Más Eventos <i class="fa-solid fa-chevron-right fa"></i></a>
+                    </div>
+                </div>
+                    
             </div>
         </section>
     </main>

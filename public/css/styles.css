@@ -468,7 +468,7 @@ header .btn-down:hover svg.svg-arrow-down {
     
 }
 
-#carreras a, #noticias a{
+#carreras a, #noticias a, a{
     text-decoration: none;
     color:var(--main-colour);
     text-align:center;
@@ -494,26 +494,26 @@ header .btn-down:hover svg.svg-arrow-down {
 .container-btn{
     display: flex;
     justify-content: start;
-
 }
 /* Cards para noticias */
 
 
 .card-news{
-    width:300px;
+    /* width:300px; */
+    width:330px;
 
     height:auto;
     min-height:450px;
     padding:0;
 }
-.card-news .container-fecha{
+.container-fecha{
     display: flex;
     justify-content: end;
     /* border-bottom:1px solid #ccc; */
     font-size:.85rem;
     color:var(--gray-700);
 }
-#noticias .card-body-carrera h5{
+.card-body-carrera h5{
     font-size:1.05rem;
     font-weight: 700;
     color:var(--main-colour);
@@ -523,7 +523,8 @@ header .btn-down:hover svg.svg-arrow-down {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding:15px;
+    /* padding:15px; */
+    padding:15px 30px;
     padding-bottom:0; 
 }
 .card-news .card-body-carrera p{
@@ -550,7 +551,7 @@ header .btn-down:hover svg.svg-arrow-down {
 .container-enlace{
     padding:20px 0;
 }
-.enlace_pag_noticias{
+.enlace_pag_noticias, .enlace_pag_eventos{
     font-size:1.3rem;
 }
 
@@ -559,6 +560,31 @@ header .btn-down:hover svg.svg-arrow-down {
     border:1px solid var(--main-colour);
     border-radius:50px;
 } */
+
+/* ------------------------------- Eventos ------------------------------- */
+.card-evento{
+    width:400px;
+    height:auto;
+    display:flex;   
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-evento .card-body-carrera{
+    padding: 10px;
+}
+
+.container-fechas-evento{
+    color:var(--gray-700);
+    padding-bottom:3px;
+    font-size:.9rem;
+}
+.card-evento .card-body-carrera p{
+    color:var(--gray-700);
+    font-size:.95rem;
+}
+.enlace_pag_eventos:hover, .enlace_pag_noticias:hover{
+    color:var(--red-700);
+}
 /* ------------------------------- Footer ------------------------------- */
 
 footer{
