@@ -311,55 +311,96 @@ header .btn-down:hover svg.svg-arrow-down {
 }
 
 /* ------------------------------- Informacion ------------------------------- */
-
-.bloq-cont {
-    background: var(--white-bg-2);
-    padding: 30px;
-    border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(5,7,8, 0.2); */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.bloq-cont .miniseccion-calendario {
-    padding: 20px 0;
-}
-.bloq-cont .miniseccion-calendario h3,
-h3.subtitulo {
-    text-align: center;
-    color: var(--main-colour);
-    text-transform: uppercase;
-    font-size: 2.1rem;
-    font-weight: 550;
-    margin-bottom: 15px;
-}
-.bloq-cont .cont-info-foto {
+.info-section .bloq-cont {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
+    padding: 0 30px;
+    background-color: white;
+    border-radius: 10px;
 }
-.bloq-cont .cont-info-foto img {
-    width: 100%;
+
+.container h2{
+    text-align: left;
+    color: var(--bordo-vino);
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-top: 20px;
 }
-.bloq-cont .miniseccion-calendario .cont-foto-calendario {
-    display: flex;
-    justify-content: center;
+
+.texto-info p {
+  margin-bottom: 1em;
+  line-height: 1.6;
 }
-.bloq-cont .miniseccion-calendario .cont-foto-calendario img {
-    max-width: 400px;
+
+.texto-info ul {
+  padding-left: 20px;
+  margin-bottom: 1em;
 }
-.img-index-modal {
-    cursor: pointer;
+
+.text-resaltado {
+  font-weight: bold;
+  color: var(--bordo-vino);
 }
+
+.boton-conocer {
+  text-align: left; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-conocer {
+  display: inline-block;
+  background-color: var(--bordo-vino); 
+  color: var(--bs-warning);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-conocer:hover {
+  background-color: var(--bordo-cereza-oscura);  /*momentaneo*/
+  color: var(--bs-orange); /*momentaneo*/
+}
+
+
 /* ------------------------------- Ubicacion ------------------------------- */
 
-#ubicacion iframe {
-    width: 100%;
-    height: 400px;
+.ubicacion-section {
+    max-width: 1325px; 
+    margin: 0 auto;     
+    padding: 40px 0; 
+    background-size: cover; 
+    background-color: white;
+    border-radius: 10px;
+}
+
+.bloq-cont .ubi-contenido {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+ .text-resaltado{
+  font-weight: bold;
+  color: var(--bordo-vino); /*momentaneo*/
+}
+
+.ubicacion-section iframe {
+    width: 300%;
+    height: 450px; 
+    max-width: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
 }
 
 #ubicacion .bloq-cont .mb-2 a {
-    font-size: 2rem;
-    color: var(--bs-danger);
-}
+    font-size: 1.5rem;
+    color: var(--bs-gray-600); /*momentaneo*/
+    padding: 10px;
 
 /* ------------------------------- Carreras ------------------------------- */
 

@@ -205,90 +205,58 @@
     </header>
     <main>
         <!----------------------------------------- Informacion ----------------------------------------->
-        <section id="informacion">
-            <div class="container bloq-cont">
-                    <h2>Información Sobre la Institución</h2>
-                    <div class="row mt-4 mb-2">
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <p>
-                                El Instituto Superior de Formación Docente Continua y Técnica 
-                                «Félix Atilio Cabrera» viene desarrollando desde hace más de 
-                                cuatro décadas una labor fundamental en la formación de niños, 
-                                jóvenes y adultos en toda la provincia de Formosa, así como en 
-                                capacitación docente y técnica. De gestión Estatal, 
-                                este instituto tiene como objetivo principal brindar una educación 
-                                de calidad a sus estudiantes para que puedan desempeñarse de manera 
-                                efectiva en su rol como docente.
-                            </p>
-                            <p>
-                                Esto incluye el desarrollo de habilidades y competencias necesarias 
-                                para que los docentes puedan diseñar y llevar a cabo planes de estudio, 
-                                evaluar el rendimiento de los estudiantes, y fomentar un ambiente 
-                                educativo inclusivo y colaborativo.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-12 cont-info-foto">
-                            <img src="{{ asset('img/instituto2.jpg') }}" alt="Felix Atilio Cabrera Formosa" class="img-index-modal">
+     <section id="informacion" class="info-section">
+  <div class="container bloq-cont">
+    <h2>Información Sobre la Institución</h2>
+    <div class="container texto-info">
+      <p>
+        El Instituto Superior de Formación Docente Continua y Técnica 
+        «Félix Atilio Cabrera» viene desarrollando desde hace más de 
+        cuatro décadas una labor fundamental en la formación de niños, 
+        jóvenes y adultos en toda la provincia de Formosa, así como en 
+        capacitación docente y técnica. <strong>De gestión Estatal, 
+        este instituto tiene como objetivo principal brindar una educación 
+        de calidad a sus estudiantes para que puedan desempeñarse de manera 
+        efectiva en su rol.</strong>
+      </p>
+      <p>
+        Además de la formación académica, el Instituto Superior Formación Docente 
+        Y Técnica <strong>«Félix Atilio Cabrera» </strong>también tiene la responsabilidad de 
+        fomentar la investigación y la innovación en el campo de la educación, y 
+        de ofrecer programas de capacitación continua para los docentes y técnicos que ya se 
+        encuentran en ejercicio.
+      </p>
+      <p>
+        Esta institución pionera en la educación mantiene vigente la estructura 
+        inicial: <br>conviven en la misma el nivel superior y tres departamentos de 
+        aplicación: inicial, primario y medio. 
+      </p>
+      <p>
+        El Jardín de Infantes Funciona en Horarios del Turno Mañana y Tarde en 
+        su propio edificio ingresando por la calle Fortín Yunka 1.190
+      </p>
+      <h5>
+        Más de mil alumnos recorren las aulas diariamente, distribuidos en tres turnos:
+        </h5>
+      <ul>
+        <li><span class="text-resaltado">Turno Mañana:</span> 07:15 a 12:30 hs Funciona el Nivel Secundario</li>
+        <li><span class="text-resaltado">Turno Tarde:</span> 01:15 a 18:00 hs Funciona el Nivel Primario</li>
+        <li><span class="text-resaltado">Turno Noche:</span> 19:00 a 23:00 hs. Funciona el Nivel Terciario</li>
+      </ul>
+    <div class="boton-conocer">
+  <a href="#!" class="btn-conocer">Conocer más</a>
+    </div>
+    </div>
+  </div>
+</section>
 
-                            <small class="text-secondary">Foto del ISFDCyT "Felix Atilio Cabrera" - Cordoba 1125</small>
-                        </div>
-                    </div>
-                    
-                    <p>
-                        Además de la formación académica, el Instituto Superior Formación Docente 
-                        Y Técnica «Félix Atilio Cabrera» también tienen la responsabilidad de 
-                        fomentar la investigación y la innovación en el campo de la educación, y 
-                        de ofrecer programas de capacitación continua para los docentes que ya se 
-                        encuentran en ejercicio.
-                    </p>
-                    <p>
-                        Esta institución pionera en la docencia mantiene vigente la estructura 
-                        inicial: conviven en la misma el nivel superior y tres departamentos de 
-                        aplicación: inicial, primario y medio. 
-                    </p>
-                    <p>
-                        Más de mil alumnos recorren las aulas diariamente, distribuidos en tres turnos:
-                    </p>
-                    <ul>
-                        <li><span class="text-resaltado">Turno Mañana:</span> 07:15 a 12:30 hs Funciona el Nivel Secundario</li>
-                        <li><span class="text-resaltado">Turno Tarde:</span> 01:15 a 18:00 hs Funciona el Nivel Primario</li>
-                        <li><span class="text-resaltado">Turno Noche:</span> 19:00 a 23:00 hs. Funciona el Nivel Terciario</li>
-                    </ul>
-                    <p>
-                        El Jardín de Infantes Funciona en Horarios del Turno Mañana y Tarde en 
-                        su propio edificio incesando por la calle Fortín Yunka 1.190
-                    </p>
-                    <div class="miniseccion-calendario">
-                        <h3>Calendario Escolar 2023 Nivel Superior</h3>
-                        <div class="cont-foto-calendario">
-                            <img src="{{ asset('img/calendarioEscolar.webp') }}" alt="Calendario Escolar 2023" class="img-index-modal">
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal para la imagen -->
-                <div id="imageModal" class="modal">
-                    <span class="close">&times;</span>
-                    <!-- <a id="downloadBtn" href="./assets/img/plansoft.png" 
-                    download="estructura_curricular_software.png" class="download-button">
-                        Descargar Foto
-                    </a> -->
-                    <img class="modal-content" id="modalImage">
-                    
-                </div>
-        </section>
+
         <!------------------------------------------ Ubicacion ------------------------------------------>
-        <section id="ubicacion" class="">
+        <section id="ubicacion" class="ubicacion-section">
             <div class="container">
-                <h2>Ubicación</h2>
                 <div class="row bloq-cont">
                     <div class="col-12">
-                        <p>
-                            El Instituto Superior de Formación Docente Técnica y 
-                            Continua "Felix Atilio Cabrera" se encuentra ubicado 
-                            en el céntrico barrio Don Bosco de Formosa Capital. <br>
-                            Hipólito Irigoyen, Córdoba &, P3600 Formosa
-                        </p>
+                         <h2>Ubicación</h2>
                     </div>
                     <div class="col-lg-9 col-md-9 col-sm-12 col-12 ">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14320.829546672081!2d-58.18692315514238!3d-26.189931178485736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945ca5e2c1814cd3%3A0x6165c864d60268e8!2sInstituto%20Superior%20Docente%20-%20F%C3%A9lix%20Atilio%20Cabrera%20-%20Formosa!5e0!3m2!1ses-419!2sus!4v1699157127922!5m2!1ses-419!2sus" 
@@ -320,10 +288,13 @@
                         <div class="mb-2">
                             <p>
                                 <span class="text-resaltado ">Redes Sociales</span><br>
-                                <!-- <a href=""><i class="fa fa-facebook"></i></a> -->
+                                <a href="https://www.facebook.com/tu_pagina" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> </a>
                                 <a href="https://www.instagram.com/isfdyt_fac/" target="_blank" title="Instagram Felix Atilio Cabrera"><i class="fa fa-instagram"></i></a>
                             </p>
                         </div>
+                        <div class="boton-conocer">
+                        <a href="#!" class="btn-conocer">Contacto</a>
+                         </div>
                     </div>
                 </div>
 
