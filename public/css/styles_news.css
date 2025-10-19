@@ -1,0 +1,150 @@
+/* ==================================== */
+/* Estilos para la seccion de noticias */
+/* ==================================== */
+
+
+#header_news{
+    height:400px;
+    /* border:1px solid #fafafa; */
+    background-image: url('../img/news_header.webp');
+    background-size: cover;
+}
+
+.container-news.catalogo{
+    gap:20px;
+}
+
+/* ========================= Noticias Show ===================== */
+
+#noticia-single{
+    padding-top:90px;
+
+}
+.bloq-news{
+    padding:40px 80px;
+    padding-bottom:80px;
+}
+.bloq-news{
+    position:relative;
+}
+.bloq-news .flecha_back{
+    position:absolute;
+    top:0;
+    left:0;
+}
+.btn-back{
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    border-radius:0;
+    border-end-end-radius: 6px;
+    border-top-left-radius: 10px;
+    background-color: var(--gray-300);
+}
+.btn-back:hover{
+    background-color: var(--gray-300);
+    border:none;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.titles_container{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+.title_news{
+    color:var(--main-colour);
+    font-weight: 600;
+}
+/* .container-fecha-news{
+    padding:10px 0;
+} */
+.container-fecha-news .news-fecha{
+    font-size:1.2rem;
+    color:var(--gray-700);
+
+}
+.img-container-singleNews{
+    /* border:1px solid red; */
+    padding:20px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom:1px solid #ccc;
+}
+.img-card-news{
+    width:700px;
+}
+.img-card-news img{
+    width:100%;
+}
+
+.container-redes{
+    /* border:1px solid #ccc; */
+    padding:10px 0;
+    display: flex;
+    gap:15px;
+}
+
+.item-shares{
+    border:1px solid var(--main-colour);
+    border-radius:50px;
+    width:30px;
+    height:30px;
+    background:transparent;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition:all .2s ease-in-out;
+}
+
+.item-shares:hover{
+    color:#fafafa;
+    background: var(--main-colour);
+    border:1px solid #fafafa;
+    transition:all .2s ease-in-out;
+}
+
+.secondary-news{
+    padding-top:10px
+}
+
+
+/* ================== Responsive Design =================== */
+/*Celulares*/
+@media only screen and (max-width: 575px) {
+    .bloq-news{
+        padding:50px 30px;
+        padding-bottom:70px;
+    }
+    .title_news{
+        font-size:1.5rem;
+    }
+    .subtitle_news{
+        font-size:1.1rem;
+    }
+    .container-fecha-news .news-fecha{
+        font-size:1rem;
+    
+    }
+
+    .img-card-news{
+        width:100%;
+    }
+}
+
+/*Celulares*/
+@media only screen and (max-width: 575px) {
+    .title_news{
+        font-size:1.3rem;
+    }
+    .subtitle_news{
+        font-size:1rem;
+    }
+    .container-fecha-news .news-fecha{
+        font-size:.9rem;
+    
+    }
+    .contenido-noticia{
+        font-size:.9rem;
+    }
+}

@@ -1,0 +1,138 @@
+/* --- Encabezado con imagen --- */
+.container-img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.evento-header-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    max-width: 950px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.evento-header-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.header-text {
+    padding: 1.5rem 1rem 0.5rem;
+}
+.header-text h1 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 0.3rem;
+}
+.header-text .fecha-posteo {
+    font-size: 0.95rem;
+    color: #777;
+}
+.evento-imagen-secundaria {
+    width: 100%;
+    max-height: 420px;
+    overflow: hidden;
+}
+.evento-imagen-secundaria img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.evento-header-card:hover img {
+    transform: scale(1.03);
+}
+
+/* --- Contenido principal --- */
+.evento-contenido.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+    margin: 3rem auto 4rem;
+    align-items: start;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #004aad;
+}
+.info-card li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.evento-descripcion {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.evento-descripcion h2 {
+    font-size: 1.7rem;
+    color: #1e2a38;
+    margin-bottom: 1.5rem;
+}
+.evento-descripcion p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* --- Botones y compartir --- */
+.acciones-evento {
+    margin-top: 2rem;
+}
+/* .btn-main {
+    background-color: #004aad;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+    display: inline-block;
+}
+.btn-main:hover {
+    background-color: #00337a;
+} */
+.compartir {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+.compartir span {
+    font-weight: 600;
+    color: #444;
+}
+/* .item-share {
+    color: #555;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+.item-share:hover {
+    color: #004aad;
+} */
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .evento-contenido.container {
+        grid-template-columns: 1fr;
+    }
+    .evento-descripcion {
+        margin-top: 2rem;
+    }
+    .evento-header-card {
+        border-radius: 12px;
+    }
+}

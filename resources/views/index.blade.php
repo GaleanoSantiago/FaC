@@ -126,13 +126,14 @@
                         </svg>
                         
                         <ul class="ul-second">
-                            <li><a href="{{ route('carreras') }}?id=1">PROFESORADO EN INGLÉS</a></li>
-                            <li><a href="{{ route('carreras') }}?id=2">TECNICATURA SUPERIOR EN DESARROLLO DE SOFTWARE</a></li>
-                            <li><a href="{{ route('carreras') }}?id=3">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS Y REDES</a></li>
-                            <li><a href="{{ route('carreras') }}?id=4">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE EMPRESAS CON ORIENTACIÓN A PYMES</a></li>
-                            <li><a href="{{ route('carreras') }}?id=5">PROFESORADO EN ECONOMÍA</a></li>
-                            <li><a href="{{ route('carreras') }}?id=6">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
+                            <li><a href="{{ route('carreras.show', 1) }}">PROFESORADO EN INGLÉS</a></li>
+                            <li><a href="{{ route('carreras.show', 2) }}">TECNICATURA SUPERIOR EN DESARROLLO DE SOFTWARE</a></li>
+                            <li><a href="{{ route('carreras.show', 3) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS Y REDES</a></li>
+                            <li><a href="{{ route('carreras.show', 4) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE EMPRESAS CON ORIENTACIÓN A PYMES</a></li>
+                            <li><a href="{{ route('carreras.show', 5) }}">PROFESORADO EN ECONOMÍA</a></li>
+                            <li><a href="{{ route('carreras.show', 6) }}">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
                         </ul>
+
 
                     </li>
                     </div>
@@ -172,7 +173,7 @@
             </div>
         </nav>
         <!----------------------------------------- CARRUSEL----------------------------------------->
-       <div id="carouselExampleIndicators" class="carousel slide">
+       <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">>
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -276,79 +277,33 @@
             <div class="container">
                 <h2>Ultimas Noticias</h2>
                 <div class="row container-news">
-                    <!-- <div class="card-carreras card-news">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/lab.jpg') }}" alt="Profesorado de inglés Felix atilio cabrera">
-                            
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">08-10-2025</span>
-
+                @if(isset($ultimasNoticias) && $ultimasNoticias->count() > 0)
+                    @foreach ($ultimasNoticias as $n)
+                        <div class="card-carreras card-news">
+                            <div class="img-card-carrera">
+                                <img src="{{ asset($n['imagen']) }}" alt="{{ $n['titulo'] }}">
                             </div>
-                            <h5>El Instituto Félix inaugura su nuevo laboratorio de ciencias modernas</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                            <div class="container-btn">
-                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="card-carreras card-news">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/feria.jpeg') }}" alt="Tecnicatura Superior en Desarrollo de Software">
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">21-09-2025</span>
-
-                            </div>
-                            <h5>Estudiantes del último año destacan en la Feria Regional de Innovación</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                            <div class="container-btn">
-                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                                </a>
+                            <div class="card-body-carrera">
+                                <div class="container-fecha">
+                                    <span class="news-fecha">
+                                        {{ \Carbon\Carbon::parse($n['created_at'])->translatedFormat('d F Y - H:i') }}
+                                    </span>
+                                </div>
+                                <h5>{{ $n['titulo'] }}</h5>
+                                <p>{{ Str::limit($n['contenido'], 100, '...') }}</p>
+                                <div class="container-btn">
+                                    <a href="{{ route('noticias.show', $n['id_noticia']) }}" class="btn btn-main">
+                                        Leer más <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-carreras card-news">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/ecologico.jpg') }}"  alt="Tecnicatura Superior en Administración de Sistemas y Redes">
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">15-09-2025</span>
-
-                            </div>
-                            <h5>Campaña ecológica: alumnos promueven el reciclaje en toda la comunidad</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                            <div class="container-btn">
-                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-carreras card-news">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/instituto.jpg') }}" alt="Tecnicatura Superior en Administración de Empresas con Orientación a PyMES">
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">10-09-2025</span>
-
-                            </div>
-                            <h5>Se abren las inscripciones para los cursos extracurriculares 2025</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                            <div class="container-btn">
-                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                @endif
                     
                 </div>
                 <div class="row container-enlace">
-                    <a href="#noticias" class="enlace_pag_noticias">Ver Más Noticias <i class="fa-solid fa-chevron-right fa"></i></a>
+                    <a href="/noticias" class="enlace_pag_noticias">Ver Más Noticias <i class="fa-solid fa-chevron-right fa"></i></a>
                 </div>
                 <div class="cont-btn-incripcion bloq-cont">
                     <h3 class="subtitulo">PREINSCRIPCIÓN A LAS CARRERAS</h3>
@@ -523,72 +478,41 @@
                             nuestro Instituto Superior: jornadas académicas, capacitaciones, talleres, actos 
                             institucionales y encuentros con la comunidad educativa.</p>
                     </div>
-                    <div class="card-carreras card-evento">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/evento1.jpg') }}" alt="Profesorado de inglés Felix atilio cabrera">
-                            
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">21-09-2025</span>
+                    @if(isset($ultimosEventos) && $ultimosEventos->count() > 0)
+                        @foreach ($ultimosEventos as $evento)
+                            <div class="card-carreras card-evento">
+                                <div class="img-card-carrera">
+                                    <img src="{{ asset($evento['img']) }}" alt="{{ $evento['titulo'] }}">
+                                </div>
 
-                            </div>
-                            <h5>Jornada de Innovación Pedagógica 2025</h5>
-                            <div class="container-fechas-evento">
-                                <span>Fecha Evento: 02-11-2025</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum repellendus quas numquam at aut magnam quidem autem voluptate praesentium eos...</p>
-                            
-                        </div>
-                        <div class="container-btn">
-                            <a href="#eventos" class="btn btn-main">Ver Evento <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-carreras card-evento">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/evento_2.png') }}" alt="Tecnicatura Superior en Desarrollo de Software">
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">21-09-2025</span>
+                                <div class="card-body-carrera">
+                                    <div class="container-fecha">
+                                        <span class="news-fecha">
+                                            {{ \Carbon\Carbon::parse($evento['created_at'])->format('d M Y') }}
+                                        </span>
+                                    </div>
 
-                            </div>
-                            <h5>Acto de Colación de Grado – Promoción 2025</h5>
-                            <div class="container-fechas-evento">
-                                <span>Fecha Evento: 02-11-2025</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum repellendus quas numquam at aut magnam quidem autem voluptate praesentium eos...</p>
-                            
-                        </div>
-                        <div class="container-btn">
-                            <a href="#eventos" class="btn btn-main">Ver Evento <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-carreras card-evento">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/evento_3.jpg') }}"  alt="Tecnicatura Superior en Administración de Sistemas y Redes">
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">21-09-2025</span>
+                                    <h5>{{ $evento['titulo'] }}</h5>
 
+                                    <div class="container-fechas-evento">
+                                        <span>Fecha Evento: {{ \Carbon\Carbon::parse($evento['fecha_evento'])->format('d-m-Y H:i') }}</span>
+                                    </div>
+
+                                    <p>{{ Str::limit($evento['contenido'], 120, '...') }}</p>
+                                </div>
+
+                                <div class="container-btn">
+                                    <a href="{{ route('eventos.show', $evento['id_evento']) }}" class="btn btn-main">
+                                        Ver Evento <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <h5>Taller de Evaluación Formativa en la Educación Inicial</h5>
-                            <div class="container-fechas-evento">
-                                <span>Fecha Evento: 02/11/2025</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum repellendus quas numquam at aut magnam quidem autem voluptate praesentium eos...</p>
-                            
-                        </div>
-                        <div class="container-btn">
-                            <a href="#eventos" class="btn btn-main">Ver Evento <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </div>
-                    </div>
+
+                        @endforeach
+                    @endif
+                    
                     <div class="row container-enlace">
-                        <a href="#noticias" class="enlace_pag_eventos">Ver Más Eventos <i class="fa-solid fa-chevron-right fa"></i></a>
+                        <a href="/eventos" class="enlace_pag_eventos">Ver Más Eventos <i class="fa-solid fa-chevron-right fa"></i></a>
                     </div>
                 </div>
                     

@@ -29,10 +29,13 @@ if(imgsIndex!=null){
 }
 
 // Maneja el clic en el botón de cierre para cerrar el modal
-const closeBtn = document.getElementsByClassName('close')[0];
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+const closeBtn = document.getElementsByClassName('close')[0] || null;
+if(closeBtn){
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+}
 
 // Cierra el modal haciendo clic en cualquier parte fuera de la imagen
 window.addEventListener('click', (event) => {
