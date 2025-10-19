@@ -77,58 +77,30 @@
     <div class="container">
         <h2>Ultimas Noticias</h2>
         <div class="row container-news">
+        @if(isset($ultimasNoticias) && $ultimasNoticias->count() > 0)
+            @foreach ($ultimasNoticias as $n)
+                <div class="card-carreras card-news">
+                    <div class="img-card-carrera">
+                        <img src="{{ asset($n['imagen']) }}" alt="{{ $n['titulo'] }}">
+                    </div>
+                    <div class="card-body-carrera">
+                        <div class="container-fecha">
+                            <span class="news-fecha">
+                                {{ \Carbon\Carbon::parse($n['created_at'])->translatedFormat('d F Y - H:i') }}
+                            </span>
+                        </div>
+                        <h5>{{ $n['titulo'] }}</h5>
+                        <p>{{ Str::limit($n['contenido'], 100, '...') }}</p>
+                        <div class="container-btn">
+                            <a href="{{ route('noticias.show', $n['id_noticia']) }}" class="btn btn-main">
+                                Leer más <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        @endif
             
-            <div class="card-carreras card-news">
-                <div class="img-card-carrera ">
-                    <img src="{{ asset('img/feria.jpeg') }}" alt="Tecnicatura Superior en Desarrollo de Software">
-                </div>
-                <div class="card-body-carrera ">
-                    <div class="container-fecha">
-                        <span class="news-fecha">21-09-2025</span>
-
-                    </div>
-                    <h5>Estudiantes del último año destacan en la Feria Regional de Innovación</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                    <div class="container-btn">
-                        <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-carreras card-news">
-                <div class="img-card-carrera ">
-                    <img src="{{ asset('img/ecologico.jpg') }}"  alt="Tecnicatura Superior en Administración de Sistemas y Redes">
-                </div>
-                <div class="card-body-carrera ">
-                    <div class="container-fecha">
-                        <span class="news-fecha">15-09-2025</span>
-
-                    </div>
-                    <h5>Campaña ecológica: alumnos promueven el reciclaje en toda la comunidad</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                    <div class="container-btn">
-                        <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-carreras card-news">
-                <div class="img-card-carrera ">
-                    <img src="{{ asset('img/instituto.jpg') }}" alt="Tecnicatura Superior en Administración de Empresas con Orientación a PyMES">
-                </div>
-                <div class="card-body-carrera ">
-                    <div class="container-fecha">
-                        <span class="news-fecha">10-09-2025</span>
-
-                    </div>
-                    <h5>Se abren las inscripciones para los cursos extracurriculares 2025</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                    <div class="container-btn">
-                        <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
             
         </div>
         

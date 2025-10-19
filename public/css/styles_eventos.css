@@ -5,6 +5,9 @@
     display: flex;
     justify-content: center;
 }
+#evento-show{
+    padding-bottom:0;
+}
 .evento-header-card {
     background: #fff;
     border-radius: 16px;
@@ -123,6 +126,10 @@
 .item-share:hover {
     color: #004aad;
 } */
+
+.secondary-eventos{
+    padding:20px 0 !important;
+}
 
 /* --- Responsive --- */
 @media (max-width: 992px) {

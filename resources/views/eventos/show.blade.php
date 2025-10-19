@@ -58,8 +58,46 @@
     </div>
 </section>
 
-{{-- CSS --}}
-<style>
+<section id="eventos" class="secondary_eventos">
+    <div class="container">
+        <h2>Ultimos Eventos</h2>
+        <div class="row container-news">
+            
+            @if(isset($ultimosEventos) && $ultimosEventos->count() > 0)
+                @foreach ($ultimosEventos as $evento)
+                    <div class="card-carreras card-evento">
+                        <div class="img-card-carrera">
+                            <img src="{{ asset($evento['img']) }}" alt="{{ $evento['titulo'] }}">
+                        </div>
 
-</style>
+                        <div class="card-body-carrera">
+                            <div class="container-fecha">
+                                <span class="news-fecha">
+                                    {{ \Carbon\Carbon::parse($evento['created_at'])->format('d M Y') }}
+                                </span>
+                            </div>
+
+                            <h5>{{ $evento['titulo'] }}</h5>
+
+                            <div class="container-fechas-evento">
+                                <span>Fecha Evento: {{ \Carbon\Carbon::parse($evento['fecha_evento'])->format('d-m-Y H:i') }}</span>
+                            </div>
+
+                            <p>{{ Str::limit($evento['contenido'], 120, '...') }}</p>
+                        </div>
+                        <div class="container-btn">
+                            <a href="{{ route('eventos.show', $evento['id_evento']) }}" class="btn btn-main">
+                                Ver Evento <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+
+                @endforeach
+            @endif
+            
+        </div>
+            
+    </div>
+</section>
 @endsection
