@@ -314,6 +314,45 @@
 
             </div>
         </section>
+        <!------------------------------------------Section Promocion------------------------------------------>
+        <section id="ingreso" class="hero-ingreso">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12">
+                        <h1>INGRESO 2026</h1>
+                        <p class="lead">Explorá nuestras ofertas educativas. Conocé las carreras y tecnicaturas disponibles para elegir tu formación.</p>
+                    </div>
+                    <div class="col-lg-5 col-md-12 d-flex justify-content-lg-end justify-content-center">
+                        <a href="{{ asset('img/calendarioEscolar.webp') }}" target="_blank" class="btn btn-hero btn-calendar">CALENDARIO ESCOLAR</a>
+                               <!-- Imagen de EJEMPLO -->
+                        <div class="hero-buttons">
+                            <div class="dropdown">
+                                <button class="btn btn-hero dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
+                                    PROFESORADOS
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownProfesorados">
+                                    <li><a class="dropdown-item" href="{{ route('carreras') }}?id=1">PROFESORADO EN INGLÉS</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras') }}?id=5">PROFESORADO EN ECONOMÍA</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras') }}?id=6">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-hero dropdown-toggle" type="button" id="dropdownTecnicas" data-bs-toggle="dropdown" aria-expanded="false">
+                                    CARRERAS TÉCNICAS
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownTecnicas">
+                                    <li><a class="dropdown-item" href="{{ route('carreras') }}?id=2">DESARROLLO DE SOFTWARE</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras') }}?id=3">SISTEMAS Y REDES</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras') }}?id=4">ADMINISTRACIÓN DE EMPRESAS</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!------------------------------------------ Carreras ------------------------------------------>
         <section id="carreras">
             <div class="container">
