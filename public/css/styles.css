@@ -340,7 +340,7 @@ nav {
       .menu-toggle svg {
         width: 28px;
         height: 28px;
-        color: white;
+        color: #fff;
         transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
