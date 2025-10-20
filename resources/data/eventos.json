@@ -1,0 +1,38 @@
+[
+    {
+        "id_evento": 1,
+        "titulo": "Jornada Institucional de Innovación Educativa",
+        "img": "img/evento1.jpg",
+        "contenido": "El Instituto Félix realizará una jornada especial dedicada a la innovación educativa, con la participación de docentes, estudiantes y expertos invitados. El objetivo es reflexionar sobre los nuevos desafíos del aprendizaje digital y las metodologías activas en el aula.\n\nDurante la jornada, se desarrollarán talleres prácticos, charlas magistrales y mesas de debate donde se abordarán temáticas como inteligencia artificial en la educación, gamificación y evaluación por competencias.",
+        "created_at": "2025-10-05 14:30:00",
+        "updated_at": "2025-10-05 14:30:00",
+        "fecha_evento": "2025-11-03 09:00:00"
+    },
+    {
+        "id_evento": 2,
+        "titulo": "Feria Anual de Ciencia y Tecnología 2025",
+        "img": "img/evento_2.png",
+        "contenido": "Como cada año, el Instituto Félix abre sus puertas para recibir a la comunidad en la Feria Anual de Ciencia y Tecnología. Los estudiantes presentarán más de 50 proyectos innovadores desarrollados a lo largo del ciclo lectivo, abarcando temáticas de robótica, sustentabilidad, programación y biotecnología.\n\nEl evento busca fomentar la creatividad, el pensamiento crítico y la investigación aplicada, siendo una oportunidad única para conectar a los jóvenes con el ámbito científico y profesional.",
+        "created_at": "2025-09-20 11:15:00",
+        "updated_at": "2025-09-22 16:00:00",
+        "fecha_evento": "2025-10-28 10:00:00"
+    },
+    {
+        "id_evento": 3,
+        "titulo": "Encuentro de Egresados 2025",
+        "img": "img/evento_3.jpg",
+        "contenido": "El Instituto invita a todos sus egresados a reencontrarse en una tarde llena de recuerdos, experiencias y nuevas oportunidades de vinculación profesional. Será un espacio para compartir logros, proyectos y generar redes entre diferentes promociones.\n\nAdemás, durante el encuentro se presentará el nuevo programa de mentorías profesionales, que permitirá a egresados colaborar con estudiantes actuales en su desarrollo académico y laboral.",
+        "created_at": "2025-09-15 09:45:00",
+        "updated_at": "2025-09-15 09:45:00",
+        "fecha_evento": "2025-11-10 18:00:00"
+    },
+    {
+        "id_evento": 4,
+        "titulo": "Charla Abierta: Educación y Sustentabilidad",
+        "img": "img/evento1.jpg",
+        "contenido": "Con el propósito de fortalecer la conciencia ambiental, el Instituto Félix organiza una charla abierta sobre Educación y Sustentabilidad, dictada por la especialista en ecopedagogía Laura Fernández. Se abordarán estrategias para integrar la sostenibilidad en el aula y en la vida cotidiana.\n\nEl evento está dirigido a docentes, estudiantes y miembros de la comunidad que deseen incorporar prácticas ecológicas en sus espacios educativos y laborales.",
+        "created_at": "2025-09-10 13:20:00",
+        "updated_at": "2025-09-12 10:00:00",
+        "fecha_evento": "2025-10-25 17:00:00"
+    }
+]

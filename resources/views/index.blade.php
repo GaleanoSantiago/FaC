@@ -126,13 +126,14 @@
                         </svg>
                         
                         <ul class="ul-second">
-                            <li><a href="{{ route('carreras') }}?id=1">PROFESORADO EN INGLÉS</a></li>
-                            <li><a href="{{ route('carreras') }}?id=2">TECNICATURA SUPERIOR EN DESARROLLO DE SOFTWARE</a></li>
-                            <li><a href="{{ route('carreras') }}?id=3">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS Y REDES</a></li>
-                            <li><a href="{{ route('carreras') }}?id=4">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE EMPRESAS CON ORIENTACIÓN A PYMES</a></li>
-                            <li><a href="{{ route('carreras') }}?id=5">PROFESORADO EN ECONOMÍA</a></li>
-                            <li><a href="{{ route('carreras') }}?id=6">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
+                            <li><a href="{{ route('carreras.show', 1) }}">PROFESORADO EN INGLÉS</a></li>
+                            <li><a href="{{ route('carreras.show', 2) }}">TECNICATURA SUPERIOR EN DESARROLLO DE SOFTWARE</a></li>
+                            <li><a href="{{ route('carreras.show', 3) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS Y REDES</a></li>
+                            <li><a href="{{ route('carreras.show', 4) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE EMPRESAS CON ORIENTACIÓN A PYMES</a></li>
+                            <li><a href="{{ route('carreras.show', 5) }}">PROFESORADO EN ECONOMÍA</a></li>
+                            <li><a href="{{ route('carreras.show', 6) }}">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
                         </ul>
+
 
                     </li>
                     </div>
@@ -171,21 +172,36 @@
                 </ul>
             </div>
         </nav>
-        <img src="{{ asset('img/logo.png') }}" alt="logo felix atilio cabrera">
-
-        <h1>Instituto Superior de Formación Docente Continua y Técnica <br> "Felix Atilio Cabrera"</h1>
-        <h2>Cordoba 1125</h2>
-        <div class="container-btn-down">
-            <a href="#informacion" class="btn-down">
-                <svg class="svg-arrow-down" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier"> <g> 
-                        <path d="M50.5,19.881c-1.104,0-2,0.896-2,2V72.17L33.193,56.609c-0.781-0.781-1.922-0.781-2.703,0 c-0.781,0.78-0.719,2.047,0.062,2.828l18.883,18.857c0.375,0.375,0.899,0.586,1.43,0.586s1.047-0.211,1.422-0.586l18.857-18.857 c0.781-0.781,0.783-2.048,0.002-2.828c-0.781-0.781-2.296-0.781-3.077,0L52.5,71.933V21.881C52.5,20.776,51.604,19.881,50.5,19.881 z"></path> 
-                    </g> 
-                    </g>
-                </svg>
-            </a>
+        <!----------------------------------------- CARRUSEL----------------------------------------->
+       <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="{{ asset('img/instituto3.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{{ asset('img/inscripcion_slide.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{{ asset('img/software_slide.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{{ asset('img/ingles2_slide.png') }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </header>
     <main>
@@ -261,79 +277,33 @@
             <div class="container">
                 <h2>Ultimas Noticias</h2>
                 <div class="row container-news">
-                    <div class="card-carreras card-news">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/lab.jpg') }}" alt="Profesorado de inglés Felix atilio cabrera">
-                            
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">08-10-2025</span>
-
+                @if(isset($ultimasNoticias) && $ultimasNoticias->count() > 0)
+                    @foreach ($ultimasNoticias as $n)
+                        <div class="card-carreras card-news">
+                            <div class="img-card-carrera">
+                                <img src="{{ asset($n['imagen']) }}" alt="{{ $n['titulo'] }}">
                             </div>
-                            <h5>El Instituto Félix inaugura su nuevo laboratorio de ciencias modernas</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                            <div class="container-btn">
-                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-carreras card-news">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/feria.jpeg') }}" alt="Tecnicatura Superior en Desarrollo de Software">
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">21-09-2025</span>
-
-                            </div>
-                            <h5>Estudiantes del último año destacan en la Feria Regional de Innovación</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                            <div class="container-btn">
-                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                                </a>
+                            <div class="card-body-carrera">
+                                <div class="container-fecha">
+                                    <span class="news-fecha">
+                                        {{ \Carbon\Carbon::parse($n['created_at'])->translatedFormat('d F Y - H:i') }}
+                                    </span>
+                                </div>
+                                <h5>{{ $n['titulo'] }}</h5>
+                                <p>{{ Str::limit($n['contenido'], 100, '...') }}</p>
+                                <div class="container-btn">
+                                    <a href="{{ route('noticias.show', $n['id_noticia']) }}" class="btn btn-main">
+                                        Leer más <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-carreras card-news">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/ecologico.jpg') }}"  alt="Tecnicatura Superior en Administración de Sistemas y Redes">
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">15-09-2025</span>
-
-                            </div>
-                            <h5>Campaña ecológica: alumnos promueven el reciclaje en toda la comunidad</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                            <div class="container-btn">
-                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-carreras card-news">
-                        <div class="img-card-carrera ">
-                            <img src="{{ asset('img/instituto.jpg') }}" alt="Tecnicatura Superior en Administración de Empresas con Orientación a PyMES">
-                        </div>
-                        <div class="card-body-carrera ">
-                            <div class="container-fecha">
-                                <span class="news-fecha">10-09-2025</span>
-
-                            </div>
-                            <h5>Se abren las inscripciones para los cursos extracurriculares 2025</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sapiente excepturi!...</p>
-                            <div class="container-btn">
-                                <a href="" class="btn btn-main">Leer más <i class="fa-solid fa-chevron-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                @endif
                     
                 </div>
                 <div class="row container-enlace">
-                    <a href="#noticias" class="enlace_pag_noticias">Ver Más Noticias <i class="fa-solid fa-chevron-right fa"></i></a>
+                    <a href="/noticias" class="enlace_pag_noticias">Ver Más Noticias <i class="fa-solid fa-chevron-right fa"></i></a>
                 </div>
                 <div class="cont-btn-incripcion bloq-cont">
                     <h3 class="subtitulo">PREINSCRIPCIÓN A LAS CARRERAS</h3>
@@ -404,7 +374,7 @@
             </div>
         </section>
         <!------------------------------------------ Carreras ------------------------------------------>
-        <section id="carreras">
+        <section id="carreras" class="d-none">
             <div class="container">
                 <h2>Carreras</h2>
                 <div class="row">
@@ -496,6 +466,56 @@
                         Preinscripción Online
                     </a>
                 </div>
+            </div>
+        </section>
+        <!------------------------------------------ Eventos ------------------------------------------>
+        <section id="eventos">
+            <div class="container">
+                <h2>Eventos</h2>
+                <div class="row container-news">
+                    <div class="descripcion">
+                        <p>En esta sección vas a encontrar las actividades más importantes que se realizan en 
+                            nuestro Instituto Superior: jornadas académicas, capacitaciones, talleres, actos 
+                            institucionales y encuentros con la comunidad educativa.</p>
+                    </div>
+                    @if(isset($ultimosEventos) && $ultimosEventos->count() > 0)
+                        @foreach ($ultimosEventos as $evento)
+                            <div class="card-carreras card-evento">
+                                <div class="img-card-carrera">
+                                    <img src="{{ asset($evento['img']) }}" alt="{{ $evento['titulo'] }}">
+                                </div>
+
+                                <div class="card-body-carrera">
+                                    <div class="container-fecha">
+                                        <span class="news-fecha">
+                                            {{ \Carbon\Carbon::parse($evento['created_at'])->format('d M Y') }}
+                                        </span>
+                                    </div>
+
+                                    <h5>{{ $evento['titulo'] }}</h5>
+
+                                    <div class="container-fechas-evento">
+                                        <span>Fecha Evento: {{ \Carbon\Carbon::parse($evento['fecha_evento'])->format('d-m-Y H:i') }}</span>
+                                    </div>
+
+                                    <p>{{ Str::limit($evento['contenido'], 120, '...') }}</p>
+                                </div>
+
+                                <div class="container-btn">
+                                    <a href="{{ route('eventos.show', $evento['id_evento']) }}" class="btn btn-main">
+                                        Ver Evento <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        @endforeach
+                    @endif
+                    
+                    <div class="row container-enlace">
+                        <a href="/eventos" class="enlace_pag_eventos">Ver Más Eventos <i class="fa-solid fa-chevron-right fa"></i></a>
+                    </div>
+                </div>
+                    
             </div>
         </section>
     </main>
