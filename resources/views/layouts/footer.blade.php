@@ -78,6 +78,7 @@
 
 <!-- JS Propios -->
 <script src="{{ asset('js/front.js') }}"></script>
+<script src="{{ asset('js/carreras.js') }}"></script>
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 

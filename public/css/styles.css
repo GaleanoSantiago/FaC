@@ -336,23 +336,23 @@ nav a:hover {
     background-color: var(--secondary-colour);
 }
 
-header .btn-down {
+.btn-down {
     background: var(--main-colour);
     padding: 12px 5px;
     border-radius: 5px;
     transition: all ease 0.4s;
     animation: arrow-animation 2s ease-in-out infinite;
 }
-header .btn-down:hover {
+.btn-down:hover {
     background: var(--bs-light);
     transition: all ease 0.4s;
 }
 
-header .container-btn-down svg {
+.container-btn-down svg {
     fill: var(--bs-light);
     width: 40px;
 }
-header .btn-down:hover svg.svg-arrow-down {
+.btn-down:hover svg.svg-arrow-down {
     fill: var(--bs-light);
     transition: all ease 0.4s;
 }
@@ -678,7 +678,7 @@ footer .copyright-footer p {
 
 /* ----------------- Header de Carreras -------------------------- */
 
-header#carreras-header {
+#carreras-header {
     height: 500px;
     /* background:linear-gradient(rgba(5,7,8, 0.4), rgba(5,7,8, 0.4)), url(./../img/ingles-big.jpg); */
     background: none;
@@ -687,9 +687,17 @@ header#carreras-header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
 }
-
-header#carreras-header img {
+#titulo-carrera{
+    color:#fff;
+    text-align:center;
+}
+#carreras-header img {
     width: 150px;
 }
 
@@ -787,6 +795,8 @@ header#carreras-header img {
     color: var(--bs-light);
 }
 
+
+
 /* ----------------------------- Seccion de Mediaqueries ----------------------------- */
 
 /* Escritorio extra grande */
@@ -834,13 +844,13 @@ header#carreras-header img {
     }
 
     /* ------- Header --------- */
-    header {
+    header, #carreras-header {
         padding: 50px 30px 5px 30px; /*top right bottom left*/
     }
-    header h1 {
+    header h1, #carreras-header h1 {
         font-size: 2rem;
     }
-    header h2 {
+    header h2, #carreras-header h2 {
         font-size: 1.5rem;
     }
 
@@ -874,16 +884,16 @@ header#carreras-header img {
         padding: 30px 0;
     }
     /* ------- Header --------- */
-    header {
+    header, #carreras-header {
         padding: 50px 30px 5px 30px; /*top right bottom left*/
     }
-    header h1 {
+    header h1, #carreras-header h1 {
         font-size: 2rem;
     }
-    header h2 {
+    header h2, #carreras-header h2 {
         font-size: 1.5rem;
     }
-    header img {
+    header img, #carreras-header img {
         width: 150px;
     }
 
@@ -1006,13 +1016,13 @@ header#carreras-header img {
     }
     /* --------------------- Index.html ---------------------*/
     /* --------------------- Header ---------------------*/
-    header {
+    header, #carreras-header {
         padding: 50px 20px 5px 20px; /*top right bottom left*/
     }
-    header h1 {
+    header h1, #carreras-header h1 {
         font-size: 1.6rem;
     }
-    header h2 {
+    header h2, #carreras-header h2 {
         font-size: 1.3rem;
     }
     /* ------------- Carreras ---------------*/
@@ -1108,10 +1118,10 @@ header#carreras-header img {
 @media only screen and (max-width: 375px) {
     /* --------------------- Index.html ---------------------*/
     /* --------------------- Header ---------------------*/
-    header h1 {
+    header h1, #carreras-header h1 {
         font-size: 1.3rem;
     }
-    header h2 {
+    header h2, #carreras-header h2 {
         font-size: 1.1rem;
     }
     /* --------------------- Navbar ---------------------*/
@@ -1159,12 +1169,12 @@ header#carreras-header img {
 
 /* Ajustes responsivos */
 @media (max-width: 991.98px) {
-    #carouselExampleIndicators .carousel-item {
+    #carouselExampleIndicators .carousel-item, #carouselExampleIndicators .carousel-inner, #carouselExampleIndicators .carousel-item {
         height: 320px;
     }
 }
 @media (max-width: 575.98px) {
-    #carouselExampleIndicators .carousel-item {
+    #carouselExampleIndicators .carousel-item , #carouselExampleIndicators .carousel-inner, #carouselExampleIndicators .carousel-item{
         height: 220px;
     }
 }
