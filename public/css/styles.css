@@ -467,10 +467,16 @@ header .btn-down{
     flex-direction: column;
     gap: 10px;
     padding: 0 30px;
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
 }
+.bloq-cont {
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+    border-radius: 10px;
+}
 .container h2{
     text-align: center;
     color: var(--bordo-vino);
@@ -525,7 +531,6 @@ header .btn-down{
     margin: 0 auto;     
     padding: 40px 0; 
     background-size: cover; 
-    background-color: white;
     border-radius: 10px;
 }
 
@@ -825,6 +830,7 @@ footer .copyright-footer p {
     align-items: center;
     justify-content: center;
     gap:10px;
+    padding:0 30px;
 }
 #titulo-carrera{
     color:#fff;
