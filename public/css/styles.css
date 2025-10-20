@@ -194,153 +194,244 @@ main section p {
 
 /* ------------------------------- Header ------------------------------- */
 
-/*header{
-    height:90vh;
-    padding: 50px 20px 5px 20px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(rgba(5,7,8, 0.4), rgba(5,7,8, 0.6)), url(./../img/instituto3.png);
-    /*Parallax*/
-/* background-attachment: fixed;
-    background-size:cover;
-    background-position:center;
-    background-repeat: repeat;
 
-    gap:5px;
-    color:var(--bs-light);
-
-}
-
-header h2, header h1{
-    text-align:center;
-} 
-header img{
-    width:200px;
-    filter: drop-shadow(0 5px 10px rgba(5,7,8, 0.4));
-}
 
 /* ----------- Navbar ----------- */
 
 nav {
-    width: 100%;
-    position: fixed;
+    background-color: var(--bordo-vino);
+    color: var(--bs-gray-300);
+    position: fixed; 
     top: 0;
     left: 0;
-    background-color: var(--main-colour);
-    padding-left: 2vw;
-    color: #fff;
-    height: 60px;
-    z-index: 2;
-    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
-
-    /* padding-bottom:0 !important; */
+    width: 100%;
+    z-index: 1000; 
+    padding: 10px 0;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
 
-nav .container,
-nav .container-fluid {
+.container-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-nav .nav-logo {
-    width: 70px;
-}
-
-.cont-ul {
+.cont-nav-logo {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    height: 60px;
-    margin-top: 20px; /* Para solucionar el error del espacio debajo del cont-ul */
-    /* width:70%; */
+    gap: 10px;
 }
 
-.cont-ul li {
-    list-style: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 1.5vw; */
-    height: 100%;
-    padding: 10px 15px;
-    transition: all 0.3s ease 0s;
-}
-
-.cont-ul li:hover {
-    background-color: var(--secondary-colour);
-}
-/* Para que el li de carreras y su dropdown esten unidos */
-nav .cont-ul .dropdown-lis {
-    display: flex;
-    height: 100%;
-}
-nav a {
+.cont-nav-logo a {
+    color: var(--bs-gray-300);
     text-decoration: none;
-    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav-icon {
+    height: 40px; 
+    width: auto;
+}
+
+/* ---------------- MENÚ PRINCIPAL ---------------- */
+.cont-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;    
+    gap: 10px;
+}
+
+.cont-ul li a {
+    color: var(--bs-gray-300);
+    text-decoration: none;
+    padding: 10px 15px; 
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 3px;
-    height: 60px;
-    width: 100%;
-}
-nav a svg {
-    width: 20px;
-    fill: #fff;
-    height: fit-content;
-}
-nav a svg.svg-info {
-    fill: none;
-}
-nav a svg.svg-news {
-    width: 30px;
-}
-
-nav a:hover {
-    color: #fff;
-}
-
-.develop {
+    gap: 5px;
+    font-size: 0.95em; 
+    transition: background-color 0.3s;
     position: relative;
 }
-#nav-carreras .develop {
-    gap: 5px;
+
+.cont-ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }
-.develop svg {
-    width: 20px;
+
+.cont-ul li a svg {
+    height: 18px;
+    width: 18px;
 }
+
+
+.dropdown-lis {
+    position: relative;
+}
+
 .ul-second {
     display: none;
     position: absolute;
-    /* margin-top: 1.5vw; */
-    /* margin-top: 475px; */
-    top: 50px;
-    right: -30px;
+    top: 100%; 
+    right: 0;
+    min-width: 250px; 
+    background-color: var(--bordo-cereza-oscura); 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5); 
+    z-index: 1010;
 }
 
-.ul-second > li {
-    width: 300px;
-    transform: translateX(-20px);
-    border-bottom: solid 1px #fff;
-    text-align: center;
-    background-color: var(--main-colour);
-    font-size: 0.9rem;
+.ul-second li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
-.ul-second > li:hover {
-    background-color: var(--secondary-colour);
+.ul-second li:last-child {
+    border-bottom: none; 
 }
 
-.btn-down {
+.ul-second li a {
+    color: var(--bs-gray-300);
+     padding: 18px 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: normal;
+    white-space: normal;
+}
+
+.ul-second li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.dropdown-lis:hover .ul-second {
+    display: block;
+}
+
+/* ---------------- BOTÓN HAMBURGUESA (oculto en desktop) ---------------- */
+.menu-toggle {
+    display: none;  
+}
+
+/* --------------- Responsive ------------- */
+
+@media only screen and (max-width: 991px) {
+     /* Mostrar botón hamburguesa */
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 3000;
+    }
+
+      .menu-toggle svg {
+        width: 28px;
+        height: 28px;
+        color: #fff;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .menu-toggle .icon-close {
+        opacity: 0;
+        transform: scale(0.8);
+        position: absolute;
+    }
+
+    
+    .menu-toggle.active .icon-menu {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    .menu-toggle.active .icon-close {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+     .cont-ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 60%;
+        background-color: var(--bordo-vino);
+        padding: 20px 0;
+        gap: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 2000;
+    }
+
+    .cont-ul.is-open {
+        display: flex;
+    }
+
+      .cont-ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .cont-ul li:last-child {
+        border-bottom: none;
+    }
+
+    .cont-ul li a {
+        width: 100%;
+         padding: 30px 20px;
+        justify-content: flex-start;
+    }
+
+    .dropdown-lis .ul-second {
+        position: static;
+        width: 100%;
+        background-color: #6a001a; /* tono más oscuro */
+        padding-left: 20px;
+        display: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    /* Mostrar submenú al hacer clic (JS agrega clase show-dropdown) */
+    .dropdown-lis.show-dropdown .ul-second {
+        display: block;
+    }
+
+    .dropdown-lis:hover .ul-second {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cont-ul {
+        width: 100%;
+        left: 0; /* Para que se pegue al borde izquierdo */
+        right: 0; /* Asegura que cubra todo */
+    }
+}
+
+
+
+/*-----------------------------------------------------*/
+
+
+header .btn-down{
     background: var(--main-colour);
-    padding: 12px 5px;
-    border-radius: 5px;
-    transition: all ease 0.4s;
+    padding:12px 5px;
+    border-radius:5px;
+    transition: all ease .4s;
     animation: arrow-animation 2s ease-in-out infinite;
 }
 .btn-down:hover {
@@ -354,71 +445,118 @@ nav a:hover {
 }
 .btn-down:hover svg.svg-arrow-down {
     fill: var(--bs-light);
-    transition: all ease 0.4s;
+    transition: all ease .4s;
+
 }
-@keyframes arrow-animation {
-    0% {
+
+@keyframes arrow-animation{
+    0%{
         background: var(--main-colour);
     }
-    50% {
+    50%{
         background: var(--secondary-colour);
     }
-    100% {
+    100%{
         background: var(--main-colour);
     }
 }
 
 /* ------------------------------- Informacion ------------------------------- */
-
-.bloq-cont {
-    background: var(--white-bg-2);
-    padding: 30px;
-    border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(5,7,8, 0.2); */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.bloq-cont .miniseccion-calendario {
-    padding: 20px 0;
-}
-.bloq-cont .miniseccion-calendario h3,
-h3.subtitulo {
-    text-align: center;
-    color: var(--main-colour);
-    text-transform: uppercase;
-    font-size: 2.1rem;
-    font-weight: 550;
-    margin-bottom: 15px;
-}
-.bloq-cont .cont-info-foto {
+.info-section .bloq-cont {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
+    padding: 0 30px;
+    background-color: #fff;
+    border-radius: 10px;
 }
-.bloq-cont .cont-info-foto img {
-    width: 100%;
+.bloq-cont {
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    border-radius: 10px;
 }
-.bloq-cont .miniseccion-calendario .cont-foto-calendario {
-    display: flex;
-    justify-content: center;
+.container h2{
+    text-align: center;
+    color: var(--bordo-vino);
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-top: 20px;
 }
-.bloq-cont .miniseccion-calendario .cont-foto-calendario img {
-    max-width: 400px;
+
+.texto-info p {
+  margin-bottom: 1em;
+  line-height: 1.6;
 }
-.img-index-modal {
-    cursor: pointer;
+
+.texto-info ul {
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+.text-resaltado {
+  font-weight: bold;
+  color: var(--bordo-vino);
+}
+
+.boton-conocer {
+  text-align: left; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-conocer {
+  display: inline-block;
+  background-color: var(--bordo-vino); 
+  color: var(--bs-warning);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-conocer:hover {
+  background-color: var(--bordo-cereza-oscura);  /*momentaneo*/
+  color: var(--bs-orange); /*momentaneo*/
 }
 
 
 /* ------------------------------- Ubicacion ------------------------------- */
 
-#ubicacion iframe {
-    width: 100%;
-    height: 400px;
+.ubicacion-section {
+    max-width: 1325px; 
+    margin: 0 auto;     
+    padding: 40px 0; 
+    background-size: cover; 
+    border-radius: 10px;
+}
+
+.bloq-cont .ubi-contenido {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+ .text-resaltado{
+  font-weight: bold;
+  color: var(--bordo-vino); /*momentaneo*/
+}
+
+.ubicacion-section iframe {
+    width: 300%;
+    height: 450px; 
+    max-width: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
 }
 
 #ubicacion .bloq-cont .mb-2 a {
-    font-size: 2rem;
-    color: var(--bs-danger);
+    font-size: 1.5rem;
+    color: var(--bs-gray-600); /*momentaneo*/
+    padding: 10px;
 }
 
 /* ------------------------------- Carreras ------------------------------- */
@@ -692,6 +830,7 @@ footer .copyright-footer p {
     align-items: center;
     justify-content: center;
     gap:10px;
+    padding:0 30px;
 }
 #titulo-carrera{
     color:#fff;
@@ -811,36 +950,15 @@ footer .copyright-footer p {
         flex-direction: column;
         justify-content: center;
     }
-    /* ------- Navbar --------- */
 }
 
 /* Tablets y smartphones MAS ESPECIFICO*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* ----------------- index.html -----------------  */
-    main section h2 {
-        font-size: 1.7rem;
-        font-weight: 600;
-    }
-    /* ------- Navbar --------- */
-
-    .nav-logo {
-        display: none;
-    }
-    nav .container,
-    nav .container-fluid {
+      .bloq-cont .cont-info-foto {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-    }
-    nav .cont-ul {
-        width: 100%;
-        justify-content: space-evenly;
-        padding-left: 0;
-    }
-    nav li {
-        font-size: 0.8rem;
-    }
-    nav .ul-second li a {
-        height: 40px;
-        font-size: 0.75rem;
     }
 
     /* ------- Header --------- */
@@ -853,6 +971,7 @@ footer .copyright-footer p {
     header h2, #carreras-header h2 {
         font-size: 1.5rem;
     }
+
 
     /* ------- Informacion --------- */
     .bloq-cont .cont-info-foto {
@@ -877,12 +996,7 @@ footer .copyright-footer p {
         font-size: 1.7rem;
         font-weight: 600;
     }
-    .bloq-cont {
-        padding: 30px 15px;
-    }
-    section {
-        padding: 30px 0;
-    }
+
     /* ------- Header --------- */
     header, #carreras-header {
         padding: 50px 30px 5px 30px; /*top right bottom left*/
@@ -897,42 +1011,6 @@ footer .copyright-footer p {
         width: 150px;
     }
 
-    /* ------- Navbar --------- */
-
-    .nav-logo {
-        display: none;
-    }
-
-    nav .container,
-    nav .container-fluid {
-        justify-content: center;
-    }
-    nav .cont-ul {
-        width: 100%;
-        justify-content: space-evenly;
-        padding-left: 0;
-    }
-    nav li {
-        font-size: 0.75rem;
-    }
-    nav li a {
-        flex-direction: column;
-    }
-    nav .develop {
-        padding: 5px;
-    }
-
-    nav .ul-second li a {
-        height: 40px;
-        font-size: 0.7rem;
-    }
-    nav .ul-second {
-        top: 60px;
-    }
-    #nav-carreras .develop {
-        flex-direction: column;
-        gap: 0;
-    }
 
     /* ------- Informacion --------- */
     .bloq-cont .cont-info-foto {
@@ -989,16 +1067,6 @@ footer .copyright-footer p {
 /*Celulares*/
 @media only screen and (max-width: 575px) {
     /* --------------------- General ---------------------*/
-    /* ----------- navbar ---------- */
-
-    nav li {
-        font-size: 0.65rem;
-        padding: 10px !important;
-    }
-    .ul-second {
-        /* top:-370px !important; */
-        right: -40px;
-    }
 
     p,
     .cont-btn-incripcion p,
@@ -1079,17 +1147,6 @@ footer .copyright-footer p {
         font-size: 1.3rem;
         font-weight: 600;
     }
-    /* --------------------- Navbar ---------------------*/
-
-    nav li {
-        padding: 2px 5px !important;
-        font-size: 0.6rem;
-    }
-
-    #nav-carreras .svg-carreras {
-        width: 20px;
-    }
-
     /* --------------------- Informacion ---------------------*/
     .cont-info-foto {
         padding: 20px;
@@ -1121,22 +1178,11 @@ footer .copyright-footer p {
     header h1, #carreras-header h1 {
         font-size: 1.3rem;
     }
+
     header h2, #carreras-header h2 {
         font-size: 1.1rem;
     }
-    /* --------------------- Navbar ---------------------*/
-    nav#nav-carreras .container {
-        padding: 3px;
-    }
-    nav li {
-        padding: 2px 3px !important;
-    }
-    nav#nav-carreras li a {
-        text-align: center;
-    }
-    nav#nav-carreras .ul-second {
-        right: -20px;
-    }
+   
     /* --------------------- Ubicacion ---------------------*/
 
     .ubi-contenido {
@@ -1152,19 +1198,20 @@ footer .copyright-footer p {
     footer .contenido-footer {
         padding: 0 10px;
     }
-}
+ }
 
-/* Reducir altura del carrusel y mantener las imágenes con cover */
+/* Carrusel base */
 #carouselExampleIndicators .carousel-inner,
 #carouselExampleIndicators .carousel-item {
-    height: 600px; /* altura base — ajusta a tu gusto */
-    max-height: 70; /* no superar % de la ventana */
+    height: 600px; /* Altura base en pantallas grandes */
+    max-height: 70vh; /* Nunca más del 70% del alto de la ventana */
     overflow: hidden;
 }
+
 #carouselExampleIndicators .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* recorta la imagen sin deformarla */
+    object-fit: cover; /* Mantiene la imagen recortada sin deformarla */
 }
 
 /* Ajustes responsivos */
@@ -1173,6 +1220,13 @@ footer .copyright-footer p {
         height: 320px;
     }
 }
+
+@media (max-width: 767.98px) {
+    #carouselExampleIndicators .carousel-item {
+        height: 300px;
+    }
+}
+
 @media (max-width: 575.98px) {
     #carouselExampleIndicators .carousel-item , #carouselExampleIndicators .carousel-inner, #carouselExampleIndicators .carousel-item{
         height: 220px;

@@ -14,7 +14,7 @@
     ">
     <img src="{{ asset('img/logo.png') }}" alt="logo felix atilio cabrera">
     <h1 id="titulo-carrera">{{ $carrera['nombre'] }}</h1>
-    <div class="container-btn-down">
+    <!-- <div class="container-btn-down">
         <a href="#informacion-carrera" class="btn-down">
             <svg class="svg-arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <path d="M50.5,19.881c-1.104,0-2,0.896-2,2V72.17L33.193,56.609c-0.781-0.781-1.922-0.781-2.703,0 
@@ -23,7 +23,7 @@
                 C52.5,20.776,51.604,19.881,50.5,19.881z"></path>
             </svg>
         </a>
-    </div>
+    </div> -->
 </div>
 
 <section id="informacion-carrera" class="">
