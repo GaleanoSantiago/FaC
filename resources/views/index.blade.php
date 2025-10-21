@@ -226,55 +226,48 @@
                 
             </div>
         </section>
-        <!------------------------------------------ Ubicacion ------------------------------------------>
-        <section id="ubicacion" class="ubicacion-section">
+        
+        <!------------------------------------------Section Promocion------------------------------------------>
+        <section id="ingreso" class="hero-ingreso">
             <div class="container">
-                <div class="row bloq-cont">
-                    <div class="col-12">
-                         <h2>Ubicación</h2>
+                <div class="row align-items-center promocion-contenido">
+                    <div class="col-lg-12 col-md-12">
+                        <h1>INGRESO 2026</h1>
+                        <p class="lead">Explorá nuestras ofertas educativas. Conocé las carreras y tecnicaturas disponibles para elegir tu formación.</p>
                     </div>
-                    <div class="col-lg-9 col-md-9 col-sm-12 col-12 ">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14320.829546672081!2d-58.18692315514238!3d-26.189931178485736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945ca5e2c1814cd3%3A0x6165c864d60268e8!2sInstituto%20Superior%20Docente%20-%20F%C3%A9lix%20Atilio%20Cabrera%20-%20Formosa!5e0!3m2!1ses-419!2sus!4v1699157127922!5m2!1ses-419!2sus" 
-                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class=" col-lg-3 col-md-3 col-sm-12 col-12 ubi-contenido">
-                        <div class="mb-2">
-                            <p><span class="text-resaltado">Ubicación</span><br>
-                            Formosa - Formosa Capital</p>
+                    <div class="col-lg-12 col-md-12 promocion-container-btn">
+                        <div class="container-btn-calendary">
+                            <button href="" img-data="{{ asset('img/calendarioEscolar.webp') }}" class="btn btn-main img-index-modal">Calendario Escolar</button>
                         </div>
-                        <div class="mb-2">
-                            <p>
-                                <span class="text-resaltado ">Dirección</span><br>
-                                Cordoba 1125
-                            </p>
+                               <!-- Imagen de EJEMPLO -->
+                        <div class="hero-buttons">
+                            <div class="dropdown">
+                                <button class="btn btn-main dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Profesorados
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownProfesorados">
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 1) }}">PROFESORADO EN INGLÉS</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 5) }}">PROFESORADO EN ECONOMÍA</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 6) }}">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-main dropdown-toggle" type="button" id="dropdownTecnicas" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tecnicaturas
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownTecnicas">
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 2) }} ">DESARROLLO DE SOFTWARE</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 3) }} ">SISTEMAS Y REDES</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 4) }} ">ADMINISTRACIÓN DE EMPRESAS</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="mb-2">
-                            <p>
-                                <span class="text-resaltado ">Codigo Postal</span><br>
-                                P3600
-                            </p>
-                        </div>
-                        <div class="mb-2">
-                            <p>
-                                <span class="text-resaltado ">Telefono</span><br>
-                                [Numero telefonico]
-                            </p>
-                        </div>
-                        <div class="mb-2">
-                            <p>
-                                <span class="text-resaltado ">Redes Sociales</span><br>
-                                <a href="https://www.facebook.com/tu_pagina" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> </a>
-                                <a href="https://www.instagram.com/isfdyt_fac/" target="_blank" title="Instagram Felix Atilio Cabrera"><i class="fa fa-instagram"></i></a>
-                            </p>
-                        </div>
-                        <div class="boton-conocer">
-                        <a href="#!" class="btn-conocer">Contacto</a>
-                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
+
         <!------------------------------------------ Carreras ------------------------------------------>
         <section id="carreras" class="d-none">
             <div class="container">
@@ -420,84 +413,193 @@
                     
             </div>
         </section>
+        <!------------------------------------------ Ubicacion ------------------------------------------>
+        <section id="ubicacion" class="ubicacion-section">
+            <div class="container">
+                <div class="row bloq-cont">
+                    <div class="col-12">
+                         <h2>Ubicación</h2>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-12 container-iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14320.829546672081!2d-58.18692315514238!3d-26.189931178485736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945ca5e2c1814cd3%3A0x6165c864d60268e8!2sInstituto%20Superior%20Docente%20-%20F%C3%A9lix%20Atilio%20Cabrera%20-%20Formosa!5e0!3m2!1ses-419!2sus!4v1699157127922!5m2!1ses-419!2sus" 
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class=" col-lg-3 col-md-3 col-sm-12 col-12 ubi-contenido">
+                        <div class="mb-2 item-ubi">
+                            <p><span class="text-resaltado">Ubicación</span><br>
+                            Formosa - Formosa Capital</p>
+                        </div>
+                        <div class="mb-2 item-ubi">
+                            <p>
+                                <span class="text-resaltado ">Dirección</span><br>
+                                Cordoba 1125
+                            </p>
+                        </div>
+                        <div class="mb-2 item-ubi">
+                            <p>
+                                <span class="text-resaltado ">Codigo Postal</span><br>
+                                P3600
+                            </p>
+                        </div>
+                        <div class="mb-2 item-ubi">
+                            <p>
+                                <span class="text-resaltado ">Telefono</span><br>
+                                [Numero telefonico]
+                            </p>
+                        </div>
+                        <div class="mb-2 item-ubi">
+                            <p>
+                                <span class="text-resaltado ">Redes Sociales</span><br>
+                                <a href="https://www.facebook.com/tu_pagina" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> </a>
+                                <a href="https://www.instagram.com/isfdyt_fac/" target="_blank" title="Instagram Felix Atilio Cabrera"><i class="fa fa-instagram"></i></a>
+                            </p>
+                        </div>
+                        <div class="boton-conocer  item-ubi">
+                        <a href="#!" class="btn-conocer">Contacto</a>
+                         </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
     <footer>
         <!-- Boton para volver a arriba -->
         <a href="#" class="btn-scrollTop" id="btnScrollTop">
-            <svg viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+            <svg viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier"> 
-                <title>arrow_up [#337]</title> 
-                <desc>Created with Sketch.</desc> 
-                <defs> </defs> 
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> 
-                <g id="Dribbble-Light-Preview" transform="translate(-260.000000, -6684.000000)"> 
-                <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M223.707692,6534.63378 L223.707692,6534.63378 C224.097436,6534.22888 224.097436,6533.57338 223.707692,6533.16951 L215.444127,6524.60657 C214.66364,6523.79781 213.397472,6523.79781 212.616986,6524.60657 L204.29246,6533.23165 C203.906714,6533.6324 203.901717,6534.27962 204.282467,6534.68555 C204.671211,6535.10081 205.31179,6535.10495 205.70653,6534.69695 L213.323521,6526.80297 C213.714264,6526.39807 214.346848,6526.39807 214.737591,6526.80297 L222.294621,6534.63378 C222.684365,6535.03868 223.317949,6535.03868 223.707692,6534.63378" id="arrow_up-[#337]"> 
-                </path> 
-                </g> 
-                </g> 
-                </g> 
+                <g id="SVGRepo_iconCarrier">
+                    <title>arrow_up [#337]</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" transform="translate(-260.000000, -6684.000000)">
+                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                <path d="M223.707692,6534.63378 L223.707692,6534.63378 C224.097436,6534.22888 224.097436,6533.57338 223.707692,6533.16951 L215.444127,6524.60657 C214.66364,6523.79781 213.397472,6523.79781 212.616986,6524.60657 L204.29246,6533.23165 C203.906714,6533.6324 203.901717,6534.27962 204.282467,6534.68555 C204.671211,6535.10081 205.31179,6535.10495 205.70653,6534.69695 L213.323521,6526.80297 C213.714264,6526.39807 214.346848,6526.39807 214.737591,6526.80297 L222.294621,6534.63378 C222.684365,6535.03868 223.317949,6535.03868 223.707692,6534.63378" id="arrow_up-[#337]"></path>
+                            </g>
+                        </g>
+                    </g>
                 </g>
-                </svg>
+            </svg>
         </a>
-        <section class="contenido-footer">
+
+        <div class="footer-main">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6 col-sm-6 col-12">
-                        <div class="cont-img-footer">
-                            <img src="{{ asset('img/logo.png') }}" alt="Logo escudo felix atilio cabrera">
-                            <p class=""><span class="">Instituto Superior de Formación Docente Continua y Técnica</span> <br> Felix Atilio Cabrera</p>
-                        </div>
-                        <div class="info-footer">
-                            <p>
-                                El Instituto Superior de Formación Docente Continua y Técnica 
-                                "Félix Atilio Cabrera" de gestión Estatal, con más de cuatro 
-                                décadas de experiencia, cumple un papel fundamental en la 
-                                formación de niños, jóvenes y adultos en la provincia de Formosa. 
-                                Su misión principal es proporcionar educación de calidad, capacitación 
-                                docente y técnica. Busca equipar a los estudiantes con las habilidades 
-                                necesarias para desempeñarse eficazmente como docentes, abarcando el diseño 
-                                y ejecución de planes de estudio, la evaluación del rendimiento estudiantil, 
-                                y la promoción de un entorno educativo inclusivo y colaborativo.
-                            </p>
-                        </div>
+                <div class="footer-grid">
+                    <!-- Logo Institucional -->
+                    <div class="footer-column footer-logo">
+                        <img src="{{ asset('img/logo.png') }}" alt="Logo escudo felix atilio cabrera">
+                        <h3>Instituto Superior de Formación Docente Continua y Técnica<br>"Félix Atilio Cabrera"</h3>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 second-col-footer">
-                        <div class="redes-footer">
-                            <a href="https://www.instagram.com/isfdyt_fac/" target="_blank" 
-                                title="Instagram Felix Atilio Cabrera">
-                                <i class="fa fa-instagram"></i> Instagram
+
+                    <!-- Información de Contacto -->
+                    <div class="footer-column footer-contact">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li>
+                                <i class="fa fa-location-dot"></i>
+                                <a href="https://www.bing.com/maps/search?mepi=0%7E%7EEmbedded%7EAddress_Link&ty=18&v=2&sV=1&FORM=MPSRPL&q=Instituto+Superior+Docente+F%C3%A9lix+Atilio+Cabrera&ss=id.ypid%3AYN9000x1519061969320773348&ppois=-26.190000534057617_-58.17660140991211_Instituto+Superior+Docente+F%C3%A9lix+Atilio+Cabrera_YN9000x1519061969320773348%7E&cp=-26.190001%7E-58.176601&lvl=16&style=r" target="_blank" class="fw-bold mega-link">Córdoba 1125, Formosa Capital</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>0370 440-9766</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <span>informes@fac.edu.ar</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Enlaces "Legales" -->
+                    <div class="footer-column footer-legal">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Aviso Legal</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="footer-column footer-social">
+                        <h4>Redes Sociales</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                                <i class="fa-brands fa-facebook"></i>
                             </a>
-                        </div>
-                        <div class="contacto-footer">
-                            <ul>
-                                <li><i class="fa fa-location-dot"></i> Formosa Capital - Barrio Don Bosco - Cordoba 1125</li>
-                                <li><i class="fa fa-phone"></i> 555 555 555</li>
-                            </ul>
+                            <a href="https://www.instagram.com/isfdyt_fac/" target="_blank" title="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
 
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 col-12 tercer-col-footer">
-                        <h4>CARRERAS TERCIARIAS</h4>
-                        <ul>
-                            <li>La preinscripción online se encuentra disponible desde noviembre hasta enero.</li>
-                            <li>Todas las carreras pueden preinscribirse a través de la misma página web.</li>
-                            <li>La preinscripción a las carreras terciarias se realiza únicamente desde el sitio web.</li>
-                            <li>Si desea conocer mas información acerca de las carreras puede acercarse a la institución
-                                a partir de las 19:00 hs. 
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <div class="container">
+                <p>&copy; 2025 FAC - Todos los derechos reservados | <a href="#" class="dev-link" data-bs-toggle="modal" data-bs-target="#devModal">Desarrollado por alumnos de la carrera de Software 3er año</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal De Desarrolladores, de momento el contacto es el github -->
+    <div class="modal fade" id="devModal" tabindex="-1" aria-labelledby="devModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="devModalLabel">Equipo de Desarrollo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center mb-4">Estudiantes de la Tecnicatura Superior en Desarrollo de Software</p>
+                    <div class="dev-list">
+                        <ul class="list-unstyled text-center">
+                            <li class="mb-2">
+                                <a href="https://github.com/GaleanoSantiago" target="_blank" class="fw-bold mega-link">
+                                    Galeano Santiago
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="https://github.com/zlElias" target="_blank" class="fw-bold mega-link">
+                                    Elías Villalba
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="https://github.com/maxJustiniano" target="_blank" class="fw-bold mega-link">
+                                    Justiniano Max
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="https://github.com/eduardobtez" target="_blank" class="fw-bold mega-link">
+                                    Benítez Eduardo
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
             </div>
-        </section>
-        <section class="copyright-footer">
-            <div class="container-fluid">
-                <p>Sitio Web Desarrollado por <a href="https://galeanosantiago.github.io/Portfolio/" target="_blank" class="text-warning">Galeano Santiago</a> </p>
-            </div>
-        </section>
-    </footer>
+        </div>
+    </div>
+    
+
+    <!-- Modal para la imagen -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <!-- <a id="downloadBtn" href="./assets/img/plansoft.png" 
+        download="estructura_curricular_software.png" class="download-button">
+            Descargar Foto
+        </a> -->
+        <img class="modal-content" id="modalImage">
+        
+    </div>
 
     <!-- JS Propios -->
     <script src="{{ asset('js/front.js') }}"></script>

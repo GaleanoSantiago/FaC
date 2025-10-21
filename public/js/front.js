@@ -17,14 +17,49 @@ const modalImg = document.getElementById('modalImage');
 // Verifica si estamos en index.html
 if(imgsIndex!=null){
     // Maneja el clic en la imagen para abrir el modal
-    imgsIndex.forEach(img =>{
-        img.addEventListener('click', ()=> {
+    imgsIndex.forEach(el => {
+        el.addEventListener('click', () => {
+            let imgSrc = "";
+
+            // Si el elemento es una imagen, tomamos su src
+            if (el.tagName.toLowerCase() === "img") {
+                imgSrc = el.src;
+            } 
+            // Si es un botón (u otro), tomamos el atributo img-data
+            else if (el.hasAttribute("img-data")) {
+                imgSrc = el.getAttribute("img-data");
+            }
+
+            // Si tenemos una imagen válida, mostramos el modal
+            if (imgSrc) {
                 modal.style.display = 'flex';
                 modal.style.flexDirection = 'column';
                 modal.style.alignItems = 'center';
                 modal.style.gap = '20px';
-                modalImg.src = img.src;
+                modalImg.src = imgSrc;
+            }
         });
+    });
+}
+
+// Maneja clic en el botón calendario para abrir el mismo modal con la imagen del calendario
+const calendarBtn = document.querySelector('.btn-calendar');
+if(calendarBtn){
+    calendarBtn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        // intentamos localizar la imagen del calendario en la sección de información
+        const calImg = document.querySelector('.cont-foto-calendario img') || document.querySelector(".img-index-modal[src*='calendario']");
+        if(calImg){
+            modal.style.display = 'flex';
+            modal.style.flexDirection = 'column';
+            modal.style.alignItems = 'center';
+            modal.style.gap = '20px';
+            modalImg.src = calImg.src;
+        } else {
+            // fallback: si no encuentra la imagen, abrir href del botón como última opción
+            const href = calendarBtn.getAttribute('href');
+            if(href){ window.open(href, '_blank'); }
+        }
     });
 }
 

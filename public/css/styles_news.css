@@ -110,6 +110,11 @@
 
 
 /* ================== Responsive Design =================== */
+@media only screen and (max-width: 991px) {
+    #noticia-single{
+        padding-top:30px;
+    }
+}
 /*Celulares*/
 @media only screen and (max-width: 575px) {
     .bloq-news{

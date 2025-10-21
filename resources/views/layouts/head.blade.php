@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles_news.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles_eventos.css') }}">
+
+    <!-- navbar -->
+    <script src="{{ asset('js/navbar.js') }}"></script>
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/52ab3134b2.js" crossorigin="anonymous"></script>
 </head>
