@@ -28,6 +28,6 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 storage/framework/views/3564e84c7bdc29f063f5cbbccdf71ec9.php
-/storage
+/storage/framework/views
 storage/logs/laravel.log
 storage/framework/views/3564e84c7bdc29f063f5cbbccdf71ec9.php
