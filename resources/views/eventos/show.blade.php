@@ -17,7 +17,7 @@
             </div>
 
             <div class="evento-imagen-secundaria">
-                <img src="{{ asset($evento['img']) }}" alt="{{ $evento['titulo'] }}">
+                <img src="{{ asset($evento['img']) }}" class="img-index-modal" alt="{{ $evento['titulo'] }}">
             </div>
         </div>
     </div>

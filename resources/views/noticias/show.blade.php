@@ -25,7 +25,7 @@
             <div class="img-container-singleNews">
 
                 <div class="img-card-news">
-                    <img src="{{ asset($noticia['imagen']) }}" alt="{{ $noticia['titulo'] }}">
+                    <img src="{{ asset($noticia['imagen']) }}" class="img-index-modal" alt="{{ $noticia['titulo'] }}">
                 </div>
             </div>
             <div class="card-body-news">
@@ -81,7 +81,7 @@
             @foreach ($ultimasNoticias as $n)
                 <div class="card-carreras card-news">
                     <div class="img-card-carrera">
-                        <img src="{{ asset($n['imagen']) }}" alt="{{ $n['titulo'] }}">
+                        <img src="{{ asset($n['imagen']) }}" class="" alt="{{ $n['titulo'] }}">
                     </div>
                     <div class="card-body-carrera">
                         <div class="container-fecha">

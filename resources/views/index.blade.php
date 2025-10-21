@@ -235,13 +235,15 @@
                         <h1>INGRESO 2026</h1>
                         <p class="lead">Explorá nuestras ofertas educativas. Conocé las carreras y tecnicaturas disponibles para elegir tu formación.</p>
                     </div>
-                    <div class="col-lg-12 col-md-12 d-flex justify-content-lg-end justify-content-center">
-                        <a href="{{ asset('img/calendarioEscolar.webp') }}" target="_blank" class="btn btn-hero btn-calendar">CALENDARIO ESCOLAR</a>
+                    <div class="col-lg-12 col-md-12 promocion-container-btn">
+                        <div class="container-btn-calendary">
+                            <button href="" img-data="{{ asset('img/calendarioEscolar.webp') }}" class="btn btn-main img-index-modal">Calendario Escolar</button>
+                        </div>
                                <!-- Imagen de EJEMPLO -->
                         <div class="hero-buttons">
                             <div class="dropdown">
-                                <button class="btn btn-hero dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
-                                    PROFESORADOS
+                                <button class="btn btn-main dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Profesorados
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownProfesorados">
                                     <li><a class="dropdown-item" href="{{ route('carreras.show', 1) }}">PROFESORADO EN INGLÉS</a></li>
@@ -251,8 +253,8 @@
                             </div>
 
                             <div class="dropdown">
-                                <button class="btn btn-hero dropdown-toggle" type="button" id="dropdownTecnicas" data-bs-toggle="dropdown" aria-expanded="false">
-                                    CARRERAS TÉCNICAS
+                                <button class="btn btn-main dropdown-toggle" type="button" id="dropdownTecnicas" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tecnicaturas
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownTecnicas">
                                     <li><a class="dropdown-item" href="{{ route('carreras.show', 2) }} ">DESARROLLO DE SOFTWARE</a></li>
@@ -585,6 +587,18 @@
                 </div>
             </div>
         </div>
+    </div>
+    
+
+    <!-- Modal para la imagen -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <!-- <a id="downloadBtn" href="./assets/img/plansoft.png" 
+        download="estructura_curricular_software.png" class="download-button">
+            Descargar Foto
+        </a> -->
+        <img class="modal-content" id="modalImage">
+        
     </div>
 
     <!-- JS Propios -->
