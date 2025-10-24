@@ -50,14 +50,13 @@
                 <ul class="cont-ul" id="main-menu">
                 <li>
                     <a href="{{ route('home') }}">
-                    @include('components.icons.home')
+                    <!--@include('components.icons.home')-->
                     Inicio
                     </a>
                 </li>
 
                 <li>
                     <a href="#informacion">
-                    @include('components.icons.info')
                     Información
                     </a>
                 </li>
@@ -65,12 +64,12 @@
                 <!-- DROPDOWN CARRERAS -->
                 <li class="dropdown-lis">
                     <a href="#carreras">
-                    @include('components.icons.carreras')
+                   <!-- @include('components.icons.carreras')-->
                     Carreras
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                         d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z"
-                        fill="#fff"></path>
+                        ></path>
                     </svg>
                     </a>
 
@@ -86,14 +85,14 @@
 
                 <li>
                     <a href="#institucional">
-                    @include('components.icons.institucional')
+                    <!--@include('components.icons.institucional')-->
                     Institucional
                     </a>
                 </li>
 
                 <li>
                     <a href="#ubicacion">
-                    @include('components.icons.location')
+                    <!--@include('components.icons.location')-->
                     Ubicación
                     </a>
                 </li>
@@ -102,7 +101,7 @@
 
                 <li>
                     <a href="#campus">
-                    @include('components.icons.campus-icon')
+                    <!--@include('components.icons.campus-icon')-->
                     Campus
                     </a>
                 </li>
@@ -210,7 +209,7 @@
                                 <h5>{{ $n['titulo'] }}</h5>
                                 <p>{{ Str::limit($n['contenido'], 100, '...') }}</p>
                                 <div class="container-btn">
-                                    <a href="{{ route('noticias.show', $n['id_noticia']) }}" class="btn btn-main">
+                                    <a href="{{ route('noticias.show', $n['id_noticia']) }}"  class="btn-news btn btn-main">
                                         Leer más <i class="fa-solid fa-chevron-right"></i>
                                     </a>
                                 </div>
@@ -236,13 +235,13 @@
                         <p class="lead">Explorá nuestras ofertas educativas. Conocé las carreras y tecnicaturas disponibles para elegir tu formación.</p>
                     </div>
                     <div class="col-lg-12 col-md-12 promocion-container-btn">
-                        <div class="container-btn-calendary">
+                        <div class=" btn-ingress container-btn-calendary">
                             <button href="" img-data="{{ asset('img/calendarioEscolar.webp') }}" class="btn btn-main img-index-modal">Calendario Escolar</button>
                         </div>
                                <!-- Imagen de EJEMPLO -->
                         <div class="hero-buttons">
                             <div class="dropdown">
-                                <button class="btn btn-main dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-ingress btn btn-main dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
                                     Profesorados
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownProfesorados">
@@ -253,7 +252,7 @@
                             </div>
 
                             <div class="dropdown">
-                                <button class="btn btn-main dropdown-toggle" type="button" id="dropdownTecnicas" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-ingress btn btn-main dropdown-toggle" type="button" id="dropdownTecnicas" data-bs-toggle="dropdown" aria-expanded="false">
                                     Tecnicaturas
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownTecnicas">

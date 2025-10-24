@@ -23,7 +23,6 @@
                 <ul class="cont-ul" id="main-menu">
                 <li>
                     <a href="{{ route('home') }}">
-                    @include('components.icons.home')
                     Inicio
                     </a>
                 </li>
