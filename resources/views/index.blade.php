@@ -230,13 +230,13 @@
         <section id="ingreso" class="hero-ingreso">
             <div class="container">
                 <div class="row align-items-center promocion-contenido">
-                    <div class="col-lg-12 col-md-12">
+                    <!-- <div class="col-lg-12 col-md-12">
                         <h1>INGRESO 2026</h1>
                         <p class="lead">Explorá nuestras ofertas educativas. Conocé las carreras y tecnicaturas disponibles para elegir tu formación.</p>
-                    </div>
+                    </div> -->
                     <div class="col-lg-12 col-md-12 promocion-container-btn">
-                        <div class=" btn-ingress container-btn-calendary">
-                            <button href="" img-data="{{ asset('img/calendarioEscolar.webp') }}" class="btn btn-main img-index-modal">Calendario Escolar</button>
+                        <div class="container-btn-calendary">
+                            <button href="" img-data="{{ asset('img/calendarioEscolar.webp') }}" class="btn-ingress btn btn-main img-index-modal">Calendario Escolar</button>
                         </div>
                                <!-- Imagen de EJEMPLO -->
                         <div class="hero-buttons">
@@ -245,9 +245,9 @@
                                     Profesorados
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownProfesorados">
-                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 1) }}">PROFESORADO EN INGLÉS</a></li>
-                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 5) }}">PROFESORADO EN ECONOMÍA</a></li>
-                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 6) }}">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 1) }}">Profesorado de Ingles</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 5) }}">Profesorado en Economía</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 6) }}">Profesorado  en Ciencas de la Educación</a></li>
                                 </ul>
                             </div>
 
@@ -256,9 +256,9 @@
                                     Tecnicaturas
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownTecnicas">
-                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 2) }} ">DESARROLLO DE SOFTWARE</a></li>
-                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 3) }} ">SISTEMAS Y REDES</a></li>
-                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 4) }} ">ADMINISTRACIÓN DE EMPRESAS</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 2) }} ">Desarrollo en Software</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 3) }} ">Sistemas y Redes</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('carreras.show', 4) }} ">Administración de PyMES</a></li>
                                 </ul>
                             </div>
                         </div>
