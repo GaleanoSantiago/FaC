@@ -1038,6 +1038,7 @@ footer .copyright-footer p {
     fill: var(--bs-light) !important;
 }
 
+
 /* ------------------------------- Pagina de Carreras.html ------------------------------- */
 
 /* ----------------- Navbar de Carreras -------------------------- */
@@ -1663,11 +1664,11 @@ footer {
     text-align: center;
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #4B0000;
+    background-color: var(--red-500);
 }
 
 .footer-copyright p {
-    color: #ccc;
+    color: var(--gray-300);
     margin: 0;
     font-size: 0.9rem;
 }
@@ -1701,14 +1702,14 @@ footer {
 
 
 .dev-link {
-    color: #ccc;
+    color: var(--gray-300);
     text-decoration: none;
     transition: color 0.3s ease;
     cursor: pointer;
 }
 
 .dev-link:hover {
-    color: #fff;
+    color: var(--red-900);
     text-decoration: underline;
 }
 
@@ -1720,9 +1721,41 @@ footer {
 
 #devModal .modal-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--main-colour);
-    color: #fff;
+    background-color: var(--red-900);
+    color: var(--gray-300);
     border-radius: 10px 10px 0 0;
+}
+
+#devModal .modal-body {
+    text-align: left !important;
+    padding: 1.5rem;
+    color: var(--gray-400); 
+}
+
+/* Párrafo introductorio */
+#devModal .modal-body p {
+    text-align: left !important;
+    margin-bottom: 1rem;
+    color: var(--gray-900) !important;
+    font-size: 0.95rem;
+}
+
+/* Lista de desarrolladores */
+#devModal .dev-list ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Enlaces a GitHub */
+#devModal a.mega-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--gray-500);
+    transition: color 0.3s ease;
+}
+#devModal a.mega-link:hover {
+    color: var(--red-500)
 }
 
 #devModal .btn-close {
