@@ -238,10 +238,10 @@
                         <div class="container-btn-calendary">
                             <button href="" img-data="{{ asset('img/calendarioEscolar.webp') }}" class="btn-ingress btn btn-main img-index-modal">Calendario Escolar</button>
                         </div>
-                               <!-- Imagen de EJEMPLO -->
+                        
                         <div class="hero-buttons">
                             <div class="dropdown">
-                                <button class="btn-ingress btn btn-main dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-ingress btn-main dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
                                     Profesorados
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownProfesorados">
@@ -252,7 +252,7 @@
                             </div>
 
                             <div class="dropdown">
-                                <button class="btn-ingress btn btn-main dropdown-toggle" type="button" id="dropdownTecnicas" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn-ingress btn-main dropdown-toggle" type="button" id="dropdownTecnicas" data-bs-toggle="dropdown" aria-expanded="false">
                                     Tecnicaturas
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownTecnicas">
