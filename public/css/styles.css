@@ -734,7 +734,7 @@ header .btn-down{
 /* ------------------------------- Carreras ------------------------------- */
 
 .card-carreras {
-    background: var(--white-bg-2);
+    background: var(--gray-300);
     padding: 10px;
     width: 100%;
     border-radius: 10px;
@@ -784,6 +784,90 @@ header .btn-down{
     gap: 20px;
     list-style: circle;
 }
+
+/* Contenedor principal de los bloques inferiores */
+.detalle-contenido {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+    margin: 3rem auto 4rem;
+    align-items: start; /* ← asegura que ambos se alineen arriba */
+}
+
+/* Columna izquierda (detalles) */
+.detalle-info {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    align-self: start; /* ← fuerza alineación superior */
+    height: fit-content; /* ← evita que se estire innecesariamente */
+}
+
+/* Columna derecha (preinscripción) */
+.cont-btn-incripcion {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    align-self: start; /* ← también arriba */
+}
+
+.cont-btn-incripcion { margin-top: 0 !important; }
+.cont-btn-incripcion .subtitulo { margin-top: 0 !important; }
+
+.btn-plan-estudio {
+    display: inline-block;
+    padding: 4px 16px;
+    background: var(--amber-900) !important;
+    color: var(--red-900) !important;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-plan-estudio:hover {
+    background: var(--blue-900);
+    transform: translateY(-2px);
+}
+
+.info-carrera h5 {
+    margin-bottom: 1rem;
+    color: var(--gray-700);
+}
+
+.cont-btn-incripcion h5{
+    margin-bottom: 1rem;
+    color: var(--gray-700);
+    text-align: left !important;
+}
+
+
+
+/* Responsive: apilar en pantallas pequeñas */
+@media (max-width: 992px) {
+    .detalle-contenido {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Si querés que en móviles se apilen nuevamente */
+@media (max-width: 768px) {
+    .detalle-contenido {
+        flex-direction: column;
+    }
+
+    .detalle-info,
+    .cont-btn-incripcion {
+        flex: 1 1 100%;
+    }
+}
+
 
 
 /* ------------------------------- Noticias ------------------------------- */
@@ -1092,25 +1176,27 @@ footer .copyright-footer p {
 }
 
 .btn-incripcion {
-    padding: 25px;
-    width: fit-content;
-    background: var(--main-colour);
-    /* background: linear-gradient(to bottom, #8B0000, #660000); */
-
-    text-decoration: none;
+    display: inline-flex;               /* Permite centrar vertical y horizontalmente */
+    align-items: center;                /* Centra verticalmente el texto */
+    justify-content: center;            /* Centra horizontalmente */
+    padding: 8px 16px;                  /* Altura visual más pequeña */
+    background: var(--red-900);
     color: var(--bs-light) !important;
-    border-radius: 10px;
-    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1;                     /* Evita que el texto se desplace */                     /* Se ajusta al padding */
 }
 
 .btn-incripcion:hover {
     transition: all 0.4s ease;
     box-shadow: 0 0 10px rgba(5, 7, 8, 0.3);
-    background: var(--secondary-colour);
-    color: var(--bs-light);
+    background: var(--amber-900);
+    color: var(--red-900) !important;
 }
 
 .cont-btn-incripcion p {

@@ -35,49 +35,87 @@
         <h5><span class="text-resaltado">Horario:</span> {{ $carrera['horario'] }}</h5>
         <h5><span class="text-resaltado">Descripción:</span></h5>
         <p>{{ $carrera['descripcion'] }}</p>
-
-        <div class="row">
-            <div class="cont-btn-incripcion">
-                <h3 class="subtitulo">PREINSCRIPCIÓN</h3>
-                <ul>
-                    <li>La preinscripción online se encuentra disponible desde noviembre hasta enero. 
-                        <span class="text-resaltado">Actualmente no se encuentra habilitado.</span>
-                    </li>
-                    <li>Todas las carreras pueden preinscribirse a través de la misma página web.</li>
-                    <li>La preinscripción a las carreras terciarias se realiza únicamente desde el sitio web.</li>
-                    <li>Si desea conocer más información acerca de las carreras puede acercarse a la institución
-                        a partir de las 19:00 hs.
-                    </li>
-                </ul>
-                <a href="https://www.formosa.gob.ar/educacion/inscripcioneducacionsuperior" 
-                   target="_blank" class="btn-incripcion">
-                    Preinscripción Online
-                </a>
-            </div>
-        </div>
     </div>
-</section>
 
-<section id="estructura-curricular" class="bg-white-1">
-    <div class="container">
-        <h2>Plan de Estudio</h2>
-        <div class="img-estructura-curr" id="cont-img-curricular">
-            <img src="{{ asset('img/' . $carrera['planEstudio']) }}" 
-                 alt="Estructura curricular de {{ $carrera['nombre'] }}"
-                 id="img-curricular" class="img-fluid shadow rounded-4" 
-                 style="cursor: pointer; transition: transform 0.3s ease;">
-        </div>
+    {{-- Contenido principal --}}
+    <div class="detalle-contenido container">
+        {{-- Columna izquierda: Detalles --}}
+        <div class="detalle-info">
+    <div class="info-carrera">
+        <h5>Detalles de la Carrera</h5>
+        <ul>
+            <li><strong>Resolución:</strong> {{ $carrera['resolucion'] }}</li>
+            <li><strong>Periodo Escolar:</strong> {{ $carrera['periodo'] }}</li>
+        </ul>
 
-        <!-- Modal para la imagen -->
-        <div id="imageModal" class="modal">
-            <span class="close">&times;</span>
-            <a id="downloadBtn" href="{{ asset('img/' . $carrera['planEstudio']) }}" 
-               download="{{ Str::slug($carrera['nombre']) }}_plan_estudio.png" 
-               class="download-button">
-                Descargar Foto
+        <!-- Botón para ver el plan de estudios -->
+        <button id="verPlanEstudioBtn" class="btn-plan-estudio">
+            Ver Plan de Estudios
+        </button>
+    </div>
+</div>
+
+<!-- Modal del Plan de Estudio -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <a id="downloadBtn" 
+       href="{{ asset('img/' . $carrera['planEstudio']) }}" 
+       download="{{ Str::slug($carrera['nombre']) }}_plan_estudio.png" 
+       class="download-button">
+        Descargar Plan
+    </a>
+    <img 
+        src="{{ asset('img/' . $carrera['planEstudio']) }}" 
+        alt="Estructura curricular de {{ $carrera['nombre'] }}"
+        class="modal-content" 
+        id="modalImage">
+</div>
+
+
+        {{-- Columna derecha: Preinscripción --}}
+        <div class="cont-btn-incripcion">
+            <h5 class="subtitulo">Preinscripción</h5>
+            <ul>
+                <li>La preinscripción online se encuentra disponible desde noviembre hasta enero. 
+                    <span class="text-resaltado">Actualmente no se encuentra habilitado.</span>
+                </li>
+                <li>Todas las carreras pueden preinscribirse a través de la misma página web.</li>
+                <li>La preinscripción a las carreras terciarias se realiza únicamente desde el sitio web.</li>
+                <li>Si desea conocer más información acerca de las carreras puede acercarse a la institución
+                    a partir de las 19:00 hs.
+                </li>
+            </ul>
+            <a href="https://www.formosa.gob.ar/educacion/inscripcioneducacionsuperior" 
+               target="_blank" class="btn-incripcion">
+                Preinscripción Online
             </a>
-            <img class="modal-content" id="modalImage">
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("imageModal");
+    const btn = document.getElementById("verPlanEstudioBtn");
+    const closeBtn = document.querySelector(".close");
+
+    // Abrir modal
+    btn.addEventListener("click", function() {
+        modal.style.display = "block";
+    });
+
+    // Cerrar modal con la X
+    closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    // Cerrar clickeando fuera de la imagen
+    window.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+</script>
+
 @endsection
