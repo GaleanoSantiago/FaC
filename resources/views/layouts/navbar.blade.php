@@ -29,7 +29,7 @@
 
                 <li>
                     <a href="#informacion">
-                    @include('components.icons.info')
+                    <!-- @include('components.icons.info') -->
                     Información
                     </a>
                 </li>
@@ -37,12 +37,12 @@
                 <!-- DROPDOWN CARRERAS -->
                 <li class="dropdown-lis">
                     <a href="#carreras">
-                    @include('components.icons.carreras')
+                    <!-- @include('components.icons.carreras') -->
                     Carreras
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                         d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z"
-                        fill="#fff"></path>
+                        ></path>
                     </svg>
                     </a>
 
@@ -58,14 +58,14 @@
 
                 <li>
                     <a href="#institucional">
-                    @include('components.icons.institucional')
+                    <!-- @include('components.icons.institucional') -->
                     Institucional
                     </a>
                 </li>
 
                 <li>
                     <a href="#ubicacion">
-                    @include('components.icons.location')
+                    <!-- @include('components.icons.location') -->
                     Ubicación
                     </a>
                 </li>
@@ -74,7 +74,7 @@
 
                 <li>
                     <a href="#campus">
-                    @include('components.icons.campus-icon')
+                    <!-- @include('components.icons.campus-icon') -->
                     Campus
                     </a>
                 </li>

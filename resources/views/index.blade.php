@@ -91,9 +91,16 @@
                 </li>
 
                 <li>
-                    <a href="#ubicacion">
+                    <a href="#noticias">
                     <!--@include('components.icons.location')-->
-                    Ubicación
+                    Noticias
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#eventos">
+                    <!--@include('components.icons.location')-->
+                    Eventos
                     </a>
                 </li>
 
