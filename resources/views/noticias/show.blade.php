@@ -92,7 +92,7 @@
                         <h5>{{ $n['titulo'] }}</h5>
                         <p>{{ Str::limit($n['contenido'], 100, '...') }}</p>
                         <div class="container-btn">
-                            <a href="{{ route('noticias.show', $n['id_noticia']) }}" class="btn btn-main">
+                            <a href="{{ route('noticias.show', $n['id']) }}" class="btn btn-main">
                                 Leer más <i class="fa-solid fa-chevron-right"></i>
                             </a>
                         </div>

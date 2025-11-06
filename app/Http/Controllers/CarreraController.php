@@ -7,6 +7,7 @@ use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\EventoController; 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
+use  App\Models\Carrera;
 
 class CarreraController extends Controller
 {
@@ -14,7 +15,7 @@ class CarreraController extends Controller
     /**
      * Obtiene todas las carreras desde el archivo JSON.noticias
      */
-    public function getCarreras()
+    public function getCarrerasJson()
     {
         $path = resource_path('data/carreras.json');
 
@@ -35,7 +36,7 @@ class CarreraController extends Controller
     /**
      * Muestra la lista de carreras.
      */
-    public function index()
+    public function indexJson()
     {
         $carreras = $this->getCarreras();
         return view('carreras.index', compact('carreras'));
@@ -44,7 +45,7 @@ class CarreraController extends Controller
     /**
      * Muestra una noticia individual.
      */
-    public function show($id)
+    public function showJson($id)
     {
         $carreras = $this->getCarreras();
 
@@ -62,5 +63,41 @@ class CarreraController extends Controller
     
         return view('carreras.show', compact('carrera', 'ultimasCarreras'));
     }
+
+// ====================================================================
+
+    /**
+     * Muestra la lista de todas las carreras desde la BD.
+     */
+    public function index()
+    {
+        $carreras = Carrera::orderBy('created_at', 'desc')->get();
+        return view('carreras.index', compact('carreras'));
+    }
+
+    /**
+     * Muestra una carrera individual.
+     */
+    public function show($id)
+    {
+        $carrera = Carrera::findOrFail($id);
+
+        // Obtener las últimas 3 carreras (excluyendo la actual)
+        $ultimasCarreras = Carrera::where('id', '!=', $id)
+            ->orderBy('created_at', 'desc')
+            ->take(3)
+            ->get();
+
+        return view('carreras.show', compact('carrera', 'ultimasCarreras'));
+    }
+
+    /**
+     * Endpoint API (opcional): devuelve todas las carreras en JSON.
+     */
+    public function getCarreras()
+    {
+        return Carrera::all();
+    }
+
 }
 

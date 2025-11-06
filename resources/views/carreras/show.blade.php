@@ -59,13 +59,13 @@
 <div id="imageModal" class="modal">
     <span class="close">&times;</span>
     <a id="downloadBtn" 
-       href="{{ asset('img/' . $carrera['planEstudio']) }}" 
+       href="{{ asset('img/' . $carrera['plan_estudio']) }}" 
        download="{{ Str::slug($carrera['nombre']) }}_plan_estudio.png" 
        class="download-button">
         Descargar Plan
     </a>
     <img 
-        src="{{ asset('img/' . $carrera['planEstudio']) }}" 
+        src="{{ asset('img/' . $carrera['plan_estudio']) }}" 
         alt="Estructura curricular de {{ $carrera['nombre'] }}"
         class="modal-content" 
         id="modalImage">
@@ -101,7 +101,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Abrir modal
     btn.addEventListener("click", function() {
-        modal.style.display = "block";
+        modal.style.display = "flex";
+        modal.style.flexDirection = "column";
+        modal.style.alignItems = "center";
     });
 
     // Cerrar modal con la X

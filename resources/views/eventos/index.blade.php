@@ -16,7 +16,7 @@
                     @foreach ($eventos as $evento)
                         <div class="card-carreras card-evento">
                             <div class="img-card-carrera">
-                                <img src="{{ asset($evento['img']) }}" alt="{{ $evento['titulo'] }}">
+                                <img src="{{ asset($evento['imagen']) }}" alt="{{ $evento['titulo'] }}">
                             </div>
 
                             <div class="card-body-carrera">
@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="container-btn">
-                                <a href="{{ route('eventos.show', $evento['id_evento']) }}" class="btn btn-main">
+                                <a href="{{ route('eventos.show', $evento['id']) }}" class="btn btn-main">
                                     Ver Evento <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                             </div>

@@ -28,7 +28,7 @@
                     <p>{{ Str::limit($noticia['contenido'], 120, '...') }}</p>
 
                     <div class="container-btn">
-                        <a href="{{ route('noticias.show', $noticia['id_noticia']) }}" class="btn btn-main">
+                        <a href="{{ route('noticias.show', $noticia['id']) }}" class="btn btn-main">
                             Leer más <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
