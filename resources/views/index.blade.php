@@ -76,10 +76,11 @@
                     <ul class="ul-second">
                         <li><a href="{{ route('carreras.show', 1) }}">PROFESORADO EN INGLÉS</a></li>
                         <li><a href="{{ route('carreras.show', 2) }}">TECNICATURA SUPERIOR EN DESARROLLO DE SOFTWARE</a></li>
-                        <li><a href="{{ route('carreras.show', 3) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS Y REDES</a></li>
-                        <li><a href="{{ route('carreras.show', 4) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE EMPRESAS CON ORIENTACIÓN A PYMES</a></li>
-                        <li><a href="{{ route('carreras.show', 5) }}">PROFESORADO EN ECONOMÍA</a></li>
-                        <li><a href="{{ route('carreras.show', 6) }}">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
+                        <li><a href="{{ route('carreras.show', 3) }}">TECNICATURA SUPERIOR EN INFRAESTRUCTURA DE LA INFORMACIÓN</a></li>
+                        <li><a href="{{ route('carreras.show', 4) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS Y REDES</a></li>
+                        <li><a href="{{ route('carreras.show', 5) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE EMPRESAS CON ORIENTACIÓN A PYMES</a></li>
+                        <li><a href="{{ route('carreras.show', 6) }}">PROFESORADO EN ECONOMÍA</a></li>
+                        <li><a href="{{ route('carreras.show', 7) }}">PROFESORADO EN CIENCIAS DE LA EDUCACIÓN</a></li>
                     </ul>
                 </li>
 

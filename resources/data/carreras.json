@@ -29,6 +29,20 @@
     },
     {
       "id_carrera": 3,
+      "nombre": "Tecnicatura Superior en Infraestructura de la Información",
+      "duracion": "3 años",
+      "resolucion": "N° 369/17",
+       "periodo": "2017",
+      "clasificacion": "Tecnicatura",
+      "horario": "19:00 a 23:00 hs",
+      "descripcion": "La Tecnicatura Superior en Desarrollo de Software, especializada en Desarrollo Web, es un programa de tres años que forma a profesionales en programación, diseño web y gestión de proyectos. Los estudiantes adquieren habilidades técnicas en programación web, bases de datos y frameworks, además de aprender sobre diseño web y usabilidad. Al graduarse, estarán preparados para desarrollar sitios y aplicaciones web, gestionar proyectos de desarrollo y mantener y optimizar sitios existentes. Esta carrera ofrece una sólida base en tecnología web y prepara a los graduados para roles en desarrollo y diseño web.",
+      "fondo": "software-big.jpg",
+      "planEstudio": "plansoft.png",
+      "created_at": "2025-09-16 19:00:00",
+      "updated_at": "2025-09-16 19:00:00"
+    },
+    {
+      "id_carrera": 4,
       "nombre": "Tecnicatura Superior en Administración de Sistemas y Redes",
       "duracion": "3 años",
       "resolucion": "N° 369/17",
@@ -42,7 +56,7 @@
       "updated_at": "2025-09-17 19:00:00"
     },
     {
-      "id_carrera": 4,
+      "id_carrera": 5,
       "nombre": "Tecnicatura Superior en Administración de Empresas con Orientación a PyMES",
       "duracion": "3 años",
       "resolucion": "N° 369/17",
@@ -56,7 +70,7 @@
       "updated_at": "2025-09-18 19:00:00"
     },
     {
-      "id_carrera": 5,
+      "id_carrera": 6,
       "nombre": "Profesorado en Economía",
       "duracion": "4 años",
       "resolucion": "N° 369/17",
@@ -70,7 +84,7 @@
       "updated_at": "2025-09-19 19:00:00"
     },
     {
-      "id_carrera": 6,
+      "id_carrera": 7,
       "nombre": "Profesorado en Ciencias de la Educación",
       "duracion": "4 años",
       "resolucion": "N° 369/17",
