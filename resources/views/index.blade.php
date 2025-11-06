@@ -130,13 +130,13 @@
                 <img src="{{ asset('img/instituto3.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="{{ asset('img/inscripcion_slide.png') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/carrusel1.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="{{ asset('img/software_slide.png') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/carrusel2.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="{{ asset('img/ingles2_slide.png') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/carrusel3.png') }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
