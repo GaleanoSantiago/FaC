@@ -108,7 +108,7 @@
                 
 
                 <li>
-                    <a href="#campus">
+                    <a href="https://lightcoral-spoonbill-497630.hostingersite.com/login">
                     <!--@include('components.icons.campus-icon')-->
                     Campus
                     </a>
