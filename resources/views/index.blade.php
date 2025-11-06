@@ -76,7 +76,7 @@
                     <ul class="ul-second">
                         <li><a href="{{ route('carreras.show', 1) }}">PROFESORADO EN INGLÉS</a></li>
                         <li><a href="{{ route('carreras.show', 2) }}">TECNICATURA SUPERIOR EN DESARROLLO DE SOFTWARE</a></li>
-                        <li><a href="{{ route('carreras.show', 3) }}">TECNICATURA SUPERIOR EN INFRAESTRUCTURA DE LA INFORMACIÓN</a></li>
+                        <li><a href="{{ route('carreras.show', 3) }}">TECNICATURA SUPERIOR EN SOPORTE DE INFRAESTRUCTURA DE TECNOLOGÍA DE LA INFORMACIÓN</a></li>
                         <li><a href="{{ route('carreras.show', 4) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE SISTEMAS Y REDES</a></li>
                         <li><a href="{{ route('carreras.show', 5) }}">TECNICATURA SUPERIOR EN ADMINISTRACIÓN DE EMPRESAS CON ORIENTACIÓN A PYMES</a></li>
                         <li><a href="{{ route('carreras.show', 6) }}">PROFESORADO EN ECONOMÍA</a></li>
@@ -457,7 +457,7 @@
                         <div class="mb-2 item-ubi">
                             <p>
                                 <span class="text-resaltado ">Redes Sociales</span><br>
-                                <a href="https://www.facebook.com/tu_pagina" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> </a>
+                                <a href="https://www.facebook.com/profile.php?id=61559515095922" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> </a>
                                 <a href="https://www.instagram.com/isfdyt_fac/" target="_blank" title="Instagram Felix Atilio Cabrera"><i class="fa fa-instagram"></i></a>
                             </p>
                         </div>
@@ -533,7 +533,7 @@
                     <div class="footer-column footer-social">
                         <h4>Redes Sociales</h4>
                         <div class="social-links">
-                            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                            <a href="https://www.facebook.com/profile.php?id=61559515095922" target="_blank" title="Facebook">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
                             <a href="https://www.instagram.com/isfdyt_fac/" target="_blank" title="Instagram">
@@ -581,7 +581,7 @@
           <h6 class="fw-bold text-uppercase mb-3 border-bottom pb-2">Backend</h6>
           <div class="d-flex flex-wrap  gap-3">
             <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Runchisky Ivan</a>
-            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Damian</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Goméz Damian </a>
           </div>
         </div>
 
