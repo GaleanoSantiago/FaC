@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (dropdownItem) {
         dropdownItem.addEventListener('click', (e) => {
             // Evitar que el enlace navegue
-            e.preventDefault();
+            // e.preventDefault();
 
             // Toggle submenú
             dropdownItem.classList.toggle('show-dropdown');
