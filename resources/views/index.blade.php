@@ -243,11 +243,12 @@
                         <p class="lead">Explorá nuestras ofertas educativas. Conocé las carreras y tecnicaturas disponibles para elegir tu formación.</p>
                     </div> -->
                     <div class="col-lg-12 col-md-12 promocion-container-btn">
-                        <div class="container-btn-calendary">
+                        
+                        <div class="hero-buttons">
+                            <div class="container-btn-calendary">
                             <button href="" img-data="{{ asset('img/calendarioEscolar.webp') }}" class="btn-ingress btn btn-main img-index-modal">Calendario Escolar</button>
                         </div>
                         
-                        <div class="hero-buttons">
                             <div class="dropdown">
                                 <button class="btn-ingress btn-main dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
                                     Profesorados
