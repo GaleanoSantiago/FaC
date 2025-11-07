@@ -130,13 +130,13 @@
                 <img src="{{ asset('img/instituto3.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="{{ asset('img/inscripcion_slide.png') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/carrusel1.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="{{ asset('img/software_slide.png') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/carrusel2.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="{{ asset('img/ingles2_slide.png') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset('img/carrusel3.png') }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -243,11 +243,12 @@
                         <p class="lead">Explorá nuestras ofertas educativas. Conocé las carreras y tecnicaturas disponibles para elegir tu formación.</p>
                     </div> -->
                     <div class="col-lg-12 col-md-12 promocion-container-btn">
-                        <div class="container-btn-calendary">
+                        
+                        <div class="hero-buttons">
+                            <div class="container-btn-calendary">
                             <button href="" img-data="{{ asset('img/calendarioEscolar.webp') }}" class="btn-ingress btn btn-main img-index-modal">Calendario Escolar</button>
                         </div>
                         
-                        <div class="hero-buttons">
                             <div class="dropdown">
                                 <button class="btn-ingress btn-main dropdown-toggle" type="button" id="dropdownProfesorados" data-bs-toggle="dropdown" aria-expanded="false">
                                     Profesorados

@@ -188,7 +188,7 @@ section {
 
 .promocion-container-btn{
     display:flex;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .hero-ingreso{
