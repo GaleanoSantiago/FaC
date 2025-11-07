@@ -38,7 +38,7 @@
                     </a>
 
                     <!-- Facebook -->
-                    <a href="https://www.facebook.com/profile.php?id=61559515095922" 
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" 
                     target="_blank" 
                     class="item-shares">
                         <i class="fa-brands fa-facebook-f"></i>
