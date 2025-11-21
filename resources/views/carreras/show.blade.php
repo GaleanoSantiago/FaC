@@ -4,6 +4,54 @@
 @section('headerId', '')
 
 @section('content')
+<style>
+.interesado-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content-interesado {
+    background: #fff;
+    width: 450px;
+    padding: 25px;
+    margin: 8% auto;
+    border-radius: 8px;
+    position: relative;
+}
+
+.cerrar-modal-interesado {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content-interesado input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+
+.btn-enviar-interesado {
+    width: 100%;
+    background: #1e73be;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+.msg-exito {
+    color: green;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+</style>
 <div id="carreras-header" 
     style="
         background: linear-gradient(rgba(5,7,8, 0.4), rgba(5,7,8, 0.4)), url('{{ asset('img/' . $carrera['fondo']) }}');
@@ -85,13 +133,49 @@
                     a partir de las 19:00 hs.
                 </li>
             </ul>
-            <a href="https://www.formosa.gob.ar/educacion/inscripcioneducacionsuperior" 
+            <a href="https://www.formosa.gob.ar/educacion/preinscripcioneducacionsuperior" 
                target="_blank" class="btn-incripcion">
                 Preinscripción Online
             </a>
+            <!-- Botón nuevo -->
+            <button class="btn-incripcion btn-interesado" id="btnInteresado">
+                Estoy interesado en inscribirme
+            </button>
+
         </div>
     </div>
 </section>
+<!-- Modal -->
+<div id="modalInteresado" class="interesado-modal">
+    <div class="modal-content-interesado">
+        <span class="cerrar-modal-interesado">&times;</span>
+        <h3>Registro de interés</h3>
+
+        <form id="formInteresado">
+            <input type="hidden" name="carrera" value="{{ $carrera->nombre }}">
+
+            <label class="form-label">Nombre completo</label>
+            <input class="form-control" type="text" name="nombre" required>
+
+            <label class="form-label">DNI</label>
+            <input class="form-control" type="text" name="dni" required>
+
+            <label class="form-label">Email</label>
+            <input class="form-control" type="email" name="email" required>
+
+            <label class="form-label">Teléfono</label>
+            <input class="form-control" type="text" name="telefono" required>
+
+            <button type="submit" class="btn-enviar-interesado">
+                Enviar
+            </button>
+        </form>
+
+        <p id="msgInteresado" class="msg-exito" style="display:none;">
+            ¡Gracias! Te avisaremos cuando se habilite la inscripción.
+        </p>
+    </div>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -118,6 +202,55 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+// ----- ELEMENTOS -----
+const btnInteresado = document.getElementById("btnInteresado");
+const modalInteresado = document.getElementById("modalInteresado");
+const cerrarModalInteresado = document.querySelector(".cerrar-modal-interesado");
+const formInteresado = document.getElementById("formInteresado");
+const msgInteresado = document.getElementById("msgInteresado");
+
+// Abrir modal
+btnInteresado.addEventListener("click", () => {
+    modalInteresado.style.display = "block";
+});
+
+// Cerrar modal
+cerrarModalInteresado.addEventListener("click", () => {
+    modalInteresado.style.display = "none";
+});
+
+// Click afuera
+window.addEventListener("click", (e) => {
+    if (e.target === modalInteresado) modalInteresado.style.display = "none";
+});
+
+// Enviar datos vía AJAX
+formInteresado.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const datos = new FormData(formInteresado);
+
+    const response = await fetch("{{ route('interesados.guardar') }}", {
+        method: "POST",
+        headers: { "X-CSRF-TOKEN": "{{ csrf_token() }}" },
+        body: datos
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        formInteresado.reset();
+        msgInteresado.style.display = "block";
+
+        setTimeout(() => {
+            msgInteresado.style.display = "none";
+            modalInteresado.style.display = "none";
+        }, 2000);
+    }
+});
+
 </script>
 
 @endsection

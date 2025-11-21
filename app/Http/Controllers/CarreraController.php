@@ -99,5 +99,42 @@ class CarreraController extends Controller
         return Carrera::all();
     }
 
+
+    public function guardarInteresado(Request $request)
+    {
+        $request->validate([
+            'carrera' => 'required|string',
+            'nombre' => 'required|string',
+            'dni' => 'required|string',
+            'email' => 'required|email',
+            'telefono' => 'required|string',
+        ]);
+
+        $path = resource_path('data/interesados.json');
+
+        // Crear archivo si no existe
+        if (!File::exists($path)) {
+            File::put($path, json_encode([]));
+        }
+
+        // Leer archivo existente
+        $data = json_decode(File::get($path), true);
+
+        // Agregar nuevo registro
+        $data[] = [
+            'carrera' => $request->carrera,
+            'nombre' => $request->nombre,
+            'dni' => $request->dni,
+            'email' => $request->email,
+            'telefono' => $request->telefono,
+            'fecha' => now()->toDateTimeString()
+        ];
+
+        // Guardar archivo actualizado
+        File::put($path, json_encode($data, JSON_PRETTY_PRINT));
+
+        // Respuesta al frontend
+        return response()->json(['success' => true]);
+    }
 }
 

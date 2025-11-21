@@ -1122,7 +1122,6 @@ footer .copyright-footer p {
     fill: var(--bs-light) !important;
 }
 
-
 /* ------------------------------- Pagina de Carreras.html ------------------------------- */
 
 /* ----------------- Navbar de Carreras -------------------------- */
@@ -1255,7 +1254,38 @@ footer .copyright-footer p {
 }
 
 
+/* ----------------------------- Padinga Institucional ----------------------------- */
+.hero_institucional{
+    height:400px;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25), 
+            rgba(0, 0, 0, 0.25)
+        ),
+        url('../img/instituto3.png');
+    background-size: cover;
+    background-position: center;
+    color:var(--bs-white);
+    
+}
+.letra_hero {
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
 
+.container-institucional{
+    padding: 80px 0;
+}
+.logo_institucion{
+    width: 100px;
+}
+.logo_institucion img{
+    width:100%;
+}
+
+.section_institucional{
+    background-color: var(--bg-50);
+    padding: 20px 60px;
+}
 /* ----------------------------- Seccion de Mediaqueries ----------------------------- */
 
 /* Escritorio extra grande */

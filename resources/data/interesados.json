@@ -1,0 +1,26 @@
+[
+    {
+        "carrera": "Profesorado en Ingl\u00e9s",
+        "nombre": "Orlando",
+        "dni": "34422116",
+        "email": "galeanosantiago10@gmail.com",
+        "telefono": "3704441233",
+        "fecha": "2025-11-20 05:08:13"
+    },
+    {
+        "carrera": "Profesorado en Ingl\u00e9s",
+        "nombre": "Samsung",
+        "dni": "34422116",
+        "email": "admin@gmail.com",
+        "telefono": "3704289901",
+        "fecha": "2025-11-20 05:08:46"
+    },
+    {
+        "carrera": "Tecnicatura Superior en Desarrollo de Software",
+        "nombre": "Juan",
+        "dni": "44343155",
+        "email": "jugador@gmail.com",
+        "telefono": "3704289901",
+        "fecha": "2025-11-20 05:09:05"
+    }
+]

@@ -33,3 +33,8 @@ Route::get('/eventos/{id}', [EventoController::class, 'show'])->name('eventos.sh
 Route::get('/carreras', [CarreraController::class, 'index'])->name('carreras.index');
 Route::get('/carreras/{id}', [CarreraController::class, 'show'])->name('carreras.show');
 
+Route::post('/interesados/guardar', [CarreraController::class, 'guardarInteresado'])
+    ->name('interesados.guardar');
+
+
+Route::get('/institucional', [HomeController::class, 'institucional'])->name('institucional');

@@ -85,7 +85,7 @@
                 </li>
 
                 <li>
-                    <a href="#institucional">
+                    <a href="{{ route('institucional') }}">
                     <!--@include('components.icons.institucional')-->
                     Institucional
                     </a>
