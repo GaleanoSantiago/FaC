@@ -84,44 +84,61 @@
 
 <!-- Modal De Desarrolladores, de momento el contacto es el github -->
 <div class="modal fade" id="devModal" tabindex="-1" aria-labelledby="devModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="devModalLabel">Equipo de Desarrollo</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-center mb-4">Estudiantes de la Tecnicatura Superior en Desarrollo de Software</p>
-                <div class="dev-list">
-                    <ul class="list-unstyled text-center">
-                        <li class="mb-2">
-                            <a href="https://github.com/GaleanoSantiago" target="_blank" class="fw-bold mega-link">
-                                Galeano Santiago
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="https://github.com/zlElias" target="_blank" class="fw-bold mega-link">
-                                Elías Villalba
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="https://github.com/maxJustiniano" target="_blank" class="fw-bold mega-link">
-                                Justiniano Max
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="https://github.com/eduardobtez" target="_blank" class="fw-bold mega-link">
-                                Benítez Eduardo
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            </div>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <div class="modal-header  text-white rounded-top-4">
+        <h5 class="modal-title" id="devModalLabel">Equipo de Desarrollo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <strong><p class="text-center mb-4 text-muted">
+          Estudiantes de la Tecnicatura Superior en Desarrollo de Software
+        </p></strong>
+
+        <div class="mb-4">
+          <h6 class="fw-bold text-uppercase mb-3 border-bottom pb-2">Tester</h6>
+          <div class="d-flex flex-wrap  gap-3">
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Justiniano Max</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Zaracho Alan</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Villalba Elias</a>
+          </div>
         </div>
+
+        <div class="mb-4 ">
+          <h6 class="fw-bold text-uppercase mb-3 border-bottom pb-2">Backend</h6>
+          <div class="d-flex flex-wrap  gap-3">
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Runchisky Ivan</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Goméz Damian </a>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h6 class="fw-bold text-uppercase mb-3 border-bottom pb-2">Frontend</h6>
+          <div class="d-flex flex-wrap  gap-3">
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Aguirre José</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Benítez Eduardo</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Boveda Mauro</a>
+             <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Galeano Santiago</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Martinez Erika</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Isolini Yanina</a>
+          </div>
+        </div>
+
+        <div class="mb-4 ">
+          <h6 class="fw-bold text-uppercase mb-3 border-bottom pb-2">Documentación</h6>
+          <div class="d-flex flex-wrap  gap-3">
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Valenzuela Bélen</a>
+            <a href="" target="_blank" class="fw-semibold text-decoration-none mega-link">Villalba Mauricio</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div> -->
     </div>
+  </div>
 </div>
 
  <!-- Modal para la imagen -->

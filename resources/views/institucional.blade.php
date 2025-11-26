@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 d-flex">
+            <div class="col-md-4 d-flex">
                 <div class="d-flex w-100 p-3 border rounded align-items-center">
                     <img src="{{ asset('img/staff/Almiron_Sonia_Vanesa.webp') }}" class="rounded-circle me-4" alt="Preceptor">
                     <div>
@@ -127,7 +127,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 d-flex">
+            <div class="col-md-4 d-flex">
                 <div class="d-flex w-100 p-3 border rounded align-items-center">
                     <img src="{{ asset('img/staff/Dario_Caceres.webp') }}" class="rounded-circle me-4" alt="Preceptor">
                     <div>
@@ -137,15 +137,15 @@
                 </div>
             </div>
 
-            <!-- <div class="col-md-4 d-flex">
+            <div class="col-md-4 d-flex">
                 <div class="d-flex w-100 p-3 border rounded align-items-center">
-                    <img src="https://user-images.githubusercontent.com/11250/39013954-f5091c3a-43e6-11e8-9cac-37cf8e8c8e4e.jpg" class="rounded-circle me-4" alt="Preceptor">
+                    <img src=" {{ asset('img/staff/german_gross_brown.webp') }}" class="rounded-circle me-4" alt="Preceptor">
                     <div>
-                        <h4 class="mb-1">Nombre del Preceptor</h4>
-                        <p class="text-muted mb-0">Preceptor</p>
+                        <h4 class="mb-1">German Gross Brown</h4>
+                        <p class="text-muted mb-0">Auxiliar de Dirección</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
         </div>
     </article>
